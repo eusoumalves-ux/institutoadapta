@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>1º Simpósio Internacional de Medicina do Estilo de Vida — Instituto Adapta</title>
+<meta name="description" content="1º Simpósio Internacional de Medicina do Estilo de Vida do Instituto Adapta. Três dias online com referências nacionais e internacionais em MEV."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-fixed-dim": "#bac3ff",
+          "secondary": "#3e54c1",
+          "primary": "#0054ca",
+          "surface-container-high": "#e7e8e9",
+          "tertiary-fixed": "#7dff46",
+          "on-error-container": "#93000a",
+          "on-tertiary": "#ffffff",
+          "tertiary-container": "#2e8500",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#062100",
+          "on-secondary-container": "#001f89",
+          "error": "#ba1a1a",
+          "surface-container": "#edeeef",
+          "outline": "#727787",
+          "surface-container-highest": "#e1e3e4",
+          "background": "#f8f9fa",
+          "tertiary-fixed-dim": "#53e300",
+          "inverse-primary": "#b1c5ff",
+          "on-primary-container": "#fdfbff",
+          "surface-container-low": "#f3f4f5",
+          "on-surface": "#191c1d",
+          "primary-fixed-dim": "#b1c5ff",
+          "inverse-on-surface": "#f0f1f2",
+          "surface-bright": "#f8f9fa",
+          "secondary-fixed": "#dee1ff",
+          "on-primary": "#ffffff",
+          "surface-variant": "#e1e3e4",
+          "primary-fixed": "#dae2ff",
+          "on-secondary-fixed": "#001159",
+          "on-primary-fixed": "#001947",
+          "on-background": "#191c1d",
+          "outline-variant": "#c2c6d8",
+          "secondary-container": "#788efe",
+          "surface-dim": "#d9dadb",
+          "tertiary": "#226900",
+          "on-tertiary-container": "#f4ffe8",
+          "surface": "#f8f9fa",
+          "error-container": "#ffdad6",
+          "on-secondary": "#ffffff",
+          "primary-container": "#116bf8",
+          "inverse-surface": "#2e3132",
+          "on-primary-fixed-variant": "#00419f",
+          "on-tertiary-fixed-variant": "#195200",
+          "on-surface-variant": "#424655",
+          "surface-tint": "#0056d0",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#223aa8"
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+        fontFamily: {
+          headline: ["Plus Jakarta Sans"],
+          body: ["Plus Jakarta Sans"],
+          label: ["Plus Jakarta Sans"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+  .hero-gradient { background: linear-gradient(135deg, #0054ca 0%, #116bf8 100%); }
+  .no-line { border: none !important; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+  <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+    <div></div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#palestrantes">Palestrantes</a>
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#programacao">Programação</a>
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#inscricao">Inscrição</a>
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#faq">FAQ</a>
+    </div>
+    <button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+      Inscreva-se
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-16 pb-10 md:pt-20 md:pb-12 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row lg:items-end gap-8 lg:gap-10">
+      <div class="lg:w-1/2 space-y-4 md:space-y-5">
+        <div class="inline-flex items-center gap-2.5 pl-2 pr-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+          <img src="images/brand/cbmev-logo.png" alt="CBMEV" class="h-6 md:h-7 w-auto" />
+          <div class="h-6 w-px bg-slate-200"></div>
+          <div class="leading-tight">
+            <p class="text-[8px] font-bold tracking-widest uppercase text-primary">1ª Edição</p>
+            <p class="text-[11px] font-bold text-on-surface">Exclusivo para membros CBMEV</p>
+          </div>
+        </div>
+        <h1 class="text-2xl md:text-[1.9rem] lg:text-[2.6rem] font-extrabold tracking-tight text-on-surface leading-[1.1]">
+          1º Simpósio Internacional de<br class="hidden md:inline" /> <span class="text-primary">Medicina do Estilo de Vida</span><span class="inline-block align-middle ml-2 text-sm md:text-base font-semibold text-on-surface-variant whitespace-nowrap">do <span class="text-primary font-bold">Instituto Adapta</span></span><span class="inline-flex items-center gap-1 align-middle ml-2 bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase shadow-sm whitespace-nowrap">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+            100% Online e Gratuito
+          </span>
+        </h1>
+        <div class="relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/10 via-white to-tertiary-fixed/30 p-4 md:p-5 shadow-lg shadow-primary/5 mt-10 md:mt-12">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined" style="font-size:24px">calendar_month</span>
+              </div>
+              <div>
+                <p class="text-[9px] font-bold tracking-widest uppercase text-primary">Marque na agenda</p>
+                <p class="text-xl md:text-2xl font-extrabold text-on-surface leading-tight">27, 28 e 29<span class="text-on-surface-variant font-bold"> de abril</span></p>
+              </div>
+            </div>
+            <div class="hidden sm:block w-px h-11 bg-primary/20"></div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined" style="font-size:24px; font-variation-settings: 'FILL' 1;">schedule</span>
+              </div>
+              <div>
+                <p class="text-[9px] font-bold tracking-widest uppercase text-primary">Horário (Brasília)</p>
+                <p class="text-xl md:text-2xl font-extrabold text-on-surface leading-tight">19:00h <span class="text-on-surface-variant">→</span> 21:30h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="#inscricao" class="hero-gradient text-white px-6 py-3 rounded-full font-bold text-base shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 text-center">
+            Garantir Minha Vaga
+          </a>
+          <a href="#programacao" class="bg-surface-container-highest text-on-surface px-6 py-3 rounded-full font-bold text-base transition-all hover:bg-surface-container-high active:scale-95 text-center">
+            Ver Programação
+          </a>
+        </div>
+        <p class="text-sm md:text-base text-on-surface-variant leading-relaxed max-w-xl pt-1">
+          Três dias com as maiores referências nacionais e internacionais em MEV. Ciência, prática clínica e os rumos da medicina do estilo de vida — direto de Yale, Harvard, Loma Linda e do Brasil.
+        </p>
+      </div>
+      <div class="lg:w-1/2 relative max-w-md lg:max-w-lg lg:ml-auto lg:translate-y-10">
+        <!-- Mosaico de palestrantes -->
+        <div class="relative z-10 grid grid-cols-6 grid-rows-6 gap-2.5 aspect-square">
+
+          <!-- Katz (destaque grande) -->
+          <div class="col-span-3 row-span-3 relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high group">
+            <img src="images/palestrantes/David%20Katz.png" alt="David Katz" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-3">
+              <p class="text-[9px] font-bold tracking-widest uppercase text-primary-fixed mb-0.5">🇺🇸 Yale</p>
+              <p class="text-white text-xs font-bold leading-tight">David Katz</p>
+            </div>
+          </div>
+
+          <!-- Beth Frates -->
+          <div class="col-span-3 row-span-3 relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high translate-y-3">
+            <img src="images/palestrantes/Beth%20Frates.png" alt="Beth Frates" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-3">
+              <p class="text-[9px] font-bold tracking-widest uppercase text-primary-fixed mb-0.5">🇺🇸 Harvard</p>
+              <p class="text-white text-xs font-bold leading-tight">Beth Frates</p>
+            </div>
+          </div>
+
+          <!-- Robert Lawson -->
+          <div class="col-span-2 row-span-3 relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high">
+            <img src="images/palestrantes/Robert%20Lawson.png" alt="Robert Lawson" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2.5">
+              <p class="text-[8px] font-bold tracking-widest uppercase text-primary-fixed">🇬🇧</p>
+              <p class="text-white text-[11px] font-bold leading-tight">Lawson</p>
+            </div>
+          </div>
+
+          <!-- Bloco gradient central com estatística + grid de palestrantes -->
+          <div class="col-span-2 row-span-3 relative rounded-2xl overflow-hidden shadow-xl text-white p-2.5 flex flex-col" style="background: linear-gradient(135deg, #5b8def 0%, #7aa7ff 100%);">
+            <div class="mb-2">
+              <p class="text-[8px] font-bold tracking-widest uppercase text-white/80">Palestrantes</p>
+              <p class="text-3xl font-extrabold leading-none mt-0.5">9<span class="text-lg">+</span></p>
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-1.5 content-start">
+              <div class="relative rounded-md overflow-hidden aspect-square ring-1 ring-white/20">
+                <img src="images/palestrantes/Carla%20Montenegro.png" class="absolute inset-0 w-full h-full object-cover" alt="Carla Montenegro" />
+              </div>
+              <div class="relative rounded-md overflow-hidden aspect-square ring-1 ring-white/20">
+                <img src="images/palestrantes/Bruno%20Smirmaul.png" class="absolute inset-0 w-full h-full object-cover" alt="Bruno Smirmaul" />
+              </div>
+              <div class="relative rounded-md overflow-hidden aspect-square ring-1 ring-white/20">
+                <img src="images/palestrantes/Sley%20Tanigawa.png" class="absolute inset-0 w-full h-full object-cover" alt="Sley Tanigawa" />
+              </div>
+              <div class="relative rounded-md overflow-hidden aspect-square ring-1 ring-white/20">
+                <img src="images/palestrantes/Fabricia%20Maciel.png" class="absolute inset-0 w-full h-full object-cover" alt="Fabricia Maciel" />
+              </div>
+            </div>
+            <p class="mt-1.5 text-[8px] font-bold tracking-widest uppercase text-white/70 text-center">+ nomes brevemente</p>
+          </div>
+
+          <!-- Bruno Colontoni -->
+          <div class="col-span-2 row-span-3 relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high translate-y-3">
+            <img src="images/palestrantes/Bruno%20Colontoni.png" alt="Bruno Colontoni" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-2.5">
+              <p class="text-[8px] font-bold tracking-widest uppercase text-primary-fixed">🇧🇷</p>
+              <p class="text-white text-[11px] font-bold leading-tight">Colontoni</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Flag tag flutuante: evento internacional -->
+        <div class="absolute -top-3 -right-3 z-20 bg-white rounded-xl shadow-xl px-3.5 py-2 border border-slate-100 hidden md:flex items-center gap-2 rotate-3">
+          <div class="flex -space-x-1 text-sm leading-none">
+            <span>🇺🇸</span><span>🇬🇧</span><span>🇧🇷</span>
+          </div>
+          <div class="text-[10px]">
+            <p class="font-bold text-on-surface leading-tight">3 países</p>
+            <p class="text-on-surface-variant leading-tight">referências globais</p>
+          </div>
+        </div>
+
+        <!-- Badge CBMEV -->
+        <div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-xl p-3 rounded-xl shadow-xl z-20 hidden md:block border border-white/40 -rotate-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+              <span class="material-symbols-outlined text-base">card_membership</span>
+            </div>
+            <div>
+              <p class="font-bold text-on-surface text-xs">Exclusivo CBMEV</p>
+              <p class="text-[10px] text-on-surface-variant">Membros associados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top"></div>
+</section>
+
+<!-- Speakers Section -->
+<section class="py-24" id="palestrantes">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="space-y-4">
+        <p class="text-primary font-bold text-xs tracking-widest uppercase">Corpo Docente</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Quem vai palestrar</h2>
+        <p class="text-on-surface-variant text-lg max-w-xl">Líderes internacionais e brasileiros em Medicina do Estilo de Vida reunidos em um só evento.</p>
+      </div>
+    </div>
+
+    <!-- TODO: substituir placeholders pelas fotos oficiais e bios curtas de cada palestrante -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- David Katz -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/David%20Katz.png" alt="David Katz" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇺🇸</span>Yale • EUA</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">David Katz</h4>
+          <p class="text-white/70 text-sm mt-1">Avaliação crítica de evidências em MEV</p>
+        </div>
+      </div>
+
+      <!-- Beth Frates -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Beth%20Frates.png" alt="Beth Frates" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇺🇸</span>Harvard • EUA</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Beth Frades</h4>
+          <p class="text-white/70 text-sm mt-1">Palestra de encerramento</p>
+        </div>
+      </div>
+
+      <!-- Robert Lawson -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Robert%20Lawson.png" alt="Robert Lawson" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇬🇧</span>Reino Unido</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Robert Lawson</h4>
+          <p class="text-white/70 text-sm mt-1">Prescrição Social</p>
+        </div>
+      </div>
+
+      <!-- Loma Linda -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <div class="absolute inset-0 hero-gradient opacity-20"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇺🇸</span>Loma Linda • EUA</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">A anunciar</h4>
+          <p class="text-white/70 text-sm mt-1">Ambulatório de MEV de Loma Linda</p>
+        </div>
+      </div>
+
+      <!-- Bruno Colontoni -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Bruno%20Colontoni.png" alt="Bruno Colontoni" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇧🇷</span>Brasil</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Bruno Colontoni</h4>
+          <p class="text-white/70 text-sm mt-1">A síndrome do estilo de vida ruim</p>
+        </div>
+      </div>
+
+      <!-- Fabrícia Maciel -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Fabricia%20Maciel.png" alt="Fabrícia Maciel" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇧🇷</span>Brasil</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Fabrícia Maciel</h4>
+          <p class="text-white/70 text-sm mt-1">Determinantes sociais de saúde na MEV</p>
+        </div>
+      </div>
+
+      <!-- Nina -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <div class="absolute inset-0 hero-gradient opacity-20"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇧🇷</span>Brasil</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Nina</h4>
+          <p class="text-white/70 text-sm mt-1">Inteligência Artificial na MEV</p>
+        </div>
+      </div>
+
+      <!-- Painel Movimento -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
+        <!-- Fundo: 3 tiras verticais com fotos -->
+        <div class="absolute inset-0 grid grid-cols-3">
+          <div class="relative overflow-hidden">
+            <img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="relative overflow-hidden">
+            <img src="images/palestrantes/Bruno%20Smirmaul.png" alt="Bruno Smirmaul" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="relative overflow-hidden bg-primary/80 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white/40" style="font-size:64px">person</span>
+          </div>
+        </div>
+        <!-- Overlay gradient + conteúdo -->
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/30 to-black/90"></div>
+        <div class="absolute inset-0 p-7 flex flex-col justify-between text-white">
+          <div>
+            <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur px-3 py-1 rounded-full mb-3">
+              <span class="material-symbols-outlined text-sm">groups</span>
+              <span class="text-[10px] font-bold tracking-widest uppercase">Painel</span>
+            </div>
+            <h4 class="text-2xl font-extrabold leading-tight">O que há de novo em <span class="text-primary-fixed">MOVIMENTO</span></h4>
+          </div>
+          <div class="space-y-1.5">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70">Com</p>
+            <p class="text-sm font-bold leading-snug">Carla Montenegro</p>
+            <p class="text-sm font-bold leading-snug">Bruno Smirmaul</p>
+            <p class="text-sm font-bold leading-snug">Claudio Gil</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painel ACLM Depressão -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-tertiary text-on-tertiary p-8 flex flex-col justify-between">
+        <div>
+          <p class="text-tertiary-fixed font-bold text-xs tracking-widest uppercase mb-2">Painel</p>
+          <h4 class="text-2xl font-bold leading-tight">Consenso ACLM de Depressão</h4>
+        </div>
+        <ul class="text-white/90 text-sm space-y-1 font-medium">
+          <li>Maria Carolina Pedalino Pinheiro</li>
+          <li>Ana Paula Carvalho</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner (pós-palestrantes) -->
+<section class="py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="relative overflow-hidden rounded-3xl hero-gradient text-white p-8 md:p-12 shadow-xl shadow-primary/20">
+      <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none"></div>
+      <div class="relative flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase">Vagas limitadas</p>
+          <h3 class="text-2xl md:text-3xl font-extrabold leading-tight">Reserve seu lugar ao vivo com os maiores nomes da MEV</h3>
+          <p class="text-white/80">3 noites • 27, 28 e 29 de abril • 19:00h → 21:30h</p>
+        </div>
+        <a href="#inscricao" class="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-full font-extrabold text-lg shadow-lg transition-all hover:scale-105 active:scale-95 whitespace-nowrap">
+          Quero participar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Value Proposition Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 space-y-4">
+      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Por que participar?</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Uma imersão em Medicina do Estilo de Vida com ciência de ponta e aplicação clínica imediata.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-3xl space-y-4 shadow-sm">
+        <span class="material-symbols-outlined text-primary text-4xl">devices</span>
+        <h3 class="text-2xl font-bold">100% Online, ao vivo</h3>
+        <p class="text-on-surface-variant text-lg">Participe de onde quiser. Transmissão ao vivo das palestras com acesso posterior às gravações para revisar no seu tempo.</p>
+      </div>
+      <div class="bg-primary text-on-primary p-10 rounded-3xl space-y-4 shadow-lg shadow-primary/20">
+        <span class="material-symbols-outlined text-4xl">public</span>
+        <h3 class="text-2xl font-bold">Referências Globais</h3>
+        <p class="opacity-90">Yale, Harvard, Loma Linda, Reino Unido e os principais nomes do Brasil em MEV reunidos num só evento.</p>
+      </div>
+      <div class="bg-tertiary text-on-tertiary p-10 rounded-3xl space-y-4">
+        <span class="material-symbols-outlined text-4xl">card_membership</span>
+        <h3 class="text-2xl font-bold">Exclusivo CBMEV</h3>
+        <p class="opacity-90">Edição gratuita e restrita aos membros associados do Colégio Brasileiro de Medicina do Estilo de Vida.</p>
+      </div>
+      <div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-3xl flex flex-col md:flex-row items-center gap-8 shadow-sm">
+        <div class="space-y-4">
+          <span class="material-symbols-outlined text-primary text-4xl">biotech</span>
+          <h3 class="text-2xl font-bold">Ciência Aplicada</h3>
+          <p class="text-on-surface-variant text-lg">Discussões sobre avaliação crítica de evidências, consensos internacionais (ACLM), prescrição social, IA e determinantes sociais da saúde aplicados à MEV.</p>
+        </div>
+        <div class="w-48 h-48 rounded-2xl shrink-0 bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary" style="font-size:96px;">ecg_heart</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partnership / Press Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+      <!-- Foto -->
+      <div class="md:col-span-3 relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 ring-1 ring-slate-100">
+        <img src="images/brand/parceria-cbmev-adapta.png" alt="Parceria Instituto Adapta e CBMEV no I Congresso Luso-Brasileiro de Medicina do Estilo de Vida" class="w-full h-auto object-cover" />
+        <div class="absolute top-4 left-4 inline-flex items-center gap-2 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-lg">
+          <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">handshake</span>
+          <span class="text-[10px] font-extrabold tracking-widest uppercase text-on-surface">Parceria institucional</span>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="md:col-span-2 space-y-6">
+        <!-- Co-branded logos -->
+        <div class="flex items-center gap-4">
+          <img src="images/brand/instituto-adapta-logo.png" alt="Instituto Adapta" class="h-9 w-auto" />
+          <span class="text-slate-300 text-xl font-light">×</span>
+          <img src="images/brand/cbmev-logo.png" alt="CBMEV" class="h-7 w-auto" />
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-on-surface">
+          Uma parceria que fortalece a formação em <span class="text-primary">Medicina do Estilo de Vida</span>
+        </h2>
+
+        <p class="text-on-surface-variant text-lg leading-relaxed">
+          Instituto Adapta e CBMEV unem forças para elevar a formação de profissionais de saúde no Brasil — combinando educação continuada de excelência com a referência científica do Colégio Brasileiro de Medicina do Estilo de Vida.
+        </p>
+
+        <!-- Press mention -->
+        <div class="pt-2 border-t border-slate-100">
+          <p class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-3">Veiculado pela imprensa</p>
+          <div class="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-surface-container-low border border-slate-200">
+            <img src="images/brand/valor-economico-logo.png" alt="Valor Econômico" class="h-6 w-auto" />
+            <div class="h-6 w-px bg-slate-200"></div>
+            <span class="text-xs font-semibold text-on-surface">Cobertura editorial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule Section -->
+<section class="py-24 bg-surface-container-low" id="programacao">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16 space-y-4">
+      <p class="text-primary font-bold text-xs tracking-widest uppercase">Programação</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Três dias, três eixos</h2>
+      <p class="text-on-surface-variant text-lg">
+        <!-- TODO: preencher horários por palestra -->
+        27, 28 e 29 de abril • Horário de Brasília
+      </p>
+    </div>
+
+    <div class="space-y-16">
+
+      <!-- Dia 01 -->
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <span class="text-6xl font-black text-primary leading-none">01</span>
+          <div>
+            <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Dia 1 • 26 de abril</p>
+            <h3 class="text-2xl font-bold">Estilo de Vida e Movimento</h3>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Bruno%20Colontoni.png" alt="Bruno Colontoni" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">A síndrome do estilo de vida ruim</h4>
+              <p class="text-on-surface-variant">Panorama clínico do impacto do estilo de vida sobre o processo saúde-doença.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Bruno Colontoni
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 flex items-center"><div class="w-12 h-12 rounded-xl overflow-hidden ring-2 ring-white shadow" style="margin-left:0px;"><img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="w-full h-full object-cover" /></div><div class="w-12 h-12 rounded-xl overflow-hidden ring-2 ring-white shadow" style="margin-left:-8px;"><img src="images/palestrantes/Bruno%20Smirmaul.png" alt="Bruno Smirmaul" class="w-full h-full object-cover" /></div><div class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 ring-2 ring-white shadow flex items-center justify-center text-slate-400" style="margin-left:-8px;"><span class="material-symbols-outlined text-base">person</span></div></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">O que há de novo em MOVIMENTO</h4>
+              <p class="text-on-surface-variant">Painel sobre atualizações em atividade física e exercício como pilar da MEV.</p>
+              <div class="flex flex-wrap items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">groups</span>
+                Carla Montenegro • Bruno Smirmaul • Claudio Gil
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 ring-2 ring-dashed ring-slate-300 flex flex-col items-center justify-center text-slate-400"><span class="material-symbols-outlined text-3xl">local_hospital</span><span class="text-[8px] font-bold tracking-wider uppercase mt-0.5">em breve</span></div><span class="text-lg leading-none">🇺🇸</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Ambulatório de MEV de Loma Linda</h4>
+              <p class="text-on-surface-variant">Referência mundial no cuidado centrado em estilo de vida.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-on-surface-variant">
+                <span class="material-symbols-outlined text-sm">schedule</span> Palestrante a anunciar
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dia 02 -->
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <span class="text-6xl font-black text-primary leading-none">02</span>
+          <div>
+            <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Dia 2 • 27 de abril</p>
+            <h3 class="text-2xl font-bold">Evidência, Consenso e Tecnologia</h3>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary text-on-primary p-8 rounded-3xl flex items-start gap-8 shadow-xl shadow-primary/20 scale-[1.01]">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-white/30 shadow-lg"><img src="images/palestrantes/David%20Katz.png" alt="David Katz" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇺🇸</span></div>
+            <div class="space-y-2 min-w-0">
+              <div class="inline-flex items-center gap-2 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase mb-1">Keynote Internacional</div>
+              <h4 class="text-xl font-bold">Avaliação crítica de evidências científicas na MEV</h4>
+              <p class="opacity-90">Como interpretar, criticar e aplicar evidências em Medicina do Estilo de Vida.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold">
+                <span class="material-symbols-outlined text-sm">person</span> David Katz (Yale)
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 flex items-center"><div class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 ring-2 ring-white shadow flex items-center justify-center text-slate-400" style="margin-left:0px;"><span class="material-symbols-outlined text-base">person</span></div><div class="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 ring-2 ring-white shadow flex items-center justify-center text-slate-400" style="margin-left:-8px;"><span class="material-symbols-outlined text-base">person</span></div></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Discussão do Consenso de Depressão do ACLM</h4>
+              <p class="text-on-surface-variant">Aplicações clínicas do consenso do American College of Lifestyle Medicine sobre depressão.</p>
+              <div class="flex flex-wrap items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">groups</span>
+                Maria Carolina Pedalino Pinheiro • Ana Paula Carvalho
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 ring-2 ring-dashed ring-slate-300 flex flex-col items-center justify-center text-slate-400"><span class="material-symbols-outlined text-3xl">smart_toy</span><span class="text-[8px] font-bold tracking-wider uppercase mt-0.5">em breve</span></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Inteligência Artificial aplicada à MEV</h4>
+              <p class="text-on-surface-variant">Possibilidades, limites e ética da IA no cuidado orientado por estilo de vida.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Nina
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dia 03 -->
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <span class="text-6xl font-black text-primary leading-none">03</span>
+          <div>
+            <p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Dia 3 • 28 de abril</p>
+            <h3 class="text-2xl font-bold">Saúde, Sociedade e o Futuro</h3>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Robert%20Lawson.png" alt="Robert Lawson" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇬🇧</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Prescrição Social</h4>
+              <p class="text-on-surface-variant">Modelo britânico consolidado de cuidado integral fora dos muros do consultório.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Robert Lawson (Reino Unido)
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Fabricia%20Maciel.png" alt="Fabricia Maciel" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Os determinantes sociais de saúde na MEV</h4>
+              <p class="text-on-surface-variant">Como contexto social molda — e é moldado por — escolhas de estilo de vida.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Fabrícia Maciel
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Beth%20Frates.png" alt="Beth Frates" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇺🇸</span></div>
+            <div class="space-y-2 min-w-0">
+              <h4 class="text-xl font-bold">Palestra de encerramento</h4>
+              <p class="text-on-surface-variant">Referência internacional em Medicina do Estilo de Vida — direto de Harvard.</p>
+              <div class="flex items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Beth Frades (Harvard)
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner (pós-programação) -->
+<section class="py-12">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="relative overflow-hidden rounded-3xl border-2 border-primary/20 bg-white p-8 md:p-10 text-center shadow-lg shadow-primary/5">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+        Acesso 100% gratuito
+      </div>
+      <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-3">Gostou da programação?</h3>
+      <p class="text-on-surface-variant text-lg mb-8 max-w-xl mx-auto">Garanta sua inscrição agora e participe das três noites ao vivo com os maiores nomes da Medicina do Estilo de Vida.</p>
+      <a href="#inscricao" class="inline-block hero-gradient text-white px-10 py-4 rounded-full font-extrabold text-lg shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95">
+        Fazer minha inscrição
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Host Section -->
+<section class="py-24 bg-surface-container-low" id="apresentadora">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-primary via-primary to-tertiary text-on-primary">
+      <!-- decorative glow -->
+      <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-white/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-5 gap-0 items-stretch">
+        <!-- Photo -->
+        <div class="md:col-span-2 relative min-h-[420px] md:min-h-[560px] overflow-hidden">
+          <img src="images/palestrantes/Sley%20Tanigawa.png" alt="Dra. Sley Tanigawa" class="absolute inset-0 w-full h-full object-cover object-top" />
+          <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-primary/60 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="md:col-span-3 p-10 md:p-16 flex flex-col justify-center space-y-6">
+          <div class="inline-flex items-center gap-2 self-start bg-white/15 backdrop-blur px-4 py-2 rounded-full">
+            <span class="material-symbols-outlined text-base">mic</span>
+            <span class="text-xs font-bold tracking-widest uppercase">Apresentação & Host Oficial</span>
+          </div>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            Dra. Sley Tanigawa
+          </h2>
+          <p class="text-white/80 text-xs font-bold tracking-widest uppercase">🇧🇷 Brasil • Medicina do Estilo de Vida</p>
+
+          <p class="text-white/90 text-lg leading-relaxed max-w-2xl">
+            Conduzindo as três noites do Simpósio Internacional, a Dra. Sley Tanigawa será a anfitriã
+            do evento — moderando painéis, apresentando palestrantes internacionais e conectando as
+            principais discussões em Medicina do Estilo de Vida.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-4 max-w-xl">
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+              <p class="text-2xl font-extrabold">3</p>
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mt-1">Noites</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+              <p class="text-2xl font-extrabold">9+</p>
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mt-1">Palestrantes</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+              <p class="text-2xl font-extrabold">2</p>
+              <p class="text-[10px] font-bold tracking-widest uppercase text-white/70 mt-1">Painéis</p>
+            </div>
+          </div>
+          <a href="#inscricao" class="inline-flex items-center gap-2 self-start bg-white text-primary px-7 py-3.5 rounded-full font-extrabold text-base shadow-xl transition-all hover:scale-105 active:scale-95 mt-2">
+            Quero estar na plateia
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </a>
+          <!-- TODO: substituir bio resumida pela oficial fornecida pela Dra. Sley -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tickets Section -->
+<section class="py-24" id="inscricao">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-inverse-surface text-inverse-on-surface rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
+      <div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-3/5 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold tracking-widest uppercase">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+            Edição Exclusiva CBMEV
+          </div>
+          <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none">Gratuito para membros do CBMEV.</h2>
+          <p class="text-xl opacity-80 max-w-xl">Esta 1ª edição do Simpósio é uma edição especial oferecida gratuitamente aos membros associados do Colégio Brasileiro de Medicina do Estilo de Vida.</p>
+          <ul class="space-y-6">
+            <li class="flex items-center gap-4 text-xl">
+              <span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+              Todas as palestras ao vivo, nos 3 dias
+            </li>
+            <li class="flex items-center gap-4 text-xl">
+              <span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+              Referências de Yale, Harvard, Loma Linda e Reino Unido
+            </li>
+            <li class="flex items-center gap-4 text-xl">
+              <span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+              Painéis com especialistas brasileiros
+            </li>
+            <li class="flex items-center gap-4 text-xl">
+              <span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+              Certificado de participação
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-2/5 w-full">
+          <!-- TODO: inserir link real de inscrição/credenciamento CBMEV -->
+          <div class="bg-white text-on-surface p-10 rounded-[2.5rem] shadow-2xl space-y-8">
+            <div class="text-center">
+              <p class="text-on-surface-variant font-bold uppercase tracking-widest text-sm mb-2">Investimento</p>
+              <div class="flex items-center justify-center gap-2">
+                <span class="text-6xl font-black text-primary">Gratuito</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mt-2">Exclusivo para membros associados CBMEV</p>
+            </div>
+            <button class="w-full bg-primary text-white py-6 rounded-2xl font-bold text-xl shadow-xl shadow-primary/30 transition-all hover:scale-[1.02] active:scale-95">
+              Fazer Inscrição
+            </button>
+            <p class="text-center text-xs text-on-surface-variant flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">verified_user</span> Acesso validado via credencial CBMEV
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low" id="faq">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold tracking-tight text-center mb-16">Perguntas Frequentes</h2>
+    <div class="space-y-4">
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 cursor-pointer shadow-sm open:shadow-md transition-all">
+        <summary class="flex justify-between items-center font-bold text-lg list-none">
+          Quando será o simpósio?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-on-surface-variant leading-relaxed">O 1º Simpósio Internacional de Medicina do Estilo de Vida do Instituto Adapta acontece nos dias 27, 28 e 29 de abril, 100% online.</p>
+      </details>
+
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 cursor-pointer shadow-sm open:shadow-md transition-all">
+        <summary class="flex justify-between items-center font-bold text-lg list-none">
+          Quem pode participar?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-on-surface-variant leading-relaxed">Esta 1ª edição é exclusiva para membros associados do CBMEV (Colégio Brasileiro de Medicina do Estilo de Vida). A participação é totalmente gratuita.</p>
+      </details>
+
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 cursor-pointer shadow-sm open:shadow-md transition-all">
+        <summary class="flex justify-between items-center font-bold text-lg list-none">
+          Como faço para me inscrever?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <!-- TODO: detalhar fluxo de inscrição/validação de associado CBMEV -->
+        <p class="mt-4 text-on-surface-variant leading-relaxed">O acesso será liberado mediante validação da sua associação ao CBMEV. Mais detalhes sobre o processo de inscrição serão divulgados em breve.</p>
+      </details>
+
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 cursor-pointer shadow-sm open:shadow-md transition-all">
+        <summary class="flex justify-between items-center font-bold text-lg list-none">
+          As palestras internacionais terão tradução?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <!-- TODO: confirmar se haverá tradução simultânea -->
+        <p class="mt-4 text-on-surface-variant leading-relaxed">Detalhes sobre tradução simultânea das palestras internacionais serão divulgados em breve.</p>
+      </details>
+
+      <details class="group bg-surface-container-lowest rounded-2xl p-6 cursor-pointer shadow-sm open:shadow-md transition-all">
+        <summary class="flex justify-between items-center font-bold text-lg list-none">
+          Haverá emissão de certificado?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-on-surface-variant leading-relaxed">Sim. Os participantes receberão certificado de participação do simpósio.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto py-16 px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+    <div class="space-y-6 max-w-sm">
+      <a href="#" aria-label="Instituto Adapta" class="inline-flex items-center">
+        <img src="images/brand/instituto-adapta-logo.png" alt="Instituto Adapta" class="h-14 w-auto" />
+      </a>
+      <p class="text-slate-500 text-sm leading-relaxed">
+        O Instituto Adapta é uma instituição de ensino especializada em educação continuada, Pós-Graduações e MBAs para a área da saúde, com os maiores nomes do mercado.
+      </p>
+      <div class="flex gap-4">
+        <a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all" href="https://institutoadapta.com" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined text-lg">public</span>
+        </a>
+        <a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">
+          <span class="material-symbols-outlined text-lg">mail</span>
+        </a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 gap-12">
+      <div class="space-y-4">
+        <h5 class="font-bold text-slate-900">Simpósio</h5>
+        <ul class="space-y-2 text-sm text-slate-500">
+          <li><a class="hover:text-primary transition-colors" href="#palestrantes">Palestrantes</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#programacao">Programação</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#inscricao">Inscrição</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h5 class="font-bold text-slate-900">Institucional</h5>
+        <ul class="space-y-2 text-sm text-slate-500">
+          <li><a class="hover:text-primary transition-colors" href="https://institutoadapta.com" target="_blank" rel="noopener">Instituto Adapta</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Termos de Uso</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- TODO: preencher CNPJ e e-mail de contato oficial -->
+  <div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
+    <p>© 2026 Instituto Adapta. Medicina do Estilo de Vida baseada em evidências.</p>
+    <div class="flex gap-6">
+      <span>Contato: contato@institutoadapta.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
