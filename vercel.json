@@ -1,5 +1,7 @@
 {
-  "outputDirectory": "simposiomev",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/simposiomev", "permanent": false }
+  ]
 }
