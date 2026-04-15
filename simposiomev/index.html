@@ -915,11 +915,32 @@
     var form = modal.querySelector('form[klicksend-form-id="y7uRKYn"]');
     if (form) {
       try {
-        var formActionUrl = new URL(form.action);
+        var formActionUrl = new URL(form.action, window.location.origin);
         var formActionSearchParams = formActionUrl.searchParams.size > 0 ? formActionUrl.searchParams.toString() + '&' : '';
         var combinedParams = formActionSearchParams + pageParams.toString();
         form.action = formActionUrl.origin + formActionUrl.pathname + '?' + combinedParams;
       } catch (err) {}
+
+      // Intercepta o submit: envia os dados para o Hotmart em background
+      // e redireciona para a página de obrigado (sem sair do fluxo de conversão)
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Enviando...';
+        }
+        var formData = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+          credentials: 'omit'
+        }).catch(function () { /* no-cors: resposta é opaca, erros silenciosos */ })
+          .finally(function () {
+            window.location.href = 'obrigado.html' + window.location.search;
+          });
+      });
     }
   })();
 </script>
