@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masterclass Felicidade Corporativa — Instituto Adapta</title>
+<meta name="description" content="NR-1 na prática: Como transformar a obrigação de diagnosticar riscos psicossociais em uma cultura de felicidade real. Masterclass online e gratuita para profissionais de RH."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-fixed-dim": "#bac3ff",
+          "secondary": "#3e54c1",
+          "primary": "#0054ca",
+          "surface-container-high": "#e7e8e9",
+          "tertiary-fixed": "#7dff46",
+          "on-error-container": "#93000a",
+          "on-tertiary": "#ffffff",
+          "tertiary-container": "#2e8500",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#062100",
+          "on-secondary-container": "#001f89",
+          "error": "#ba1a1a",
+          "surface-container": "#edeeef",
+          "outline": "#727787",
+          "surface-container-highest": "#e1e3e4",
+          "background": "#f8f9fa",
+          "tertiary-fixed-dim": "#53e300",
+          "inverse-primary": "#b1c5ff",
+          "on-primary-container": "#fdfbff",
+          "surface-container-low": "#f3f4f5",
+          "on-surface": "#191c1d",
+          "primary-fixed-dim": "#b1c5ff",
+          "inverse-on-surface": "#f0f1f2",
+          "surface-bright": "#f8f9fa",
+          "secondary-fixed": "#dee1ff",
+          "on-primary": "#ffffff",
+          "surface-variant": "#e1e3e4",
+          "primary-fixed": "#dae2ff",
+          "on-secondary-fixed": "#001159",
+          "on-primary-fixed": "#001947",
+          "on-background": "#191c1d",
+          "outline-variant": "#c2c6d8",
+          "secondary-container": "#788efe",
+          "surface-dim": "#d9dadb",
+          "tertiary": "#226900",
+          "on-tertiary-container": "#f4ffe8",
+          "surface": "#f8f9fa",
+          "error-container": "#ffdad6",
+          "on-secondary": "#ffffff",
+          "primary-container": "#116bf8",
+          "inverse-surface": "#2e3132",
+          "on-primary-fixed-variant": "#00419f",
+          "on-tertiary-fixed-variant": "#195200",
+          "on-surface-variant": "#424655",
+          "surface-tint": "#0056d0",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#223aa8"
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+        fontFamily: {
+          headline: ["Plus Jakarta Sans"],
+          body: ["Plus Jakarta Sans"],
+          label: ["Plus Jakarta Sans"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+  .hero-gradient { background: linear-gradient(135deg, #0054ca 0%, #116bf8 100%); }
+  .hero-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://flavialippi.com.br/wp-content/uploads/2026/01/fl-palestra.webp');
+    background-size: cover;
+    background-position: 90% 40%;
+    z-index: 1;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #0054ca 0%, #0054ca 20%, rgba(0, 84, 202, 0.95) 35%, rgba(17, 107, 248, 0.45) 50%, rgba(17, 107, 248, 0.08) 62%, transparent 70%);
+    z-index: 2;
+  }
+  @media (max-width: 768px) {
+    .hero-bg::before {
+      background-position: 65% center;
+    }
+    .hero-bg::after {
+      background: linear-gradient(to bottom, rgba(0, 84, 202, 0.85) 0%, rgba(0, 84, 202, 0.95) 60%, #0054ca 100%);
+    }
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+  <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+    <div class="flex items-center gap-2">
+      <img src="images/brand/instituto-adapta-logo.png" alt="Instituto Adapta" class="h-5 md:h-6 w-auto" />
+    </div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#aprendizado">O que vai aprender</a>
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#palestrante">Palestrante</a>
+      <a class="text-slate-600 hover:text-slate-900 transition-colors font-medium" href="#faq">FAQ</a>
+    </div>
+    <a href="#inscricao" class="hero-gradient text-on-primary px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+      Inscreva-se
+    </a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-bg pt-32 md:pt-40 pb-20 md:pb-28">
+  <!-- Decorative elements -->
+  <div class="absolute top-10 -left-20 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none z-[3]"></div>
+
+  <div class="relative z-[3] max-w-7xl mx-auto px-6 md:px-8">
+    <div class="flex flex-col">
+      <div class="max-w-2xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+          <span class="material-symbols-outlined text-tertiary-fixed text-sm">verified</span>
+          <span class="text-white/90 text-sm font-medium tracking-wide uppercase">Masterclass para profissionais de RH</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
+          Compliance é o novo<br/>Bem-Estar.
+        </h1>
+
+        <!-- Subheadline - more human -->
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-4 max-w-2xl">
+          Você sabe que a NR-1 exige o diagnóstico de riscos psicossociais. Mas e se, em vez de apenas cumprir a norma, você pudesse usar isso para criar um ambiente de trabalho onde as pessoas realmente querem estar?
+        </p>
+        <p class="text-base md:text-lg text-white/60 leading-relaxed mb-8 max-w-2xl">
+          Nesta masterclass, a Flavia Lippi vai te mostrar como — na prática, sem enrolação.
+        </p>
+
+        <!-- Event details -->
+        <div class="flex flex-wrap gap-4 mb-10">
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
+            <span class="material-symbols-outlined text-tertiary-fixed">calendar_today</span>
+            <span class="text-white font-medium">Data a definir</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
+            <span class="material-symbols-outlined text-tertiary-fixed">videocam</span>
+            <span class="text-white font-medium">Online e ao vivo</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
+            <span class="material-symbols-outlined text-tertiary-fixed">sell</span>
+            <span class="text-white font-medium">Gratuita</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#inscricao" class="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/20">
+            Quero participar
+            <span class="material-symbols-outlined">arrow_downward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- O que você vai aprender -->
+<section id="aprendizado" class="py-20 md:py-28 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-2xl mx-auto">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">Conteúdo da Masterclass</span>
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-4">O que você vai sair sabendo fazer</h2>
+      <p class="text-on-surface-variant text-lg">Chega de teoria vazia. Aqui você sai com ferramentas que pode aplicar já na segunda-feira.</p>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-14 h-14 hero-gradient rounded-2xl flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-white text-2xl">search_insights</span>
+        </div>
+        <h3 class="text-xl font-bold text-on-surface mb-3">Diagnóstico DRPS na prática</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          Aplicar o DRPS na prática e mapear os riscos psicossociais da sua empresa com metodologia validada e acionável.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-14 h-14 hero-gradient rounded-2xl flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-white text-2xl">shield</span>
+        </div>
+        <h3 class="text-xl font-bold text-on-surface mb-3">Programas que protegem e transformam</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          Montar programas que protegem juridicamente a empresa e geram mudança cultural real no dia a dia das equipes.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-14 h-14 hero-gradient rounded-2xl flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-white text-2xl">trending_up</span>
+        </div>
+        <h3 class="text-xl font-bold text-on-surface mb-3">Dados que convencem a liderança</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          Transformar dados do diagnóstico em argumentos estratégicos que convencem a liderança a investir em bem-estar.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Para quem é -->
+<section class="py-20 md:py-28 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-16 max-w-2xl mx-auto">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">Isso é pra você?</span>
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-4">Se você se identifica, essa masterclass é sua</h2>
+      <p class="text-on-surface-variant text-lg">Não importa o tamanho da empresa — se pessoas fazem parte do seu dia a dia, você precisa estar aqui.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Perfil 1 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-6 text-center">
+        <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">person</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2">Profissionais de RH</h3>
+        <p class="text-sm text-on-surface-variant">Analistas, BPs e gerentes que precisam implementar a NR-1</p>
+      </div>
+
+      <!-- Perfil 2 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-6 text-center">
+        <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2">Psicólogos Organizacionais</h3>
+        <p class="text-sm text-on-surface-variant">Profissionais que atuam com saúde mental no ambiente corporativo</p>
+      </div>
+
+      <!-- Perfil 3 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-6 text-center">
+        <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">supervisor_account</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2">Gestores e Líderes</h3>
+        <p class="text-sm text-on-surface-variant">Lideranças que querem criar ambientes de trabalho mais saudáveis</p>
+      </div>
+
+      <!-- Perfil 4 -->
+      <div class="bg-surface-container-lowest rounded-3xl p-6 text-center">
+        <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">business_center</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2">Consultores</h3>
+        <p class="text-sm text-on-surface-variant">Consultores de SST e bem-estar que querem ampliar seu portfólio</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Palestrante -->
+<section id="palestrante" class="relative py-20 md:py-28 hero-gradient overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-tertiary-fixed mb-3 block">Quem vai conduzir</span>
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">Conheça a Flavia Lippi</h2>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+      <!-- Photos grid -->
+      <div class="flex-shrink-0">
+        <div class="grid grid-cols-2 gap-4 w-72 md:w-80">
+          <div class="col-span-2 h-64 rounded-3xl overflow-hidden shadow-2xl shadow-black/30">
+            <img src="https://institutoadapta.com/wp-content/uploads/2025/01/Flavia-Lippi-Instituto-Adapta-Saude.png"
+                 alt="Flavia Lippi - Instituto Adapta"
+                 class="w-full h-full object-cover" />
+          </div>
+          <div class="h-36 rounded-2xl overflow-hidden shadow-xl shadow-black/20">
+            <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/fl.webp"
+                 alt="Flavia Lippi palestrando"
+                 class="w-full h-full object-cover" />
+          </div>
+          <div class="h-36 rounded-2xl overflow-hidden shadow-xl shadow-black/20">
+            <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/profile.webp"
+                 alt="Flavia Lippi"
+                 class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="text-center lg:text-left flex-1">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-1">Flavia Lippi</h3>
+        <p class="text-tertiary-fixed font-semibold mb-2">Fundadora do IDHL e A Equação</p>
+        <p class="text-white/50 text-sm mb-6">+25 anos em desenvolvimento humano e organizacional</p>
+
+        <p class="text-white/80 leading-relaxed text-lg mb-4">
+          Flavia não é daquelas palestrantes que ficam na teoria bonita. Com mais de duas décadas ajudando grandes empresas a unir performance com saúde emocional, ela sabe exatamente o que funciona — e o que é perda de tempo.
+        </p>
+        <p class="text-white/70 leading-relaxed mb-6">
+          Neurocientista, pesquisadora, empreendedora serial e autora, ela já trabalhou com equipes de liderança, áreas de RH e cultura, times comerciais e eventos corporativos de empresas como Google, Bradesco, Samsung e ArcelorMittal.
+        </p>
+
+        <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
+          <span class="bg-white/10 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">Neurociência Aplicada</span>
+          <span class="bg-white/10 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">NR-1 e Saúde Mental</span>
+          <span class="bg-white/10 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">Liderança Sustentável</span>
+          <span class="bg-white/10 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">Inteligência Emocional</span>
+        </div>
+
+        <!-- Client logos -->
+        <p class="text-white/40 text-xs font-bold tracking-widest uppercase mb-4">Já palestrou para</p>
+        <div class="flex flex-wrap items-center gap-6 justify-center lg:justify-start opacity-60">
+          <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/google.svg" alt="Google" class="h-5 brightness-0 invert" />
+          <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/bradesco.svg" alt="Bradesco" class="h-5 brightness-0 invert" />
+          <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/samsung.svg" alt="Samsung" class="h-4 brightness-0 invert" />
+          <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/scania.svg" alt="Scania" class="h-5 brightness-0 invert" />
+          <img src="https://flavialippi.com.br/wp-content/uploads/2026/01/Arcelor_Mittal.svg" alt="ArcelorMittal" class="h-5 brightness-0 invert" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="py-16 md:py-20 bg-surface-container-low">
+  <div class="max-w-5xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">Quem já viu, recomenda</span>
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-on-surface">O que dizem sobre a Flavia</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-surface-container-lowest rounded-3xl p-8">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed mb-6 italic">
+          "É raro encontrar alguém que une ciência rigorosa com tanta sensibilidade humana. As reflexões mais profundas que já ouvi sobre saúde emocional nas organizações."
+        </p>
+        <div>
+          <p class="font-bold text-on-surface">Stania Moraes</p>
+          <p class="text-sm text-on-surface-variant">CFO</p>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-3xl p-8">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-amber-400 text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed mb-6 italic">
+          "A combinação de rigor técnico, profundidade conceitual e impacto real é rara. Um conhecimento profundo de ciência comportamental e ciência mental."
+        </p>
+        <div>
+          <p class="font-bold text-on-surface">Adriana Muratore</p>
+          <p class="text-sm text-on-surface-variant">Board Member</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulário de Inscrição -->
+<section id="inscricao" class="py-20 md:py-28 bg-surface">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">Inscrição gratuita</span>
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-4">Sua vaga está te esperando</h2>
+        <p class="text-on-surface-variant text-lg">São poucos campos, leva menos de 30 segundos. E é grátis.</p>
+      </div>
+
+      <form action="#" method="POST" class="bg-surface-container-lowest rounded-3xl p-8 md:p-10 shadow-lg shadow-primary/5 space-y-6">
+        <!-- Nome -->
+        <div>
+          <label for="nome" class="block text-sm font-semibold text-on-surface mb-2">Nome completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome"
+                 class="w-full bg-surface-container-low border-0 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-semibold text-on-surface mb-2">E-mail profissional</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com"
+                 class="w-full bg-surface-container-low border-0 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" />
+        </div>
+
+        <!-- Empresa -->
+        <div>
+          <label for="empresa" class="block text-sm font-semibold text-on-surface mb-2">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa"
+                 class="w-full bg-surface-container-low border-0 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" />
+        </div>
+
+        <!-- Cargo -->
+        <div>
+          <label for="cargo" class="block text-sm font-semibold text-on-surface mb-2">Cargo</label>
+          <input type="text" id="cargo" name="cargo" placeholder="Seu cargo atual"
+                 class="w-full bg-surface-container-low border-0 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" />
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="w-full hero-gradient text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/30 mt-4">
+          Garantir minha vaga
+        </button>
+
+        <p class="text-center text-xs text-outline mt-4">Ao se inscrever, você concorda em receber comunicações sobre o evento. Seus dados estão protegidos.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 md:py-28 bg-surface-container-low">
+  <div class="max-w-3xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">Tire suas dúvidas</span>
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-on-surface">Perguntas Frequentes</h2>
+    </div>
+
+    <div class="space-y-4">
+      <!-- FAQ 1 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>A Masterclass é gratuita?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          Sim, a Masterclass é 100% gratuita. Basta se inscrever pelo formulário acima para garantir sua vaga.
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>Como vou assistir?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          A Masterclass será transmitida ao vivo online. Após a inscrição, você receberá o link de acesso por e-mail.
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>O que é NR-1 e por que devo me preocupar?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          A NR-1 é a Norma Regulamentadora que exige das empresas o gerenciamento de riscos ocupacionais, incluindo os riscos psicossociais. A partir das atualizações recentes, as empresas precisam diagnosticar e tratar fatores como estresse, assédio e sobrecarga — e o RH é peça-chave nesse processo.
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>O que é DRPS e Programas de Gerenciamento?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          DRPS é o Diagnóstico de Riscos Psicossociais — a ferramenta para mapear fatores de risco no ambiente de trabalho. Programas de Gerenciamento Ocupacional são os planos de ação que a empresa cria para mitigar esses riscos e promover saúde mental.
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>Terei acesso à gravação?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          Os inscritos terão acesso à gravação por tempo limitado após o evento. Detalhes serão enviados por e-mail.
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="group bg-surface-container-lowest rounded-2xl overflow-hidden open:shadow-md transition-all">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-on-surface list-none">
+          <span>Receberei certificado?</span>
+          <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="px-6 pb-5 text-on-surface-variant leading-relaxed">
+          Sim, todos os participantes que assistirem ao vivo receberão certificado de participação digital emitido pelo Instituto Adapta.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="py-16 md:py-20 hero-gradient">
+  <div class="max-w-3xl mx-auto px-6 md:px-8 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">Você pode ser a pessoa que muda a cultura da sua empresa.</h2>
+    <p class="text-white/80 text-lg mb-8">Não é sobre cumprir tabela. É sobre criar um lugar onde as pessoas querem trabalhar — e onde os resultados aparecem naturalmente.</p>
+    <a href="#inscricao" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/20">
+      Quero participar
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-inverse-surface py-12">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex items-center gap-3">
+        <img src="images/brand/instituto-adapta-logo.png" alt="Instituto Adapta" class="h-6 w-auto brightness-0 invert" />
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-inverse-on-surface/60 text-sm">
+        <a href="https://institutoadapta.com" target="_blank" class="hover:text-white transition-colors">institutoadapta.com</a>
+        <a href="mailto:contato@institutoadapta.com" class="hover:text-white transition-colors">contato@institutoadapta.com</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-white/10 text-center text-inverse-on-surface/40 text-xs">
+      &copy; 2026 Instituto Adapta. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
