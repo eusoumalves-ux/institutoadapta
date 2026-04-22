@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="192x192" href="images/brand/favicon-192.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="images/brand/favicon-512.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png"/>
+<title>Masterclass CBMEV — MEV e Obesidade na Era do GLP-1</title>
+<meta name="description" content="Masterclass CBMEV: MEV e Obesidade na Era do GLP-1. 30 de maio, no Kurotel (Gramado). Com Tassiane Alvarenga e Carol Pimentel."/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:site_name" content="CBMEV"/>
+<meta property="og:title" content="Masterclass CBMEV — MEV e Obesidade na Era do GLP-1"/>
+<meta property="og:description" content="30 de maio, no Kurotel (Gramado). Com Tassiane Alvarenga e Carol Pimentel."/>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=MuseoModerno:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          // paleta da marca (PDF "Proposta de IDV Masterclass Obesidade na Era do GLP-1")
+          "coral":       "#FF8B9D",  // primária
+          "coral-dark":  "#EE6F83",
+          "coral-soft":  "#F8C9C2",  // rosa claro de fundo
+          "coral-cream": "#FBE4DF",
+          "purple":      "#9B8AFF",
+          "purple-soft": "#C8BFFF",
+          "green":       "#66BB5A",
+          "green-dark":  "#4FA247",
+          "blue":        "#0098DB",
+          "ink":         "#3F3F3F",  // cinza escuro "grafite"
+          "ink-soft":    "#5A5A5A",
+          "cream":       "#FFF7F4"
+        },
+        borderRadius: {
+          DEFAULT: "0.5rem",
+          lg: "1rem",
+          xl: "1.5rem",
+          "2xl": "2rem",
+          full: "9999px"
+        },
+        fontFamily: {
+          display: ["Boldonse", "system-ui", "sans-serif"],
+          body:    ["MuseoModerno", "system-ui", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  body { font-family: 'MuseoModerno', system-ui, sans-serif; background-color: #FFF7F4; color: #3F3F3F; }
+  .font-display { font-family: 'Boldonse', system-ui, sans-serif; letter-spacing: 0.01em; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+
+  .glass-nav { background: rgba(255, 247, 244, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+  /* Padrão decorativo inspirado em "cadeias estruturais / moléculas" do PDF */
+  .pattern-molecule {
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(155,138,255,0.18) 0, transparent 22%),
+      radial-gradient(circle at 80% 70%, rgba(255,139,157,0.22) 0, transparent 28%),
+      radial-gradient(circle at 50% 50%, rgba(102,187,90,0.12) 0, transparent 40%);
+  }
+
+  /* Hero: "O" grande como watermark, estilo da capa do PDF */
+  .hero-wrap { position: relative; overflow: hidden; }
+  .hero-O {
+    position: absolute;
+    left: -14%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90vw;
+    max-width: 820px;
+    color: #F8C9C2;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* animação sutil para o CTA */
+  @keyframes pulse-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(255,139,157,0.55); }
+    70%  { box-shadow: 0 0 0 16px rgba(255,139,157,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,139,157,0); }
+  }
+  .cta-pulse { animation: pulse-ring 2.4s infinite; }
+
+  /* Link do menu com underline suave */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px;
+    background: #FF8B9D; transition: width .25s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- ========== NAV ========== -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-coral-soft/40">
+  <div class="flex justify-between items-center px-5 md:px-8 py-3.5 max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <img src="images/brand/cbmev-logo.png" alt="CBMEV — Colégio Brasileiro de Medicina do Estilo de Vida" class="h-6 md:h-7 w-auto"/>
+    </div>
+    <div class="hidden md:flex gap-8 items-center text-sm">
+      <a class="nav-link text-ink-soft hover:text-ink font-medium" href="#sobre">Sobre</a>
+      <a class="nav-link text-ink-soft hover:text-ink font-medium" href="#palestrantes">Palestrantes</a>
+      <a class="nav-link text-ink-soft hover:text-ink font-medium" href="#conteudo">Conteúdo</a>
+      <a class="nav-link text-ink-soft hover:text-ink font-medium" href="#local">Local</a>
+    </div>
+    <a href="https://www.sympla.com.br/evento/masterclass-mev-e-obesidade-na-era-dos-analogos-do-glp1/3386092" target="_blank" rel="noopener"
+       class="bg-coral text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-coral-dark transition-all active:scale-95 shadow-md shadow-coral/30">
+      Inscreva-se
+    </a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero-wrap relative pt-28 pb-16 md:pt-36 md:pb-24">
+  <!-- O gigante de fundo (igual à capa do PDF) -->
+  <svg class="hero-O" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="300" cy="300" r="250" stroke="currentColor" stroke-width="100"/>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+
+      <!-- Texto principal -->
+      <div class="lg:col-span-3 space-y-6">
+        <span class="inline-flex items-center gap-2 bg-coral/10 text-coral-dark px-3 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">
+          <span class="material-symbols-outlined" style="font-size:16px;">stethoscope</span>
+          Masterclass CBMEV
+        </span>
+
+        <h1 class="font-display text-coral leading-[0.95] text-5xl md:text-6xl lg:text-[5.2rem]">
+          MEV e Obesidade<br/>
+          na Era do<br/>
+          <span class="text-ink">GLP-1</span>
+        </h1>
+
+        <p class="text-ink-soft text-base md:text-lg max-w-xl leading-relaxed">
+          A nova era do tratamento da obesidade não é MEV <em>ou</em> farmacoterapia.
+          É <strong class="text-ink">MEV <u class="decoration-coral decoration-2 underline-offset-4">com</u> farmacoterapia</strong>.
+          Reunimos duas referências nacionais para discutir a integração prática, baseada em evidência, aplicada à vida real.
+        </p>
+
+        <!-- Data / Local card -->
+        <div class="relative overflow-hidden rounded-2xl border-2 border-coral/30 bg-white/70 p-5 md:p-6 shadow-lg shadow-coral/10 max-w-xl">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-coral text-white flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined" style="font-size:26px;">calendar_month</span>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold tracking-widest uppercase text-coral-dark">Marque na agenda</p>
+                <p class="text-xl md:text-2xl font-extrabold text-ink leading-tight">30 de maio</p>
+              </div>
+            </div>
+            <div class="hidden sm:block w-px h-11 bg-coral/25"></div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green text-white flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined" style="font-size:26px;">location_on</span>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold tracking-widest uppercase text-coral-dark">Local</p>
+                <p class="text-xl md:text-2xl font-extrabold text-ink leading-tight">Kurotel <span class="text-ink-soft font-semibold text-base">• Gramado/RS</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="https://www.sympla.com.br/evento/masterclass-mev-e-obesidade-na-era-dos-analogos-do-glp1/3386092" target="_blank" rel="noopener"
+             class="cta-pulse bg-coral text-white px-7 py-3.5 rounded-full font-bold text-base shadow-xl shadow-coral/30 transition-all hover:bg-coral-dark hover:scale-105 active:scale-95 text-center inline-flex items-center justify-center gap-2">
+            Garantir minha vaga
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+          </a>
+          <a href="#palestrantes" class="bg-white border-2 border-ink/10 text-ink px-7 py-3.5 rounded-full font-bold text-base transition-all hover:border-coral hover:text-coral active:scale-95 text-center">
+            Ver palestrantes
+          </a>
+        </div>
+      </div>
+
+      <!-- Logo oficial "Masterclass Obesidade & GLP-1" (capa do PDF de marca) -->
+      <div class="lg:col-span-2 relative">
+        <div class="relative max-w-md lg:max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-coral/20">
+          <img src="images/brand/logo-masterclass.png"
+               alt="Masterclass Obesidade & GLP-1"
+               width="1400" height="1104"
+               class="block w-full h-auto"
+               fetchpriority="high"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANIFESTO / SOBRE ========== -->
+<section id="sobre" class="py-20 md:py-28 bg-coral-cream pattern-molecule relative">
+  <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <p class="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-coral-dark mb-4">Por que essa Masterclass, por que agora</p>
+    <h2 class="font-display text-ink text-3xl md:text-5xl leading-[1.05] mb-8 max-w-4xl">
+      Nunca a Medicina do Estilo de Vida foi <span class="text-coral">tão necessária</span>.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 text-ink-soft leading-relaxed text-base md:text-lg">
+      <div class="space-y-4">
+        <p>Vivemos uma transformação no tratamento da obesidade. As chamadas <em>“canetas emagrecedoras”</em> — baseadas em agonistas de GLP-1 — trouxeram resultados clínicos antes inimagináveis: perdas de peso significativas, sustentadas, com impacto relevante em desfechos metabólicos.</p>
+        <p class="text-ink font-semibold">Diante desse avanço, surge uma pergunta inevitável: <span class="text-coral-dark">o que sobra para a Medicina do Estilo de Vida?</span></p>
+      </div>
+      <div class="space-y-4">
+        <p>A resposta é clara — e talvez mais importante do que nunca. Pacientes em uso de GLP-1 exigem <strong class="text-ink">mais precisão clínica</strong> no manejo de hábitos, comportamentos e ambiente.</p>
+        <p>Sem a estrutura adequada de mudança de estilo de vida, a sustentabilidade dos resultados fica comprometida, o risco de reganho de peso aumenta, os benefícios metabólicos não são plenamente alcançados — e a saúde mental pode ser negligenciada.</p>
+      </div>
+    </div>
+
+    <!-- Callout -->
+    <div class="mt-10 md:mt-14 relative bg-white rounded-2xl border-l-8 border-coral p-6 md:p-8 shadow-xl shadow-coral/10">
+      <div class="absolute -top-3 left-6 bg-coral text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Tese</div>
+      <p class="font-display text-ink text-2xl md:text-3xl leading-snug">
+        A Medicina do Estilo de Vida deixa de ser coadjuvante e passa a ser o <span class="text-coral">alicerce</span> que sustenta, potencializa e dá significado clínico ao tratamento farmacológico.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PALESTRANTES ========== -->
+<section id="palestrantes" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 md:mb-16">
+      <p class="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-coral-dark mb-3">Quem conduz</p>
+      <h2 class="font-display text-ink text-3xl md:text-5xl leading-[1.05] max-w-3xl mx-auto">
+        Duas referências nacionais, uma abordagem <span class="text-coral">integrada</span>.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Tassiane -->
+      <article class="group relative bg-white rounded-2xl border border-coral-soft/60 shadow-lg shadow-coral/5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-coral/10 overflow-hidden">
+        <div class="relative aspect-[4/5] overflow-hidden bg-coral-soft">
+          <img src="images/palestrantes/tassiane-alvarenga.jpg"
+               alt="Dra. Tassiane Alvarenga — Endocrinologista, USP"
+               class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+               loading="lazy"/>
+          <!-- gradiente para leitura do badge -->
+          <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent"></div>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur text-coral-dark text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-md">
+            <span class="material-symbols-outlined" style="font-size:14px;">stethoscope</span>
+            Endocrinologia
+          </span>
+        </div>
+        <div class="p-7 md:p-8">
+          <h3 class="font-display text-ink text-2xl md:text-3xl leading-tight">Dra. Tassiane Alvarenga</h3>
+          <p class="text-coral-dark font-semibold text-sm mt-1.5 mb-4">Endocrinologista • USP</p>
+          <p class="text-ink-soft leading-relaxed text-base">
+            Referência em obesidade, certificada em Medicina do Estilo de Vida pelo <strong class="text-ink">IBLM</strong>.
+            Idealizadora do projeto <strong class="text-ink">Médicos na Cozinha</strong>, pioneiro em medicina culinária no Brasil.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="bg-coral/10 text-coral-dark text-xs font-semibold px-3 py-1 rounded-full">Obesidade</span>
+            <span class="bg-purple/15 text-purple text-xs font-semibold px-3 py-1 rounded-full">MEV</span>
+            <span class="bg-green/15 text-green-dark text-xs font-semibold px-3 py-1 rounded-full">Medicina Culinária</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carol -->
+      <article class="group relative bg-white rounded-2xl border border-coral-soft/60 shadow-lg shadow-coral/5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-coral/10 overflow-hidden">
+        <div class="relative aspect-[4/5] overflow-hidden bg-coral-soft">
+          <img src="images/palestrantes/carol-pimentel.jpg"
+               alt="Dra. Carol Pimentel — Nutricionista, Doutora pela USP"
+               class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+               loading="lazy"/>
+          <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent"></div>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur text-coral-dark text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-md">
+            <span class="material-symbols-outlined" style="font-size:14px;">restaurant</span>
+            Nutrição
+          </span>
+        </div>
+        <div class="p-7 md:p-8">
+          <h3 class="font-display text-ink text-2xl md:text-3xl leading-tight">Dra. Carol Pimentel</h3>
+          <p class="text-coral-dark font-semibold text-sm mt-1.5 mb-4">Nutricionista • Doutora pela USP</p>
+          <p class="text-ink-soft leading-relaxed text-base">
+            Certificada em Medicina do Estilo de Vida pelo <strong class="text-ink">IBLM</strong>. Especialista na interface entre
+            <strong class="text-ink">nutrição, comportamento e saúde metabólica</strong>.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="bg-coral/10 text-coral-dark text-xs font-semibold px-3 py-1 rounded-full">Nutrição</span>
+            <span class="bg-purple/15 text-purple text-xs font-semibold px-3 py-1 rounded-full">Comportamento</span>
+            <span class="bg-green/15 text-green-dark text-xs font-semibold px-3 py-1 rounded-full">Saúde Metabólica</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== O QUE VOCÊ VAI LEVAR ========== -->
+<section id="conteudo" class="py-20 md:py-28 bg-ink text-white relative overflow-hidden">
+  <!-- G de fundo decorativo -->
+  <svg class="absolute -right-20 -bottom-10 opacity-[0.06] w-[500px]" viewBox="0 0 400 400" aria-hidden="true">
+    <path d="M 30 200 a 170 170 0 1 0 340 0" stroke="#66BB5A" stroke-width="80" fill="none"/>
+    <line x1="370" y1="200" x2="370" y2="360" stroke="#66BB5A" stroke-width="80"/>
+    <line x1="300" y1="200" x2="370" y2="200" stroke="#66BB5A" stroke-width="80"/>
+  </svg>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <p class="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-green mb-3">O que você vai levar</p>
+    <h2 class="font-display text-white text-3xl md:text-5xl leading-[1.05] mb-12 max-w-4xl">
+      Cinco competências clínicas <span class="text-green">aplicáveis</span> já na próxima consulta.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-4 md:gap-5">
+      <!-- item -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green text-ink flex items-center justify-center font-display text-lg">1</div>
+          <p class="text-white/90 leading-relaxed text-base md:text-lg">
+            Como <strong class="text-white">integrar GLP-1</strong> com estratégias estruturadas de MEV.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green text-ink flex items-center justify-center font-display text-lg">2</div>
+          <p class="text-white/90 leading-relaxed text-base md:text-lg">
+            Manejo prático de <strong class="text-white">alimentação, atividade física, sono e comportamento</strong> em pacientes em uso de medicação.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green text-ink flex items-center justify-center font-display text-lg">3</div>
+          <p class="text-white/90 leading-relaxed text-base md:text-lg">
+            Estratégias para <strong class="text-white">prevenir o reganho de peso</strong> após a descontinuação ou ajuste de dose.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green text-ink flex items-center justify-center font-display text-lg">4</div>
+          <p class="text-white/90 leading-relaxed text-base md:text-lg">
+            Abordagem da <strong class="text-white">saúde mental</strong> no contexto da obesidade e do tratamento farmacológico.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors md:col-span-2">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green text-ink flex items-center justify-center font-display text-lg">5</div>
+          <p class="text-white/90 leading-relaxed text-base md:text-lg">
+            Como transformar <strong class="text-white">perda de peso em saúde real e sustentável</strong> — não só no número da balança.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARA QUEM ========== -->
+<section class="py-20 md:py-28 bg-cream">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+      <div class="md:col-span-2">
+        <p class="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-coral-dark mb-3">Para quem é</p>
+        <h2 class="font-display text-ink text-3xl md:text-5xl leading-[1.05]">
+          Mais do que tratar o peso,<br/>
+          é sobre <span class="text-coral">transformar trajetórias</span>.
+        </h2>
+      </div>
+      <div class="md:col-span-3 space-y-4 text-ink-soft text-base md:text-lg leading-relaxed">
+        <p>
+          <span class="material-symbols-outlined align-middle text-coral" style="font-size:22px;">stethoscope</span>
+          <strong class="text-ink">Médicos</strong> que atuam ou desejam atuar no manejo moderno da obesidade.
+        </p>
+        <p>
+          <span class="material-symbols-outlined align-middle text-coral" style="font-size:22px;">restaurant</span>
+          <strong class="text-ink">Nutricionistas</strong> que integram nutrição, comportamento e farmacoterapia.
+        </p>
+        <p>
+          <span class="material-symbols-outlined align-middle text-coral" style="font-size:22px;">favorite</span>
+          <strong class="text-ink">Profissionais de saúde</strong> comprometidos com uma abordagem baseada em evidência e centrada no paciente.
+        </p>
+        <div class="pt-4">
+          <p class="font-display text-ink text-xl md:text-2xl leading-snug">
+            Se existe uma nova era no tratamento da obesidade,<br/>
+            <span class="text-coral">a MEV é o que garante que ela funcione de verdade.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOCAL ========== -->
+<section id="local" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-10 md:mb-12">
+      <p class="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-purple mb-3">Local do encontro</p>
+      <h2 class="font-display text-ink text-4xl md:text-6xl leading-[1.02] mb-4">Kurotel</h2>
+      <p class="text-ink-soft text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        Centro de Longevidade &amp; Spa em <strong class="text-ink">Gramado, Rio Grande do Sul</strong> — uma das referências em
+        saúde, estilo de vida e medicina preventiva da América Latina. O cenário ideal para a imersão.
+      </p>
+    </div>
+
+    <!-- Bento grid de fotos (hospedadas no CDN oficial do Kurotel) -->
+    <div class="grid grid-cols-6 grid-rows-2 gap-3 md:gap-4 mb-10 md:mb-12 h-[380px] md:h-[520px]">
+      <figure class="col-span-6 md:col-span-3 row-span-2 relative rounded-2xl overflow-hidden bg-purple-soft shadow-xl shadow-purple/10 group">
+        <img src="https://cdn.prod.website-files.com/6524a94b073ef164e095de03/66218cc0818170df86a83036_66218b99f82c2ebc0baabb2a_6526bc167542c17c5fd8c7b9_Kurotel%2027.webp"
+             alt="Fachada e exterior do Kurotel em Gramado"
+             loading="lazy"
+             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <figcaption class="absolute bottom-4 left-4 right-4 text-white">
+          <p class="text-[10px] font-bold tracking-widest uppercase text-white/80">O lugar</p>
+          <p class="font-display text-xl md:text-2xl leading-tight">Entre a Serra Gaúcha e o silêncio</p>
+        </figcaption>
+      </figure>
+
+      <figure class="col-span-3 md:col-span-2 row-span-1 relative rounded-2xl overflow-hidden bg-purple-soft shadow-lg shadow-purple/10 group">
+        <img src="https://cdn.prod.website-files.com/6524a94b073ef164e095de03/66218cb59350005f375f0bb6_66218b997f75baf8c5348211_656e00370c9892153c7154c8_spa.webp"
+             alt="Instalações do spa Kurotel"
+             loading="lazy"
+             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+        <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-purple text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Spa</span>
+      </figure>
+
+      <figure class="col-span-3 md:col-span-1 row-span-1 relative rounded-2xl overflow-hidden bg-purple-soft shadow-lg shadow-purple/10 group">
+        <img src="https://cdn.prod.website-files.com/6524a94b073ef164e095de03/66218ccb41f22d74c342788d_66218b99202d1a6fb6fa2475_6526bc244dfce5ab59ffb285_Kurotel%2034.webp"
+             alt="Natureza ao redor do Kurotel"
+             loading="lazy"
+             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+      </figure>
+
+      <figure class="col-span-3 md:col-span-2 row-span-1 relative rounded-2xl overflow-hidden bg-purple-soft shadow-lg shadow-purple/10 group">
+        <img src="https://cdn.prod.website-files.com/652402a9af9e55d46ffb16b4/66218b9a202f19149ff81c71_656dcfde5a953701abe1e634_Caminho-das-A%CC%81guas.webp"
+             alt="Caminho das Águas — piscina do Kurotel"
+             loading="lazy"
+             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+        <span class="absolute top-3 left-3 bg-white/95 backdrop-blur text-purple text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full shadow">Águas</span>
+      </figure>
+
+      <figure class="col-span-3 md:col-span-1 row-span-1 relative rounded-2xl overflow-hidden bg-purple-soft shadow-lg shadow-purple/10 group">
+        <img src="https://cdn.prod.website-files.com/6524a94b073ef164e095de03/66218ca7815c8af639d76ca1_66218b9a33744d918206f547_6526bbfca6a91b681821b707__M1_5457.webp"
+             alt="Ambiente interno do Kurotel"
+             loading="lazy"
+             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+      </figure>
+    </div>
+    <p class="text-[11px] text-ink-soft/70 text-center -mt-6 mb-10">Fotos: Kurotel</p>
+
+    <!-- Card de dados + CTAs -->
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-soft via-white to-coral-soft border border-purple/20 shadow-2xl shadow-purple/10 p-8 md:p-12">
+      <svg class="absolute -right-20 -bottom-20 opacity-25 w-[420px]" viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="200" cy="200" r="150" stroke="#9B8AFF" stroke-width="50" fill="none"/>
+      </svg>
+
+      <div class="relative z-10 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <div>
+          <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-purple mb-3">Informações</p>
+          <h3 class="font-display text-ink text-2xl md:text-3xl leading-snug mb-5 max-w-md">
+            Imersão de um dia com discussão clínica integrada.
+          </h3>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://www.kurotel.com.br/" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-ink text-white px-5 py-3 rounded-full font-semibold text-sm hover:bg-purple transition-colors">
+              Conhecer o Kurotel
+              <span class="material-symbols-outlined" style="font-size:18px;">open_in_new</span>
+            </a>
+            <a href="https://maps.google.com/?q=Kurotel+Gramado" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-white border-2 border-ink/10 text-ink px-5 py-3 rounded-full font-semibold text-sm hover:border-purple hover:text-purple transition-colors">
+              Ver no mapa
+              <span class="material-symbols-outlined" style="font-size:18px;">map</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/80 backdrop-blur rounded-2xl p-5 shadow-md shadow-purple/5">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-purple mb-2">Data</p>
+            <p class="font-display text-ink text-2xl md:text-3xl leading-tight">30<br/>de maio</p>
+          </div>
+          <div class="bg-white/80 backdrop-blur rounded-2xl p-5 shadow-md shadow-purple/5">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-purple mb-2">Cidade</p>
+            <p class="font-display text-ink text-2xl md:text-3xl leading-tight">Gramado<br/>RS</p>
+          </div>
+          <div class="col-span-2 bg-white/80 backdrop-blur rounded-2xl p-5 shadow-md shadow-purple/5">
+            <p class="text-[10px] font-bold tracking-widest uppercase text-purple mb-2">Formato</p>
+            <p class="text-ink font-semibold text-base md:text-lg leading-snug">Masterclass presencial — imersiva, com discussão clínica integrada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section id="inscricao" class="py-20 md:py-28 bg-coral relative overflow-hidden">
+  <!-- padrão de "cadeias" sutil -->
+  <div class="absolute inset-0 opacity-15 pointer-events-none" aria-hidden="true"
+       style="background-image: radial-gradient(circle at 2px 2px, white 1.5px, transparent 1.5px); background-size: 22px 22px;"></div>
+
+  <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+    <h2 class="font-display text-white text-4xl md:text-6xl leading-[1.02] mb-6">
+      Nunca a MEV foi<br/>tão necessária.
+    </h2>
+    <p class="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+      Garanta sua vaga na Masterclass CBMEV — <strong>30 de maio, Kurotel</strong>.
+      Inscrições oficiais pelo Sympla.
+    </p>
+    <a href="https://www.sympla.com.br/evento/masterclass-mev-e-obesidade-na-era-dos-analogos-do-glp1/3386092" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-white text-coral-dark px-10 py-4 rounded-full font-bold text-lg shadow-2xl shadow-black/10 hover:bg-cream hover:scale-105 transition-all active:scale-95">
+      Inscrever-se no Sympla
+      <span class="material-symbols-outlined" style="font-size:22px;">arrow_forward</span>
+    </a>
+    <p class="text-white/70 text-xs mt-6 tracking-wider">
+      Pagamento e emissão de ingresso processados pelo Sympla
+    </p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-ink text-white/70 py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div class="flex items-center gap-4">
+        <img src="images/brand/cbmev-logo.png" alt="CBMEV — Colégio Brasileiro de Medicina do Estilo de Vida" class="h-8 w-auto brightness-0 invert opacity-90"/>
+      </div>
+      <div class="text-xs md:text-sm space-y-1 md:text-right">
+        <p>Um evento do <strong class="text-white">CBMEV</strong> — Colégio Brasileiro de Medicina do Estilo de Vida</p>
+        <p class="text-white/50">Masterclass MEV e Obesidade na Era do GLP-1 • 30 de maio • Kurotel — Gramado/RS</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-8 pt-6 text-xs text-white/40 flex flex-col md:flex-row justify-between gap-3">
+      <p>© <span id="year"></span> CBMEV — Colégio Brasileiro de Medicina do Estilo de Vida. Todos os direitos reservados.</p>
+      <p>Conteúdo científico sob responsabilidade das palestrantes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
