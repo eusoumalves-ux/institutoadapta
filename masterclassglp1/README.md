@@ -55,7 +55,6 @@ Roteamento configurado em `../vercel.json` — a raiz do domínio redireciona pa
 
 ## Pendências / TODO
 
-- Fotos oficiais das palestrantes (Tassiane Alvarenga, Carol Pimentel) — atualmente placeholder com iniciais
 - `og-image.png` específica da Masterclass (atualmente sem OG image)
 - Horário de início/término do evento (não informado no briefing)
 - Valor da inscrição (controlado via Sympla)
