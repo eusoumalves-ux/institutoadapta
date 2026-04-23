@@ -33,7 +33,7 @@ python3 -m http.server 8000
 ```
 simposiomev/
 ├── index.html            # landing page do simpósio
-├── pos-graduacao.html    # página de vendas da Pós MEV
+├── posgraduacao.html    # página de vendas da Pós MEV
 ├── obrigado.html         # página de confirmação de inscrição
 ├── DESIGN.md             # design system "Clinical Editorial"
 ├── screen.png            # referência visual do mockup original
@@ -43,7 +43,7 @@ simposiomev/
 ## Páginas
 
 - **`index.html`** — Landing do 1º Simpósio Internacional de MEV.
-- **`pos-graduacao.html`** — Página de vendas da pós-graduação em Medicina do Estilo de Vida e Mudança de Comportamento (oferta baseada na LP oficial em `lp.institutoadapta.com/pos-medicina-estilo-de-vida-web`).
+- **`posgraduacao.html`** — Página de vendas da pós-graduação em Medicina do Estilo de Vida e Mudança de Comportamento (oferta baseada na LP oficial em `lp.institutoadapta.com/pos-medicina-estilo-de-vida-web`).
 - **`obrigado.html`** — Página de confirmação pós-inscrição no simpósio.
 
 ## Placeholders pendentes
@@ -61,9 +61,9 @@ Itens marcados com `TODO` no HTML aguardam informação definitiva:
 - Confirmação de Beth Frates (Harvard)
 - Confirmação do painel "O que há de novo em MOVIMENTO"
 
-**Pós-graduação (`pos-graduacao.html`):**
+**Pós-graduação (`posgraduacao.html`):**
+- URL final: `eventos.institutoadapta.com/simposiomev/posgraduacao`
 - Link real de checkout das duas ofertas (padrão e exclusiva)
-- URL final de publicação para meta `og:url`
 - Data de início da próxima turma
 - Data limite real dos bônus (atualmente o countdown é client-side, 7 dias a partir do primeiro acesso)
 - Demais docentes do corpo docente (além da coordenadora)
