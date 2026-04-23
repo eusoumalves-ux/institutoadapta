@@ -215,24 +215,18 @@
 
           <!-- Grid de palestrantes (apenas fotos mosaico) -->
           <div class="col-span-2 row-span-3 relative rounded-2xl overflow-hidden shadow-xl">
-            <div class="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0.5">
+            <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0.5">
               <div class="relative overflow-hidden">
                 <img src="images/palestrantes/Carla%20Montenegro.png" class="absolute inset-0 w-full h-full object-cover" alt="Carla Montenegro" />
               </div>
-              <div class="relative overflow-hidden bg-gradient-to-br from-primary/30 to-secondary/40 flex items-center justify-center">
-                <span class="material-symbols-outlined text-white/80 text-lg">person_add</span>
-              </div>
-              <div class="relative overflow-hidden bg-gradient-to-br from-primary/30 to-secondary/40 flex items-center justify-center">
-                <span class="material-symbols-outlined text-white/80 text-lg">person_add</span>
+              <div class="relative overflow-hidden">
+                <img src="images/palestrantes/Reginachamon.png" class="absolute inset-0 w-full h-full object-cover" alt="Regina Chamon" />
               </div>
               <div class="relative overflow-hidden">
-                <img src="images/palestrantes/Sley%20Tanigawa.png" class="absolute inset-0 w-full h-full object-cover" alt="Sley Tanigawa" />
+                <img src="images/palestrantes/Dra%20Ana%20Teresa%20D%E2%80%99Elia.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Dra. Ana Teresa D’Elia" />
               </div>
               <div class="relative overflow-hidden">
                 <img src="images/palestrantes/Fabricia%20Maciel.png" class="absolute inset-0 w-full h-full object-cover" alt="Fabricia Maciel" />
-              </div>
-              <div class="relative overflow-hidden bg-gradient-to-br from-primary/30 to-secondary/40 flex items-center justify-center">
-                <span class="material-symbols-outlined text-white/80 text-lg">person_add</span>
               </div>
             </div>
           </div>
@@ -341,54 +335,23 @@
         </div>
       </div>
 
-      <!-- Anúncio em breve (Consenso ACLM Depressão) -->
-      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary">
-        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,white,transparent_50%)]"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-8">
-          <div class="absolute top-6 right-6">
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 text-primary text-[10px] font-extrabold uppercase tracking-wide shadow-md">
-              <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">campaign</span>
-              Anúncio Oficial em Breve
-            </span>
-          </div>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="w-28 h-28 rounded-full bg-white/15 backdrop-blur flex items-center justify-center ring-4 ring-white/20">
-              <span class="material-symbols-outlined text-white text-5xl">person_add</span>
-            </div>
-          </div>
+      <!-- Dra. Ana Teresa D'Elia -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Dra%20Ana%20Teresa%20D%E2%80%99Elia.jpeg" alt="Dra. Ana Teresa D’Elia" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
           <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇧🇷</span>Brasil</p>
-          <h4 class="text-white text-2xl font-bold leading-tight">A ser anunciado em breve</h4>
+          <h4 class="text-white text-2xl font-bold leading-tight">Dra. Ana Teresa D’Elia</h4>
           <p class="text-white/70 text-sm mt-1">Consenso ACLM de Depressão</p>
         </div>
       </div>
 
-      <!-- Painel Movimento -->
-      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
-        <div class="absolute inset-0 grid grid-cols-3">
-          <div class="relative overflow-hidden">
-            <img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-          </div>
-          <div class="relative overflow-hidden bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <span class="material-symbols-outlined text-white/80 text-3xl">person_add</span>
-          </div>
-          <div class="relative overflow-hidden bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-            <span class="material-symbols-outlined text-white/80 text-3xl">person_add</span>
-          </div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/30 to-black/90"></div>
-        <div class="absolute inset-0 p-7 flex flex-col justify-between text-white">
-          <div>
-            <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur px-3 py-1 rounded-full mb-3">
-              <span class="material-symbols-outlined text-sm">groups</span>
-              <span class="text-[10px] font-bold tracking-widest uppercase">Painel</span>
-            </div>
-            <h4 class="text-2xl font-extrabold leading-tight">O que há de novo em <span class="text-primary-fixed">MOVIMENTO</span></h4>
-          </div>
-          <div class="space-y-1.5">
-            <p class="text-[10px] font-bold tracking-widest uppercase text-white/70">Com</p>
-            <p class="text-sm font-bold leading-snug">Carla Montenegro</p>
-            <p class="text-sm font-bold leading-snug text-white/70">+ palestrantes a serem anunciados</p>
-          </div>
+      <!-- Carla Montenegro -->
+      <div class="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container">
+        <img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/85 via-black/30 to-transparent">
+          <p class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-2"><span class="mr-1.5">🇧🇷</span>Brasil</p>
+          <h4 class="text-white text-2xl font-bold leading-tight">Carla Montenegro</h4>
+          <p class="text-white/70 text-sm mt-1">O que há de novo em MOVIMENTO</p>
         </div>
       </div>
 
@@ -555,28 +518,25 @@
         </div>
         <div class="space-y-4">
           <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
-            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center ring-2 ring-primary/20 shadow-sm"><span class="material-symbols-outlined text-white text-3xl">person_add</span></div><span class="text-lg leading-none">✨</span></div>
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Dra%20Ana%20Teresa%20D%E2%80%99Elia.jpeg" alt="Dra. Ana Teresa D’Elia" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇧🇷</span></div>
             <div class="space-y-2 min-w-0">
               <h4 class="text-xl font-bold">Discussão do Consenso de Depressão do ACLM</h4>
               <p class="text-on-surface-variant">Aplicações clínicas do consenso do American College of Lifestyle Medicine sobre depressão.</p>
-              <div class="flex flex-wrap items-center gap-2 pt-2 text-sm font-semibold text-on-surface-variant">
-                <span class="material-symbols-outlined text-sm">schedule</span> A ser anunciado em breve
-                <span class="ml-2 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-white text-[10px] font-extrabold uppercase tracking-wide shadow-md">
-                  <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">campaign</span>
-                  Anúncio Oficial em Breve
-                </span>
+              <div class="flex flex-wrap items-center gap-2 pt-2 text-sm font-semibold text-secondary">
+                <span class="material-symbols-outlined text-sm">person</span> Dra. Ana Teresa D’Elia
+                <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase">Confirmada</span>
               </div>
             </div>
           </div>
 
           <div class="bg-surface-container-lowest p-8 rounded-3xl flex items-start gap-8 shadow-sm">
-            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 flex items-center"><div class="w-12 h-12 rounded-xl overflow-hidden ring-2 ring-white shadow" style="margin-left:0px;"><img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="w-full h-full object-cover" /></div><div class="w-12 h-12 rounded-xl ring-2 ring-white shadow bg-gradient-to-br from-primary to-secondary flex items-center justify-center" style="margin-left:-8px;"><span class="material-symbols-outlined text-white text-lg">person_add</span></div><div class="w-12 h-12 rounded-xl ring-2 ring-white shadow bg-gradient-to-br from-secondary to-primary flex items-center justify-center" style="margin-left:-8px;"><span class="material-symbols-outlined text-white text-lg">person_add</span></div></div><span class="text-lg leading-none">🇧🇷</span></div>
+            <div class="shrink-0 flex flex-col items-center gap-1.5"><div class="shrink-0 w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary/10 shadow-sm"><img src="images/palestrantes/Carla%20Montenegro.png" alt="Carla Montenegro" class="w-full h-full object-cover" /></div><span class="text-lg leading-none">🇧🇷</span></div>
             <div class="space-y-2 min-w-0">
               <h4 class="text-xl font-bold">O que há de novo em MOVIMENTO</h4>
-              <p class="text-on-surface-variant">Painel sobre atualizações em atividade física e exercício como pilar da MEV.</p>
+              <p class="text-on-surface-variant">Palestra sobre atualizações em atividade física e exercício como pilar da MEV.</p>
               <div class="flex flex-wrap items-center gap-2 pt-2 text-sm font-semibold text-secondary">
-                <span class="material-symbols-outlined text-sm">groups</span>
-                Carla Montenegro <span class="text-on-surface-variant font-medium">• demais palestrantes a serem anunciados</span>
+                <span class="material-symbols-outlined text-sm">person</span>
+                Carla Montenegro
                 <span class="ml-2 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-white text-[10px] font-extrabold uppercase tracking-wide shadow-md">
                   <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">campaign</span>
                   Anúncio Oficial
