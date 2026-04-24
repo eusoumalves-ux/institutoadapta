@@ -6,7 +6,7 @@ Landing page da **Masterclass CBMEV: MEV e Obesidade na Era do GLP-1** — event
 - **Local:** Kurotel — Gramado/RS
 - **Formato:** presencial (imersão)
 - **Público:** médicos, nutricionistas e profissionais de saúde (aberto ao público geral da área)
-- **Palestrantes:** Dra. Tassiane Alvarenga (endocrinologista, USP) e Dra. Carol Pimentel (nutricionista, doutora USP)
+- **Palestrantes:** Dra. Tassiane Alvarenga (endocrinologista, USP) e Dra. Carolina Pimentel (nutricionista, doutora USP)
 - **Inscrições:** via Sympla — [link oficial](https://www.sympla.com.br/evento/masterclass-mev-e-obesidade-na-era-dos-analogos-do-glp1/3386092)
 
 ## Identidade visual
