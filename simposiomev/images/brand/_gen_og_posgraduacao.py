@@ -67,13 +67,6 @@ def main():
     f_brand = font(26)
     d.text((60, 50), "INSTITUTO ADAPTA", font=f_brand, fill=WHITE)
 
-    # Top-right: pill verde "LICENCIADA PELO CBMEV"
-    pill_text = "OFICIAL · LICENCIADA PELO CBMEV"
-    f_pill = font(20)
-    bbox = d.textbbox((0, 0), pill_text, font=f_pill)
-    pill_w = bbox[2] - bbox[0] + 56
-    draw_pill(d, (W - pill_w - 60, 44), pill_text, f_pill, GREEN, DARK_TEXT)
-
     # PÓS-GRADUAÇÃO — protagonista
     f_title = font(160)
     d.text((60, 130), "PÓS-", font=f_title, fill=GREEN)
