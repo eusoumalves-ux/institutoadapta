@@ -67,21 +67,29 @@ def main():
     f_brand = font(26)
     d.text((60, 50), "INSTITUTO ADAPTA", font=f_brand, fill=WHITE)
 
-    # PÓS-GRADUAÇÃO — protagonista
-    f_title = font(160)
-    d.text((60, 130), "PÓS-", font=f_title, fill=GREEN)
-    d.text((60, 265), "GRADUAÇÃO", font=f_title, fill=GREEN)
+    # PÓS-GRADUAÇÃO — eyebrow grande (linha única)
+    f_eyebrow = font(110)
+    d.text((60, 110), "PÓS-GRADUAÇÃO", font=f_eyebrow, fill=GREEN)
 
-    # Subtitle (white, bold)
-    f_sub = font(32)
-    d.text((60, 460), "em Medicina do Estilo de Vida e Mudança de Comportamento",
-           font=f_sub, fill=WHITE)
+    # 'em' prefix pequeno
+    f_em = font(36)
+    d.text((60, 250), "em", font=f_em, fill=(255, 255, 255, 220))
+
+    # Tema principal: Medicina do Estilo de Vida (linha 1) + Mudança de Comportamento (linha 2)
+    f_topic = font(78)
+    d.text((60, 290), "Medicina do Estilo de Vida", font=f_topic, fill=WHITE)
+    f_topic2 = font(56)
+    d.text((60, 385), "e Mudança de Comportamento", font=f_topic2, fill=WHITE)
 
     # Stats row
-    f_stats = font(22)
-    d.text((60, 510),
-           "360h  ·  Diploma MEC  ·  100% Online  ·  Acesso vitalício  ·  Harvard · Yale · Einstein",
-           font=f_stats, fill=(255, 255, 255, 220))
+    f_stats = font(24)
+    d.text((60, 475),
+           "360h  ·  Diploma MEC  ·  100% Online  ·  Acesso vitalício",
+           font=f_stats, fill=(255, 255, 255, 230))
+    f_schools = font(22)
+    d.text((60, 515),
+           "Harvard  ·  Yale  ·  Einstein  ·  Loma Linda  ·  CBMEV",
+           font=f_schools, fill=(255, 255, 255, 200))
 
     # White footer with URL
     footer_h = 60
