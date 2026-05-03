@@ -5,8 +5,6 @@
     { "source": "/", "destination": "/CBMEV/masterclassglp1/", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/imersaotreinamentofeminino", "destination": "/MasterclassMenarcaMenopausa/index.html" },
-    { "source": "/imersaotreinamentofeminino/", "destination": "/MasterclassMenarcaMenopausa/index.html" },
     { "source": "/imersaotreinamentofeminino/:path*", "destination": "/MasterclassMenarcaMenopausa/:path*" }
   ]
 }
