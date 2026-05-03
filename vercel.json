@@ -3,8 +3,5 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/", "destination": "/CBMEV/masterclassglp1/", "permanent": false }
-  ],
-  "rewrites": [
-    { "source": "/imersaotreinamentofeminino/:path*", "destination": "/MasterclassMenarcaMenopausa/:path*" }
   ]
 }
