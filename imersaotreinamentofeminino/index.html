@@ -887,12 +887,105 @@
       </ul>
     </div>
 
-    <!-- CTA -->
-    <a href="#" class="hotmart-cta block w-full text-center hero-gradient text-white px-8 py-5 rounded-full font-extrabold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/30">
-      SIM, QUERO ENTRAR NO LOTE EXCLUSIVO — R$ 27
-      <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
-    </a>
+    <!-- Formulário Klicksend (Hotmart) -->
+    <form klicksend-form-id="Y4u16oM"
+          autocomplete="off"
+          method="post"
+          action="//handler.send.hotmart.com/subscription/Y4u16oM?hotfeature=53"
+          class="space-y-3">
+      <input type="email"
+             autocomplete="off"
+             name="email"
+             id="ks-email"
+             placeholder="Seu melhor e-mail"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+      <input type="text"
+             autocomplete="off"
+             name="first_name"
+             id="ks-name"
+             placeholder="Primeiro nome"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+      <input type="tel"
+             autocomplete="off"
+             name="phone"
+             id="ks-phone"
+             placeholder="WhatsApp (com DDD)"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+
+      <!-- Honeypot anti-spam (não remover) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" autocomplete="new-password" name="b_Y4u16oM" tabindex="-1" value=""/>
+      </div>
+
+      <button klicksend-form-submit-id="Y4u16oM"
+              type="submit"
+              class="hotmart-cta block w-full text-center hero-gradient text-white px-8 py-5 rounded-full font-extrabold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/30 mt-2">
+        SIM, QUERO ENTRAR NO LOTE EXCLUSIVO — R$ 27
+        <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
+      </button>
+    </form>
+
     <p class="text-center text-sm text-muted mt-4">Pagamento processado pela Hotmart • Cartão, Pix ou boleto</p>
+
+    <script>
+      (function () {
+        var form = document.querySelector('form[klicksend-form-id="Y4u16oM"]');
+        if (!form) return;
+
+        // Forward URL params (UTMs, fbclid, etc.) para a Hotmart
+        var pageParams = new URLSearchParams(window.location.search);
+        var formActionUrl = new URL(form.action);
+        var formActionSearchParams = formActionUrl.searchParams.size > 0
+          ? formActionUrl.searchParams.toString() + '&'
+          : '';
+        var combinedParams = formActionSearchParams + pageParams.toString();
+        form.action = formActionUrl.origin + formActionUrl.pathname +
+          (combinedParams ? '?' + combinedParams : '');
+
+        // Intercepta submit: envia pro Klicksend e redireciona pra página de obrigado
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // Honeypot — bot detectado, ignora silenciosamente
+          var honeypot = form.querySelector('input[name="b_Y4u16oM"]');
+          if (honeypot && honeypot.value) return;
+
+          // Estado de loading
+          var btn = form.querySelector('button[type="submit"]');
+          var originalHTML = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = '<span class="material-symbols-outlined align-middle mr-2" style="animation:spin 1s linear infinite;">progress_activity</span>Enviando...';
+
+          var formData = new FormData(form);
+
+          // Constrói URL de redirect mantendo UTMs
+          var redirectParams = pageParams.toString();
+          var redirectUrl = new URL('obrigado/', window.location.href).href +
+            (redirectParams ? '?' + redirectParams : '');
+
+          // Fire-and-forget POST pro Klicksend (no-cors)
+          fetch(form.action, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+          }).finally(function () {
+            window.location.href = redirectUrl;
+          });
+
+          // Fallback: se a rede travar por mais de 4s, redireciona mesmo assim
+          setTimeout(function () {
+            if (btn.disabled) window.location.href = redirectUrl;
+          }, 4000);
+        });
+      })();
+    </script>
+    <style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
   </div>
 </section>
 
