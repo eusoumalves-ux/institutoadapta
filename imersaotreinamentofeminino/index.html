@@ -887,105 +887,14 @@
       </ul>
     </div>
 
-    <!-- Formulário Klicksend (Hotmart) -->
-    <form klicksend-form-id="Y4u16oM"
-          autocomplete="off"
-          method="post"
-          action="//handler.send.hotmart.com/subscription/Y4u16oM?hotfeature=53"
-          class="space-y-3">
-      <input type="email"
-             autocomplete="off"
-             name="email"
-             id="ks-email"
-             placeholder="Seu melhor e-mail"
-             value=""
-             required
-             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
-      <input type="text"
-             autocomplete="off"
-             name="first_name"
-             id="ks-name"
-             placeholder="Primeiro nome"
-             value=""
-             required
-             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
-      <input type="tel"
-             autocomplete="off"
-             name="phone"
-             id="ks-phone"
-             placeholder="WhatsApp (com DDD)"
-             value=""
-             required
-             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-lowest text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
-
-      <!-- Honeypot anti-spam (não remover) -->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" autocomplete="new-password" name="b_Y4u16oM" tabindex="-1" value=""/>
-      </div>
-
-      <button klicksend-form-submit-id="Y4u16oM"
-              type="submit"
-              class="hotmart-cta block w-full text-center hero-gradient text-white px-8 py-5 rounded-full font-extrabold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/30 mt-2">
-        SIM, QUERO ENTRAR NO LOTE EXCLUSIVO — R$ 27
-        <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
-      </button>
-    </form>
-
+    <!-- CTA: abre modal de inscrição -->
+    <button type="button"
+            data-modal-open="inscricao"
+            class="hotmart-cta block w-full text-center hero-gradient text-white px-8 py-5 rounded-full font-extrabold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/30">
+      SIM, QUERO ENTRAR NO LOTE EXCLUSIVO — R$ 27
+      <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
+    </button>
     <p class="text-center text-sm text-muted mt-4">Pagamento processado pela Hotmart • Cartão, Pix ou boleto</p>
-
-    <script>
-      (function () {
-        var form = document.querySelector('form[klicksend-form-id="Y4u16oM"]');
-        if (!form) return;
-
-        // Forward URL params (UTMs, fbclid, etc.) para a Hotmart
-        var pageParams = new URLSearchParams(window.location.search);
-        var formActionUrl = new URL(form.action);
-        var formActionSearchParams = formActionUrl.searchParams.size > 0
-          ? formActionUrl.searchParams.toString() + '&'
-          : '';
-        var combinedParams = formActionSearchParams + pageParams.toString();
-        form.action = formActionUrl.origin + formActionUrl.pathname +
-          (combinedParams ? '?' + combinedParams : '');
-
-        // Intercepta submit: envia pro Klicksend e redireciona pra página de obrigado
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          // Honeypot — bot detectado, ignora silenciosamente
-          var honeypot = form.querySelector('input[name="b_Y4u16oM"]');
-          if (honeypot && honeypot.value) return;
-
-          // Estado de loading
-          var btn = form.querySelector('button[type="submit"]');
-          var originalHTML = btn.innerHTML;
-          btn.disabled = true;
-          btn.innerHTML = '<span class="material-symbols-outlined align-middle mr-2" style="animation:spin 1s linear infinite;">progress_activity</span>Enviando...';
-
-          var formData = new FormData(form);
-
-          // Constrói URL de redirect mantendo UTMs
-          var redirectParams = pageParams.toString();
-          var redirectUrl = new URL('obrigado/', window.location.href).href +
-            (redirectParams ? '?' + redirectParams : '');
-
-          // Fire-and-forget POST pro Klicksend (no-cors)
-          fetch(form.action, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: formData
-          }).finally(function () {
-            window.location.href = redirectUrl;
-          });
-
-          // Fallback: se a rede travar por mais de 4s, redireciona mesmo assim
-          setTimeout(function () {
-            if (btn.disabled) window.location.href = redirectUrl;
-          }, 4000);
-        });
-      })();
-    </script>
-    <style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
   </div>
 </section>
 
@@ -1237,6 +1146,179 @@
     </div>
   </div>
 </footer>
+
+<!-- Modal de inscrição -->
+<div id="inscModal"
+     class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-6"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="inscModalTitle">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-ink/75 backdrop-blur-sm" data-modal-close></div>
+
+  <!-- Card -->
+  <div class="relative bg-surface-lowest rounded-3xl shadow-2xl max-w-md w-full p-6 md:p-8 max-h-[92vh] overflow-y-auto modal-card-anim">
+    <button type="button"
+            class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface-low hover:bg-line transition-colors flex items-center justify-center"
+            data-modal-close
+            aria-label="Fechar">
+      <span class="material-symbols-outlined text-ink-soft">close</span>
+    </button>
+
+    <div class="text-center mb-6 mt-1">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-2 block">Última etapa</span>
+      <h2 id="inscModalTitle" class="text-2xl md:text-3xl font-extrabold text-ink leading-tight mb-3">
+        Garanta sua vaga por R$ 27
+      </h2>
+      <p class="text-ink-soft text-sm">
+        3h ao vivo com a Dra. Bianca Ramallo. Preencha abaixo:
+      </p>
+    </div>
+
+    <!-- Formulário Klicksend (Hotmart) -->
+    <form klicksend-form-id="Y4u16oM"
+          autocomplete="off"
+          method="post"
+          action="//handler.send.hotmart.com/subscription/Y4u16oM?hotfeature=53"
+          class="space-y-3">
+      <input type="email"
+             autocomplete="off"
+             name="email"
+             id="ks-email"
+             placeholder="Seu melhor e-mail"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-low text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+      <input type="text"
+             autocomplete="off"
+             name="first_name"
+             id="ks-name"
+             placeholder="Primeiro nome"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-low text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+      <input type="tel"
+             autocomplete="off"
+             name="phone"
+             id="ks-phone"
+             placeholder="WhatsApp (com DDD)"
+             value=""
+             required
+             class="w-full px-5 py-4 rounded-2xl border border-line bg-surface-low text-ink placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"/>
+
+      <!-- Honeypot anti-spam (não remover) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" autocomplete="new-password" name="b_Y4u16oM" tabindex="-1" value=""/>
+      </div>
+
+      <button klicksend-form-submit-id="Y4u16oM"
+              type="submit"
+              class="hotmart-cta block w-full text-center hero-gradient text-white px-8 py-4 rounded-full font-extrabold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/30 mt-2">
+        QUERO MINHA VAGA POR R$ 27
+        <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
+      </button>
+    </form>
+
+    <p class="text-center text-xs text-muted mt-4">
+      Pagamento processado pela Hotmart • Cartão, Pix ou boleto
+    </p>
+  </div>
+</div>
+
+<style>
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes modalCardIn { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  #inscModal.flex { animation: modalFadeIn 180ms ease-out; }
+  #inscModal .modal-card-anim { animation: modalCardIn 220ms cubic-bezier(0.16, 1, 0.3, 1); }
+</style>
+
+<script>
+  (function () {
+    /* ===== Modal de inscrição ===== */
+    var modal = document.getElementById('inscModal');
+    if (!modal) return;
+    var bodyEl = document.body;
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      bodyEl.style.overflow = 'hidden';
+      setTimeout(function () {
+        var firstInput = modal.querySelector('input[name="email"]');
+        if (firstInput) firstInput.focus();
+      }, 220);
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      bodyEl.style.overflow = '';
+    }
+
+    // Triggers: todos os links pra #inscricao + qualquer elemento com data-modal-open="inscricao"
+    var triggers = document.querySelectorAll('a[href="#inscricao"], [data-modal-open="inscricao"]');
+    triggers.forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    // Close: botões com data-modal-close (X e backdrop)
+    modal.querySelectorAll('[data-modal-close]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+
+    // ESC pra fechar
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+
+    /* ===== Form Klicksend (já dentro do modal) ===== */
+    var form = modal.querySelector('form[klicksend-form-id="Y4u16oM"]');
+    if (!form) return;
+
+    // Forward URL params (UTMs, fbclid, etc.) para a Hotmart
+    var pageParams = new URLSearchParams(window.location.search);
+    var formActionUrl = new URL(form.action);
+    var formActionSearchParams = formActionUrl.searchParams.size > 0
+      ? formActionUrl.searchParams.toString() + '&'
+      : '';
+    var combinedParams = formActionSearchParams + pageParams.toString();
+    form.action = formActionUrl.origin + formActionUrl.pathname +
+      (combinedParams ? '?' + combinedParams : '');
+
+    // Submit: envia pro Klicksend e redireciona pra obrigado/
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var honeypot = form.querySelector('input[name="b_Y4u16oM"]');
+      if (honeypot && honeypot.value) return;
+
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined align-middle mr-2" style="animation:spin 1s linear infinite;">progress_activity</span>Enviando...';
+
+      var formData = new FormData(form);
+      var redirectParams = pageParams.toString();
+      var redirectUrl = new URL('obrigado/', window.location.href).href +
+        (redirectParams ? '?' + redirectParams : '');
+
+      fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).finally(function () {
+        window.location.href = redirectUrl;
+      });
+
+      setTimeout(function () {
+        if (btn.disabled) window.location.href = redirectUrl;
+      }, 4000);
+    });
+  })();
+</script>
 
 </body>
 </html>
