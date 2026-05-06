@@ -914,8 +914,8 @@
 
       var formData = new FormData(form);
       var redirectParams = pageParams.toString();
-      // Redireciona pra obrigado/ na raiz da imersão (compartilhada entre v1 e v2)
-      var redirectUrl = '/imersaotreinamentofeminino/obrigado/' +
+      // Redireciona pra obrigado/ da própria v2 (paleta + tom matching)
+      var redirectUrl = '/imersaotreinamentofeminino/v2/obrigado/' +
         (redirectParams ? '?' + redirectParams : '');
 
       fetch(form.action, {
