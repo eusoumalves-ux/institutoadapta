@@ -1355,6 +1355,52 @@
   #inscModal .modal-card-anim { animation: modalCardIn 220ms cubic-bezier(0.16, 1, 0.3, 1); }
 </style>
 
+<!-- ===== A/B Tracking: variante v1 ===== -->
+<script>
+  (function () {
+    var VARIANT = 'v1';
+    var PAGE_TYPE = 'imersao_capture';
+
+    // Expõe a variante globalmente
+    window.AB_VARIANT = VARIANT;
+
+    // Auto-injeta utm_content se não tiver UTM nenhum (preserva atribuição de ads)
+    try {
+      var url = new URL(window.location.href);
+      var hasAnyUtm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].some(function(k){return url.searchParams.has(k);});
+      if (!hasAnyUtm) {
+        url.searchParams.set('utm_content', VARIANT);
+        url.searchParams.set('utm_source', 'direct');
+        history.replaceState({}, '', url.toString());
+      } else if (!url.searchParams.has('utm_content')) {
+        url.searchParams.set('utm_content', VARIANT);
+        history.replaceState({}, '', url.toString());
+      }
+    } catch (e) {}
+
+    // GTM dataLayer (lp_view)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'lp_view',
+      ab_variant: VARIANT,
+      page_type: PAGE_TYPE
+    });
+
+    // Meta Pixel custom event (se fbq estiver carregado)
+    if (typeof window.fbq === 'function') {
+      window.fbq('trackCustom', 'LPView', { variant: VARIANT, page_type: PAGE_TYPE });
+    }
+
+    // Hook pro lead_submit — disparado pelo bloco do modal abaixo
+    window.__abTrackLead = function () {
+      window.dataLayer.push({ event: 'lead_submit', ab_variant: VARIANT, page_type: PAGE_TYPE });
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead', { variant: VARIANT, page_type: PAGE_TYPE });
+      }
+    };
+  })();
+</script>
+
 <script>
   (function () {
     /* ===== Modal de inscrição ===== */
@@ -1417,6 +1463,9 @@
 
       var honeypot = form.querySelector('input[name="b_Y4u16oM"]');
       if (honeypot && honeypot.value) return;
+
+      // Tracking de lead com identificação de variante
+      if (typeof window.__abTrackLead === 'function') window.__abTrackLead();
 
       var btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
