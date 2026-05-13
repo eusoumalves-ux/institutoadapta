@@ -137,6 +137,29 @@ h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.02em}
 .who-list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem}
 .who-list li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--green-soft);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233ee37e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-repeat:no-repeat;background-position:center;background-size:14px;margin-top:2px}
 
+/* Audience — fotos reais com bordas esfumaadas */
+.audience{background:linear-gradient(180deg,#050d24,#091433)}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.audience-grid figure{margin:0;text-align:center}
+.audience-grid img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  -webkit-mask-image:radial-gradient(ellipse 72% 75% at center, #000 32%, transparent 100%);
+  mask-image:radial-gradient(ellipse 72% 75% at center, #000 32%, transparent 100%);
+  filter:contrast(1.05) saturate(1.06);
+  transition:transform .35s ease;
+  will-change:transform;
+}
+.audience-grid figure:hover img{transform:scale(1.04)}
+.audience-grid figcaption{
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--text);
+  margin-top:6px;
+  letter-spacing:.01em;
+}
+
 /* Bonus */
 .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .bonus-card{position:relative;border-radius:var(--radius-lg);padding:24px 20px 20px;border:1px solid var(--border);overflow:hidden;background:var(--bg-card)}
@@ -235,6 +258,7 @@ footer a{color:var(--muted)}
   .summary-grid{grid-template-columns:1fr}
   .learn-grid{grid-template-columns:1fr}
   .bonus-grid{grid-template-columns:1fr}
+  .audience-grid{grid-template-columns:repeat(2,1fr);gap:16px}
   .compare-grid{grid-template-columns:1fr}
   .teacher-grid{grid-template-columns:1fr;gap:32px}
   .teacher-photo{max-width:360px;margin:0 auto}
@@ -407,6 +431,35 @@ footer a{color:var(--muted)}
         <li>Já tentou cursos de Grupos Especiais e saiu cheio de teoria sem aplicação</li>
         <li>Quer um protocolo validado clinicamente, não improviso de internet</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Audience — fotos reais dos grupos especiais com esfumaado -->
+<section class="section audience">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Quem você atende</span>
+      <h2 style="margin-top:14px">Os grupos que você vai prescrever com segurança</h2>
+      <p class="lead">Cada perfil tem suas próprias avaliações, intensidades e sinais de alerta. Você sai do workshop com protocolo específico pra cada um.</p>
+    </div>
+    <div class="audience-grid">
+      <figure>
+        <img src="images/audience/hipertensos.webp" alt="Profissional atendendo aluna idosa em sessão de mobilidade" width="266" height="266" loading="lazy" decoding="async">
+        <figcaption>Hipertensos</figcaption>
+      </figure>
+      <figure>
+        <img src="images/audience/gestantes.webp" alt="Gestante em treinamento de força supervisionado" width="332" height="332" loading="lazy" decoding="async">
+        <figcaption>Gestantes</figcaption>
+      </figure>
+      <figure>
+        <img src="images/audience/cardiopatas.webp" alt="Reabilitação cardiovascular em equipamento de musculação" width="452" height="452" loading="lazy" decoding="async">
+        <figcaption>Cardiopatas</figcaption>
+      </figure>
+      <figure>
+        <img src="images/audience/diabeticos.webp" alt="Casal de idosos em alongamento ativo" width="346" height="346" loading="lazy" decoding="async">
+        <figcaption>Diabéticos</figcaption>
+      </figure>
     </div>
   </div>
 </section>
