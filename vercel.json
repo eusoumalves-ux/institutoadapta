@@ -2,6 +2,24 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "redirects": [
-    { "source": "/", "destination": "/CBMEV/masterclassglp1/", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/CBMEV/masterclassglp1/",
+      "permanent": false,
+      "missing": [{ "type": "host", "value": "pos.institutoadapta.com" }]
+    },
+    {
+      "source": "/",
+      "destination": "/neurociencia/",
+      "permanent": false,
+      "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path((?!neurociencia).+)",
+      "destination": "/neurociencia/:path",
+      "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
+    }
   ]
 }
