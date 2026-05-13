@@ -4,12 +4,6 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/CBMEV/masterclassglp1/",
-      "permanent": false,
-      "missing": [{ "type": "host", "value": "pos.institutoadapta.com" }]
-    },
-    {
-      "source": "/",
       "destination": "/neurociencia/",
       "permanent": false,
       "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
