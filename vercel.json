@@ -4,12 +4,23 @@
   "redirects": [
     {
       "source": "/",
+      "destination": "https://institutoadapta.com/",
+      "permanent": false,
+      "has": [{ "type": "host", "value": "eventos.institutoadapta.com" }]
+    },
+    {
+      "source": "/",
       "destination": "/neurociencia/",
       "permanent": false,
       "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
     }
   ],
   "rewrites": [
+    {
+      "source": "/:path((?!eventos).+)",
+      "destination": "/eventos/:path",
+      "has": [{ "type": "host", "value": "eventos.institutoadapta.com" }]
+    },
     {
       "source": "/:path((?!neurociencia).+)",
       "destination": "/neurociencia/:path",
