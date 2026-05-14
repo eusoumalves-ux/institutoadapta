@@ -25,8 +25,8 @@
 <link rel="icon" type="image/png" sizes="512x512" href="images/brand/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png">
 
-<link rel="preload" as="image" href="images/palestrantes/carla-hero.webp" fetchpriority="high">
-<link rel="preload" as="image" href="images/audience/cardiopatas.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/palestrantes/carla-hero.webp" fetchpriority="high" media="(min-width: 881px)">
+<link rel="preload" as="image" href="images/audience/cardiopatas.webp" fetchpriority="high" media="(min-width: 881px)">
 
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -297,7 +297,8 @@ footer a{color:rgba(255,255,255,.85)}
   .hero{padding:32px 0 48px}
   .hero-grid{grid-template-columns:1fr;gap:32px;text-align:center}
   .hero-credentials{justify-content:center}
-  .hero-photo{order:-1;max-width:360px;margin:0 auto}
+  .hero-photo{max-width:360px;margin:24px auto 0}
+  .hero{background:linear-gradient(180deg,#fdfcf8 0%,var(--bg) 100%)}
   .hero p.lead{margin:0 auto 24px}
   .cta-row{justify-content:center}
   .badge-mec{left:-6px}
@@ -377,7 +378,7 @@ footer a{color:rgba(255,255,255,.85)}
     </div>
     <div class="hero-photo">
       <div class="img-wrap">
-        <img src="images/palestrantes/carla-hero.webp" alt="Profa. Dra. Carla Montenegro" width="500" height="687" fetchpriority="high" decoding="async">
+        <img src="images/palestrantes/carla-hero.webp" alt="Profa. Dra. Carla Montenegro" width="500" height="687" decoding="async" loading="eager">
       </div>
       <div class="badge-floating badge-mec">
         <img src="images/brand/selo-mec.webp" alt="Selo MEC" width="42" height="42" loading="lazy" decoding="async">
