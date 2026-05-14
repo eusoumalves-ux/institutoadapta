@@ -94,8 +94,18 @@ h1,h2,h3{line-height:1.18;font-weight:800;letter-spacing:-.02em;color:var(--text
 .hero-credentials{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
 .cred{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);background:var(--bg-2);border-radius:99px;font-size:.8rem;font-weight:600;color:var(--text-2);box-shadow:var(--shadow-sm)}
 .cred svg{width:14px;height:14px;color:var(--primary)}
-.hero-prelude{font-size:1.05rem;font-weight:600;color:var(--muted);margin:18px 0 6px;letter-spacing:.005em}
-.hero-prelude strong{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.hero-prelude{font-size:1.3rem;font-weight:600;color:var(--text-2);margin:18px 0 10px;letter-spacing:.005em}
+.hero-prelude strong{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-deep) 100%);
+  color:#fff;
+  font-weight:800;
+  padding:2px 14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px -6px rgba(4,120,87,.45);
+  letter-spacing:.01em;
+  transform:translateY(-1px);
+}
 .hero h1{font-size:var(--fs-h1);margin-bottom:14px}
 .hero h1 .hl{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:560px;margin-bottom:28px}
