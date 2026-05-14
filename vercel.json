@@ -22,7 +22,7 @@
       "has": [{ "type": "host", "value": "eventos.institutoadapta.com" }]
     },
     {
-      "source": "/:path((?!neurociencia|fisiocardioresp|images).+)",
+      "source": "/:path((?!neurociencia|fisiocardioresp|mev|images).+)",
       "destination": "/neurociencia/:path",
       "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
     }
