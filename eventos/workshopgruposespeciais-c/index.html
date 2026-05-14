@@ -26,6 +26,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png">
 
 <link rel="preload" as="image" href="images/palestrantes/carla-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/audience/cardiopatas.webp" fetchpriority="high">
 
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -75,11 +76,20 @@ h1,h2,h3{line-height:1.18;font-weight:800;letter-spacing:-.02em;color:var(--text
 .cd-cell small{display:block;font-size:.55rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#064e3b;opacity:.8;line-height:1}
 
 /* Hero */
-.hero{position:relative;background:linear-gradient(180deg,#fdfcf8 0%,var(--bg) 100%);padding:48px 0 56px;overflow:hidden}
+.hero{
+  position:relative;
+  background:
+    linear-gradient(to right, var(--bg) 0%, rgba(250,250,247,.96) 40%, rgba(250,250,247,.4) 65%, rgba(250,250,247,.05) 88%, transparent 100%),
+    url('images/audience/cardiopatas.webp') center right / cover no-repeat,
+    linear-gradient(180deg,#fdfcf8 0%,var(--bg) 100%);
+  padding:48px 0 56px;
+  overflow:hidden;
+}
 .hero::before{content:"";position:absolute;inset:0;background:
   radial-gradient(ellipse 50% 40% at 90% 0%, var(--primary-soft), transparent 70%),
   radial-gradient(ellipse 40% 30% at 0% 80%, var(--accent-soft), transparent 70%);
-  pointer-events:none}
+  pointer-events:none;z-index:0}
+.hero-grid{z-index:1}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
 .hero-credentials{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
 .cred{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);background:var(--bg-2);border-radius:99px;font-size:.8rem;font-weight:600;color:var(--text-2);box-shadow:var(--shadow-sm)}
