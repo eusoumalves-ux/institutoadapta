@@ -78,6 +78,18 @@ h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.02em}
 .hero-credentials{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
 .cred{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border-strong);border-radius:99px;font-size:.8rem;font-weight:600;color:#dde6ff;background:rgba(255,255,255,.03)}
 .cred svg{width:14px;height:14px;color:var(--green)}
+.hero-prelude{font-size:1.3rem;font-weight:600;color:#cbd5e1;margin:18px 0 14px;letter-spacing:.005em}
+.hero-prelude strong{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--green) 0%,var(--green-2) 100%);
+  color:#001a14;
+  font-weight:800;
+  padding:2px 14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px -6px rgba(62,227,126,.45);
+  letter-spacing:.01em;
+  transform:translateY(-1px);
+}
 .hero h1{font-size:var(--fs-h1);margin-bottom:14px}
 .hero h1 .hl{background:linear-gradient(120deg,var(--green) 0%,#a7f3d0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:540px;margin-bottom:28px}
@@ -305,6 +317,7 @@ footer a{color:var(--muted)}
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">Online · próximo domingo, 17 de maio</span>
+      <p class="hero-prelude">Você, profissional da <strong>Educação Física</strong>,</p>
       <div class="hero-credentials" aria-label="Credenciais da palestrante">
         <span class="cred">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
