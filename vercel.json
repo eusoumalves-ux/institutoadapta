@@ -22,7 +22,7 @@
       "has": [{ "type": "host", "value": "eventos.institutoadapta.com" }]
     },
     {
-      "source": "/:path((?!neurociencia|pg13|pg2|images).+)",
+      "source": "/:path((?!neurociencia|pg13|pg2|pg5|pg6|images).+)",
       "destination": "/neurociencia/:path",
       "has": [{ "type": "host", "value": "pos.institutoadapta.com" }]
     }
