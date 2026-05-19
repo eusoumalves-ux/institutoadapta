@@ -262,30 +262,29 @@
             <p class="text-white/60 text-xs mt-1">em 9 módulos</p>
           </div>
 
-          <!-- Main visual: team photo -->
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 aspect-[4/5] hero-gradient">
-            <!-- Photo -->
+          <!-- Main visual: full team photo with feathered edges -->
+          <div class="relative">
+            <!-- Ambient color accents bleeding into hero -->
+            <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-tertiary-fixed/15 blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-primary-bright/30 blur-3xl pointer-events-none"></div>
+
+            <!-- Photo: full image, edges faded into the hero background -->
             <img src="images/image.png"
                  alt="Equipe de especialistas em fisioterapia cardiopulmonar"
-                 class="absolute inset-0 w-full h-full object-cover object-[center_top]"/>
+                 class="relative w-full h-auto block"
+                 style="-webkit-mask-image: radial-gradient(ellipse 95% 92% at center, #000 48%, rgba(0,0,0,0.6) 75%, transparent 100%);
+                        mask-image: radial-gradient(ellipse 95% 92% at center, #000 48%, rgba(0,0,0,0.6) 75%, transparent 100%);"/>
+          </div>
 
-            <!-- Ambient color accents to blend with hero background -->
-            <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-tertiary-fixed/15 blur-3xl mix-blend-screen pointer-events-none"></div>
-            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-primary-bright/25 blur-3xl mix-blend-screen pointer-events-none"></div>
-
-            <!-- Top fade for floating cards legibility -->
-            <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/30 to-transparent pointer-events-none"></div>
-
-            <!-- Bottom gradient + caption overlay -->
-            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 bg-gradient-to-t from-black/85 via-black/50 to-transparent">
-              <div class="inline-flex items-center gap-2 glass-dark rounded-full px-3 py-1.5 border border-white/15 mb-3">
-                <span class="w-2 h-2 rounded-full bg-tertiary-fixed pulse-soft"></span>
-                <span class="text-white text-[10px] font-bold tracking-[0.2em] uppercase">Corpo docente especialista</span>
-              </div>
-              <p class="text-white text-xl md:text-2xl font-extrabold leading-tight">
-                Aprenda com quem reabilita pacientes todos os dias.
-              </p>
+          <!-- Caption below the photo -->
+          <div class="relative z-10 mt-2 md:mt-4 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 glass-dark rounded-full px-3 py-1.5 border border-white/15 mb-3">
+              <span class="w-2 h-2 rounded-full bg-tertiary-fixed pulse-soft"></span>
+              <span class="text-white text-[10px] font-bold tracking-[0.2em] uppercase">Corpo docente especialista</span>
             </div>
+            <p class="text-white text-xl md:text-2xl font-extrabold leading-tight">
+              Aprenda com quem reabilita pacientes todos os dias.
+            </p>
           </div>
         </div>
       </div>
