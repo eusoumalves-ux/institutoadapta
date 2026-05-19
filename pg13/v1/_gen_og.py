@@ -118,7 +118,7 @@ def main():
     f_sub = font(30)
     draw_centered(
         d, cx, 305,
-        "em Fisioterapia em Reabilitação Cardiopulmonar Domiciliar",
+        "em Fisioterapia em Reabilitação Cardiorrespiratória Domiciliar",
         f_sub, fill=INK,
     )
 
