@@ -151,6 +151,54 @@
         linear-gradient(180deg, #050813 0%, #001740 50%, #0a0e1a 100%);
     }
   }
+
+  /* ===== Light skin (Adapta identity, white) ===== */
+  .hero-bg-light {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .hero-bg-light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 85% 30%, rgba(17,107,248,0.18), transparent 60%),
+      radial-gradient(ellipse 55% 45% at 8% 85%, rgba(125,255,70,0.10), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f4f6fb 60%, #e7ecf6 100%);
+    z-index: 1;
+  }
+  .hero-bg-light::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(0,84,202,0.10) 1px, transparent 1px),
+      radial-gradient(circle at 70% 60%, rgba(0,84,202,0.07) 1px, transparent 1px),
+      radial-gradient(circle at 90% 10%, rgba(0,84,202,0.06) 1px, transparent 1px);
+    background-size: 60px 60px, 120px 120px, 200px 200px;
+    z-index: 2;
+    opacity: 0.6;
+  }
+  .grid-pattern-light {
+    background-image:
+      linear-gradient(to right, rgba(0,84,202,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,84,202,0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .text-gradient-light {
+    background: linear-gradient(135deg, #0054ca 0%, #3e54c1 50%, #116bf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 768px) {
+    .hero-bg-light::before {
+      background-image:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(17,107,248,0.18), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f4f6fb 50%, #e9eef7 100%);
+    }
+  }
 </style>
 </head>
 <body class="bg-surface text-on-surface antialiased">
@@ -175,117 +223,115 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="top" class="hero-bg pt-32 md:pt-40 pb-24 md:pb-32">
-  <div class="absolute inset-0 grid-pattern z-[2] opacity-50 pointer-events-none"></div>
+<section id="top" class="hero-bg-light pt-32 md:pt-40 pb-24 md:pb-32">
+  <div class="absolute inset-0 grid-pattern-light z-[2] opacity-50 pointer-events-none"></div>
 
   <div class="relative z-[3] max-w-7xl mx-auto px-6 md:px-8">
     <div class="flex flex-col lg:flex-row items-center gap-12">
       <!-- Left: copy -->
       <div class="max-w-2xl lg:flex-1">
         <!-- Eyebrow / credentials -->
-        <div class="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2 mb-5 border border-white/10">
+        <div class="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 mb-5 border border-primary-fixed shadow-sm">
           <img src="../../images/brand/mec-logo.png" alt="Selo MEC" class="w-5 h-5 rounded-full object-cover"/>
-          <span class="text-white/90 text-xs font-bold tracking-[0.18em] uppercase">Reconhecida pelo MEC · 360h · 100% Online</span>
+          <span class="text-on-surface text-xs font-bold tracking-[0.18em] uppercase">Reconhecida pelo MEC · 360h · 100% Online</span>
         </div>
 
         <!-- Kicker -->
-        <p class="text-tertiary-fixed text-lg md:text-2xl font-extrabold tracking-[0.25em] uppercase mb-3">
+        <p class="text-primary text-lg md:text-2xl font-extrabold tracking-[0.25em] uppercase mb-3">
           Pós-graduação em
         </p>
 
         <!-- Headline -->
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[0.95] tracking-tight mb-6">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-ink leading-[0.95] tracking-tight mb-6">
           Fisioterapia em<br/>
-          <span class="text-gradient">Reabilitação Cardiopulmonar Domiciliar.</span>
+          <span class="text-gradient-light">Reabilitação Cardiopulmonar Domiciliar.</span>
         </h1>
 
         <!-- Subheadline -->
-        <p class="text-lg md:text-xl text-white/85 leading-relaxed mb-4 max-w-xl">
-          Ganhe segurança, destaque no mercado e avance para o próximo nível da sua carreira em <strong class="text-white font-semibold">fisioterapia respiratória</strong> — uma das áreas que mais crescem no home care.
+        <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-4 max-w-xl">
+          Ganhe segurança, destaque no mercado e avance para o próximo nível da sua carreira em <strong class="text-ink font-semibold">fisioterapia respiratória</strong> — uma das áreas que mais crescem no home care.
         </p>
-        <p class="text-base md:text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
-          Nesta pós-graduação, você vai dominar <strong class="text-white">protocolos atualizados, técnicas práticas e estratégias seguras</strong> para reabilitar pacientes no ambiente domiciliar.
+        <p class="text-base md:text-lg text-outline leading-relaxed mb-10 max-w-xl">
+          Nesta pós-graduação, você vai dominar <strong class="text-ink">protocolos atualizados, técnicas práticas e estratégias seguras</strong> para reabilitar pacientes no ambiente domiciliar.
         </p>
 
         <!-- Quick facts -->
         <div class="flex flex-wrap gap-3 mb-10">
-          <div class="flex items-center gap-2 glass-dark rounded-xl px-4 py-3 border border-white/10">
+          <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-3 border border-primary-fixed shadow-sm">
             <img src="../../images/brand/mec-logo.png" alt="Selo MEC" class="w-6 h-6 rounded-full object-cover"/>
-            <span class="text-white font-medium text-sm">Certificado MEC</span>
+            <span class="text-on-surface font-medium text-sm">Certificado MEC</span>
           </div>
-          <div class="flex items-center gap-2 glass-dark rounded-xl px-4 py-3 border border-white/10">
-            <span class="material-symbols-outlined text-tertiary-fixed text-xl">schedule</span>
-            <span class="text-white font-medium text-sm">12 meses · seu ritmo</span>
+          <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-3 border border-primary-fixed shadow-sm">
+            <span class="material-symbols-outlined text-primary text-xl">schedule</span>
+            <span class="text-on-surface font-medium text-sm">12 meses · seu ritmo</span>
           </div>
-          <div class="flex items-center gap-2 glass-dark rounded-xl px-4 py-3 border border-white/10">
-            <span class="material-symbols-outlined text-tertiary-fixed text-xl">play_circle</span>
-            <span class="text-white font-medium text-sm">100% online · sem TCC</span>
+          <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-3 border border-primary-fixed shadow-sm">
+            <span class="material-symbols-outlined text-primary text-xl">play_circle</span>
+            <span class="text-on-surface font-medium text-sm">100% online · sem TCC</span>
           </div>
         </div>
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-          <a href="#investimento" class="inline-flex items-center justify-center gap-2 bg-tertiary-fixed text-primary-deep px-8 py-4 rounded-full font-bold text-base hover:scale-[1.03] active:scale-95 transition-all shadow-2xl shadow-tertiary-fixed/30">
+          <a href="#investimento" class="inline-flex items-center justify-center gap-2 hero-gradient text-white px-8 py-4 rounded-full font-bold text-base hover:scale-[1.03] active:scale-95 transition-all shadow-2xl shadow-primary/30">
             Quero me matricular
             <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-          <a href="#mercado" class="inline-flex items-center justify-center gap-2 glass-dark text-white border border-white/20 px-8 py-4 rounded-full font-semibold text-base hover:bg-white/15 transition-all">
+          <a href="#mercado" class="inline-flex items-center justify-center gap-2 bg-white text-primary-deep border-2 border-primary-fixed hover:border-primary px-8 py-4 rounded-full font-semibold text-base transition-all">
             Ver o mercado
           </a>
         </div>
 
         <!-- Trust strip -->
-        <div class="flex items-center gap-3 text-white/50 text-xs">
-          <span class="material-symbols-outlined text-tertiary-fixed text-base">shield</span>
+        <div class="flex items-center gap-3 text-on-surface-variant text-xs">
+          <span class="material-symbols-outlined text-primary text-base">shield</span>
           <span>7 dias de garantia · acesso imediato · pagamento seguro</span>
         </div>
       </div>
 
-      <!-- Right: card stack -->
+      <!-- Right: team photo (transparent PNG) -->
       <div class="lg:flex-1 w-full max-w-md mx-auto lg:max-w-none">
         <div class="relative">
+          <!-- Soft ambient glows behind the doctors -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-[80%] h-[80%] rounded-full bg-primary-fixed/80 blur-3xl"></div>
+          </div>
+          <div class="absolute -top-8 -right-8 w-56 h-56 rounded-full bg-tertiary-fixed/25 blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-8 -left-8 w-64 h-64 rounded-full bg-primary-bright/25 blur-3xl pointer-events-none"></div>
+
           <!-- Floating credentials card -->
-          <div class="float-slow absolute -top-4 -left-4 z-20 glass-dark border border-white/15 rounded-2xl p-4 shadow-2xl shadow-black/40">
+          <div class="float-slow absolute -top-2 -left-2 md:-top-4 md:-left-4 z-20 bg-white rounded-2xl p-4 shadow-2xl shadow-primary/15 border border-primary-fixed">
             <div class="flex items-center gap-3">
-              <img src="../../images/brand/mec-logo.png" alt="Selo MEC" class="w-10 h-10 rounded-full object-cover shadow-lg"/>
+              <img src="../../images/brand/mec-logo.png" alt="Selo MEC" class="w-10 h-10 rounded-full object-cover shadow"/>
               <div>
-                <p class="text-white text-sm font-bold leading-tight">Certificado MEC</p>
-                <p class="text-white/60 text-xs">via Faculdade Focus</p>
+                <p class="text-ink text-sm font-bold leading-tight">Certificado MEC</p>
+                <p class="text-on-surface-variant text-xs">via Faculdade Focus</p>
               </div>
             </div>
           </div>
 
           <!-- Floating stat card -->
-          <div class="float-slow absolute -bottom-4 -right-4 z-20 glass-dark border border-white/15 rounded-2xl p-4 shadow-2xl shadow-black/40" style="animation-delay: -3s">
-            <p class="text-tertiary-fixed text-xs font-bold tracking-widest uppercase mb-1">Carga horária</p>
-            <p class="text-white text-2xl font-extrabold leading-none">360h</p>
-            <p class="text-white/60 text-xs mt-1">em 9 módulos</p>
+          <div class="float-slow absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 z-20 bg-white rounded-2xl p-4 shadow-2xl shadow-primary/15 border border-primary-fixed" style="animation-delay: -3s">
+            <p class="text-primary text-xs font-bold tracking-widest uppercase mb-1">Carga horária</p>
+            <p class="text-ink text-2xl font-extrabold leading-none">360h</p>
+            <p class="text-on-surface-variant text-xs mt-1">em 9 módulos</p>
           </div>
 
-          <!-- Main visual: full team photo with feathered edges -->
-          <div class="relative">
-            <!-- Ambient color accents bleeding into hero -->
-            <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-tertiary-fixed/15 blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-primary-bright/30 blur-3xl pointer-events-none"></div>
+          <!-- Team photo: transparent PNG, no background rectangle -->
+          <img src="images/equipe-recortada.png"
+               alt="Equipe de especialistas em fisioterapia cardiopulmonar"
+               class="relative w-full h-auto block drop-shadow-xl"/>
+        </div>
 
-            <!-- Photo: full image, edges faded into the hero background -->
-            <img src="images/image.png"
-                 alt="Equipe de especialistas em fisioterapia cardiopulmonar"
-                 class="relative w-full h-auto block"
-                 style="-webkit-mask-image: radial-gradient(ellipse 95% 92% at center, #000 48%, rgba(0,0,0,0.6) 75%, transparent 100%);
-                        mask-image: radial-gradient(ellipse 95% 92% at center, #000 48%, rgba(0,0,0,0.6) 75%, transparent 100%);"/>
+        <!-- Caption below the photo -->
+        <div class="relative z-10 mt-4 md:mt-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-white rounded-full px-3 py-1.5 border border-primary-fixed shadow-sm mb-3">
+            <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim pulse-soft"></span>
+            <span class="text-primary-deep text-[10px] font-bold tracking-[0.2em] uppercase">Corpo docente especialista</span>
           </div>
-
-          <!-- Caption below the photo -->
-          <div class="relative z-10 mt-2 md:mt-4 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 glass-dark rounded-full px-3 py-1.5 border border-white/15 mb-3">
-              <span class="w-2 h-2 rounded-full bg-tertiary-fixed pulse-soft"></span>
-              <span class="text-white text-[10px] font-bold tracking-[0.2em] uppercase">Corpo docente especialista</span>
-            </div>
-            <p class="text-white text-xl md:text-2xl font-extrabold leading-tight">
-              Aprenda com quem reabilita pacientes todos os dias.
-            </p>
-          </div>
+          <p class="text-ink text-xl md:text-2xl font-extrabold leading-tight">
+            Aprenda com quem reabilita pacientes todos os dias.
+          </p>
         </div>
       </div>
     </div>
@@ -293,7 +339,7 @@
 
   <!-- Scroll hint -->
   <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-[3] pulse-soft">
-    <span class="material-symbols-outlined text-white/40">expand_more</span>
+    <span class="material-symbols-outlined text-primary/50">expand_more</span>
   </div>
 </section>
 
