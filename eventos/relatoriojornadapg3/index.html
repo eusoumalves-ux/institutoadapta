@@ -6,20 +6,22 @@
 <title>Análise Semântica · Jornada Preparatória — Grupos Especiais 2.0</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FAF6EE;
-    --paper-deep: #F2EBDB;
-    --ink: #1A1D2E;
-    --ink-soft: #4A4E60;
-    --ink-mute: #8B8D99;
-    --rule: #D9D2C0;
-    --accent: #C4533D;
-    --accent-deep: #9E3E2A;
-    --teal: #0C4A6E;
-    --forest: #1F4A3D;
-    --gold: #B8893A;
+    --paper: #FAFBFC;
+    --paper-deep: #F1F4F8;
+    --ink: #111518;
+    --ink-soft: #3F4856;
+    --ink-mute: #8A8F99;
+    --rule: #DDE3EC;
+    --blue: #116BF8;
+    --blue-deep: #0848B8;
+    --blue-soft: #E8F0FF;
+    --green: #00D27F;
+    --accent: #116BF8;
+    --accent-deep: #0848B8;
+    --gold: #00D27F;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,14 +31,14 @@
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     font-weight: 400;
     overflow-x: hidden;
     background-image:
-      radial-gradient(circle at 15% 8%, rgba(196, 83, 61, 0.04) 0%, transparent 40%),
-      radial-gradient(circle at 85% 92%, rgba(31, 74, 61, 0.04) 0%, transparent 40%);
+      radial-gradient(circle at 15% 8%, rgba(17, 107, 248, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(8, 72, 184, 0.04) 0%, transparent 40%);
   }
 
   /* Grain overlay for paper feel */
@@ -45,7 +47,7 @@
     position: fixed;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.035;
+    opacity: 0.02;
     pointer-events: none;
     z-index: 1000;
     mix-blend-mode: multiply;
@@ -58,15 +60,48 @@
     position: relative;
   }
 
+  /* ============ BRAND BAR ============ */
+  .brand-bar {
+    padding: 28px 0 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand-logo {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .brand-bar .brand-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-bar .brand-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
   /* ============ HERO ============ */
   .hero {
-    padding: 80px 0 60px;
+    padding: 56px 0 60px;
     border-bottom: 1px solid var(--rule);
     position: relative;
   }
 
   .eyebrow {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.22em;
@@ -89,23 +124,23 @@
   .eyebrow::after { flex: 1; opacity: 0.2; }
 
   .hero h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 300;
-    font-size: clamp(40px, 6vw, 78px);
-    line-height: 0.98;
-    letter-spacing: -0.025em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(36px, 5.4vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -0.028em;
     margin-bottom: 28px;
     color: var(--ink);
   }
 
   .hero h1 em {
     font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
+    font-weight: 700;
+    color: var(--blue);
   }
 
   .hero .subtitle {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 22px;
     font-weight: 300;
     color: var(--ink-soft);
@@ -131,7 +166,7 @@
   .meta-cell:not(:first-child) { padding-left: 32px; }
 
   .meta-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -140,7 +175,7 @@
   }
 
   .meta-value {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 32px;
     font-weight: 400;
     color: var(--ink);
@@ -148,7 +183,7 @@
   }
 
   .meta-value .unit {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     color: var(--ink-mute);
     font-weight: 400;
@@ -167,8 +202,8 @@
     padding: 32px;
     border: 1px solid var(--rule);
     box-shadow:
-      0 1px 0 rgba(26, 29, 46, 0.04),
-      0 24px 48px -16px rgba(26, 29, 46, 0.12);
+      0 1px 0 rgba(17, 21, 24, 0.04),
+      0 24px 48px -16px rgba(17, 21, 24, 0.12);
     margin-bottom: 24px;
   }
 
@@ -188,7 +223,7 @@
   }
 
   .cloud-caption {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -209,7 +244,7 @@
   }
 
   .section-number {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     color: var(--accent);
     font-weight: 500;
@@ -217,7 +252,7 @@
   }
 
   .section-title {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: clamp(28px, 4vw, 44px);
     line-height: 1.05;
@@ -231,7 +266,7 @@
   }
 
   .section-intro {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 19px;
     font-weight: 300;
     line-height: 1.5;
@@ -271,7 +306,7 @@
   }
 
   .cluster-id {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -280,7 +315,7 @@
   }
 
   .cluster-title {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.2;
@@ -294,7 +329,7 @@
   }
 
   .cluster-weight-num {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 42px;
     font-weight: 300;
     line-height: 1;
@@ -302,7 +337,7 @@
   }
 
   .cluster-weight-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -318,7 +353,7 @@
   }
 
   .chip {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     font-weight: 500;
     padding: 6px 12px;
@@ -332,7 +367,7 @@
   }
 
   .chip .num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     color: var(--ink-mute);
     font-weight: 400;
@@ -375,7 +410,7 @@
   }
 
   .rank-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     color: var(--ink-mute);
     font-weight: 500;
@@ -386,7 +421,7 @@
   }
 
   .rank-word {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: var(--ink);
@@ -407,7 +442,7 @@
   }
 
   .rank-count {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     color: var(--ink);
     text-align: right;
@@ -425,7 +460,7 @@
   }
 
   .insights-section .section-title { color: var(--paper); }
-  .insights-section .section-intro { color: rgba(250, 246, 238, 0.7); }
+  .insights-section .section-intro { color: rgba(250, 251, 252, 0.7); }
   .insights-section .section-number { color: var(--gold); }
 
   .insights-section::before {
@@ -433,17 +468,17 @@
     position: absolute;
     top: -40px;
     right: -20px;
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 280px;
     font-weight: 800;
-    color: rgba(184, 137, 58, 0.04);
+    color: rgba(0, 210, 127, 0.04);
     line-height: 1;
     pointer-events: none;
     letter-spacing: -0.05em;
   }
 
   .insight {
-    border-top: 1px solid rgba(250, 246, 238, 0.15);
+    border-top: 1px solid rgba(250, 251, 252, 0.15);
     padding: 48px 0;
     display: grid;
     grid-template-columns: 80px 1fr 1fr;
@@ -452,10 +487,10 @@
     z-index: 2;
   }
 
-  .insight:last-child { border-bottom: 1px solid rgba(250, 246, 238, 0.15); }
+  .insight:last-child { border-bottom: 1px solid rgba(250, 251, 252, 0.15); }
 
   .insight-num {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 60px;
     font-weight: 300;
     color: var(--gold);
@@ -464,7 +499,7 @@
   }
 
   .insight-headline {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 1.2;
@@ -480,18 +515,18 @@
   .insight-body {
     font-size: 15px;
     line-height: 1.7;
-    color: rgba(250, 246, 238, 0.8);
+    color: rgba(250, 251, 252, 0.8);
   }
 
   .insight-evidence {
     margin-top: 20px;
     padding: 16px 18px;
-    background: rgba(184, 137, 58, 0.08);
+    background: rgba(0, 210, 127, 0.08);
     border-left: 2px solid var(--gold);
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     font-style: italic;
-    color: rgba(250, 246, 238, 0.9);
+    color: rgba(250, 251, 252, 0.9);
     line-height: 1.5;
   }
 
@@ -529,7 +564,7 @@
   }
 
   .app-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -539,7 +574,7 @@
   }
 
   .app-title {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 22px;
     font-weight: 500;
     line-height: 1.2;
@@ -560,7 +595,7 @@
   }
 
   .app-example-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -569,7 +604,7 @@
   }
 
   .app-example {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: italic;
     font-size: 14px;
     line-height: 1.5;
@@ -587,6 +622,29 @@
     margin-top: 80px;
   }
 
+  .foot-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .foot-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+  .foot-brand-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    font-weight: 500;
+  }
+
   .foot-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -594,7 +652,7 @@
   }
 
   .foot-title {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 12px;
@@ -608,7 +666,7 @@
   }
 
   .foot-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -659,8 +717,8 @@
     justify-content: center;
     padding: 24px;
     background-image:
-      radial-gradient(circle at 20% 10%, rgba(196, 83, 61, 0.06) 0%, transparent 45%),
-      radial-gradient(circle at 80% 90%, rgba(31, 74, 61, 0.06) 0%, transparent 45%);
+      radial-gradient(circle at 20% 10%, rgba(17, 107, 248, 0.06) 0%, transparent 45%),
+      radial-gradient(circle at 80% 90%, rgba(8, 72, 184, 0.06) 0%, transparent 45%);
   }
   #auth-gate .gate-card {
     max-width: 460px;
@@ -668,7 +726,7 @@
     background: white;
     border: 1px solid var(--rule);
     padding: 48px 40px;
-    box-shadow: 0 24px 48px -16px rgba(26, 29, 46, 0.18);
+    box-shadow: 0 24px 48px -16px rgba(17, 21, 24, 0.18);
     position: relative;
   }
   #auth-gate .gate-card::before {
@@ -678,8 +736,14 @@
     width: 60px; height: 3px;
     background: var(--accent);
   }
+  #auth-gate .gate-logo {
+    height: 30px;
+    width: auto;
+    display: block;
+    margin-bottom: 22px;
+  }
   #auth-gate .gate-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.22em;
@@ -688,7 +752,7 @@
     font-weight: 500;
   }
   #auth-gate h1 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: 30px;
     line-height: 1.1;
@@ -698,7 +762,7 @@
   }
   #auth-gate h1 em { font-style: italic; color: var(--accent); }
   #auth-gate .gate-sub {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 15px;
     font-style: italic;
     color: var(--ink-soft);
@@ -707,7 +771,7 @@
   }
   #auth-gate label {
     display: block;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -717,7 +781,7 @@
   #auth-gate input[type="password"] {
     width: 100%;
     padding: 14px 16px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     border: 1px solid var(--rule);
     background: var(--paper);
@@ -732,7 +796,7 @@
     width: 100%;
     margin-top: 16px;
     padding: 14px 20px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -746,7 +810,7 @@
   #auth-gate button:hover { background: var(--accent); }
   #auth-gate .gate-error {
     margin-top: 14px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     color: var(--accent);
     letter-spacing: 0.06em;
@@ -757,7 +821,7 @@
     margin-top: 28px;
     padding-top: 20px;
     border-top: 1px dotted var(--rule);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -783,17 +847,24 @@
     width: 80px; height: 4px;
     background: var(--gold);
   }
+  .tldr-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+    margin-bottom: 22px;
+    opacity: 0.96;
+  }
   .tldr-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.22em;
-    color: var(--gold);
-    font-weight: 500;
+    color: var(--green);
+    font-weight: 600;
     margin-bottom: 22px;
   }
   .tldr-title {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: clamp(24px, 3vw, 32px);
     line-height: 1.2;
@@ -806,10 +877,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     padding-top: 28px;
-    border-top: 1px solid rgba(250, 246, 238, 0.15);
+    border-top: 1px solid rgba(250, 251, 252, 0.15);
   }
   .tldr-cell .tldr-num {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: italic;
     font-size: 36px;
     font-weight: 300;
@@ -818,7 +889,7 @@
     margin-bottom: 12px;
   }
   .tldr-cell .tldr-head {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 17px;
     font-weight: 500;
     line-height: 1.3;
@@ -828,22 +899,22 @@
   .tldr-cell .tldr-body {
     font-size: 14px;
     line-height: 1.55;
-    color: rgba(250, 246, 238, 0.75);
+    color: rgba(250, 251, 252, 0.75);
   }
   .tldr-weapon {
     margin-top: 36px;
     padding: 22px 24px;
-    background: rgba(184, 137, 58, 0.1);
+    background: rgba(0, 210, 127, 0.1);
     border-left: 3px solid var(--gold);
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: italic;
     font-size: 18px;
     line-height: 1.45;
-    color: rgba(250, 246, 238, 0.95);
+    color: rgba(250, 251, 252, 0.95);
   }
   .tldr-weapon-label {
     display: block;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     font-style: normal;
     text-transform: uppercase;
@@ -867,20 +938,20 @@
     border-bottom: 1px dotted var(--rule);
   }
   .bigram-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px;
     color: var(--ink-mute);
     font-weight: 500;
   }
   .bigram-phrase {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: var(--ink);
     font-style: italic;
   }
   .bigram-tier {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -920,7 +991,7 @@
     position: relative;
   }
   .signal-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -929,7 +1000,7 @@
     font-weight: 500;
   }
   .signal-quote {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: italic;
     font-size: 17px;
     line-height: 1.4;
@@ -979,7 +1050,7 @@
     background: var(--accent);
   }
   .phrase-text {
-    font-family: 'Fraunces', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: italic;
     font-size: 16px;
     line-height: 1.45;
@@ -994,14 +1065,14 @@
     border-top: 1px dotted var(--rule);
   }
   .phrase-author {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--ink-mute);
   }
   .phrase-copy {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -1014,7 +1085,7 @@
     font-weight: 500;
   }
   .phrase-copy:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .phrase-copy.copied { background: var(--forest); color: var(--paper); border-color: var(--forest); }
+  .phrase-copy.copied { background: var(--green); color: var(--ink); border-color: var(--green); }
 
   /* responsive add-ons */
   @media (max-width: 900px) {
@@ -1028,6 +1099,7 @@
 <!-- ============ AUTH GATE ============ -->
 <div id="auth-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
   <div class="gate-card">
+    <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="gate-logo">
     <div class="gate-eyebrow">Acesso restrito</div>
     <h1 id="gate-title">Relatório <em>interno</em></h1>
     <p class="gate-sub">Inteligência comercial — uso exclusivo do time Instituto Adapta. Informe a senha de acesso compartilhada pela coordenação.</p>
@@ -1041,9 +1113,15 @@
   </div>
 </div>
 
+<!-- ============ BRAND BAR ============ -->
+<div class="container brand-bar">
+  <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="brand-logo">
+  <span class="brand-tag">Relatório interno · Inteligência comercial</span>
+</div>
+
 <!-- ============ HERO ============ -->
 <header class="container hero">
-  <div class="eyebrow">Análise Semântica · Inteligência Comercial · Uso Interno</div>
+  <div class="eyebrow">Análise Semântica · Jornada PG3 · v1.1</div>
   <h1>O que os profissionais <em>realmente</em> dizem sobre prescrever para grupos especiais</h1>
   <p class="subtitle">Leitura estratégica de 197 comentários abertos coletados na fase preparatória da jornada — vocabulário, dores e oportunidades extraídas das próprias palavras de quem ainda não comprou, mas declarou intenção.</p>
 
@@ -1070,6 +1148,7 @@
 <!-- ============ TL;DR PARA O COMERCIAL ============ -->
 <section class="container tldr-section">
   <div class="tldr-card">
+    <img src="images/brand/logo-white.png" alt="Instituto Adapta" class="tldr-logo">
     <div class="tldr-eyebrow">TL;DR · Para o time comercial — leia primeiro</div>
     <h2 class="tldr-title">Três coisas que esse público <em>está te dizendo</em> agora — antes de você abordar.</h2>
 
@@ -1609,6 +1688,10 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="container">
+  <div class="foot-brand">
+    <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="foot-logo">
+    <span class="foot-brand-tag">Inteligência comercial · Uso interno</span>
+  </div>
   <div class="foot-grid">
     <div>
       <div class="foot-title">Metodologia</div>
