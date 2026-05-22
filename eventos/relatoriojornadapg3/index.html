@@ -1145,6 +1145,160 @@
     .tldr-grid, .bigram-grid, .signal-grid, .phrases-grid { grid-template-columns: 1fr; gap: 16px; }
     .tldr-card { padding: 32px 24px; }
   }
+
+  /* ============ TOC SIDEBAR ============ */
+  .toc-handle {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 80;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    cursor: pointer;
+    padding: 16px 8px;
+    width: 38px;
+    height: 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    box-shadow: -4px 8px 24px -8px rgba(17, 21, 24, 0.25);
+    transition: background 0.2s ease, transform 0.25s ease;
+  }
+  .toc-handle:hover { background: var(--blue); }
+  .toc-handle .toc-handle-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    line-height: 1;
+  }
+  .toc-handle svg { flex-shrink: 0; transition: transform 0.25s ease; opacity: 0.85; }
+  .toc-open .toc-handle { transform: translateY(-50%) translateX(280px); }
+
+  .toc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 21, 24, 0.32);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .toc-open .toc-overlay { opacity: 1; pointer-events: auto; }
+
+  .toc-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    background: var(--paper);
+    z-index: 95;
+    box-shadow: -8px 0 32px -12px rgba(17, 21, 24, 0.20);
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.2, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--rule);
+  }
+  .toc-open .toc-drawer { transform: translateX(0); }
+
+  .toc-drawer-head {
+    padding: 26px 24px 18px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .toc-drawer-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--blue);
+  }
+  .toc-close {
+    background: transparent;
+    border: 1px solid var(--rule);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    transition: all 0.18s ease;
+    padding: 0;
+  }
+  .toc-close:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 12px 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .toc-list li { margin: 0; }
+  .toc-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 12px 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all 0.18s ease;
+  }
+  .toc-list a:hover { background: var(--blue-soft); color: var(--ink); }
+  .toc-list a.active {
+    background: var(--blue-soft);
+    color: var(--blue);
+    border-left-color: var(--blue);
+    font-weight: 700;
+  }
+  .toc-list .toc-num {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink-mute);
+    letter-spacing: 0.06em;
+    min-width: 18px;
+  }
+  .toc-list a.active .toc-num { color: var(--blue); }
+
+  .toc-drawer-foot {
+    padding: 16px 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-mute);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .toc-drawer { width: 86vw; }
+    .toc-open .toc-handle { transform: translateY(-50%) translateX(86vw); }
+    .toc-handle { width: 32px; height: 128px; font-size: 9px; }
+  }
+
+  body.auth-locked .toc-handle,
+  body.auth-locked .toc-drawer,
+  body.auth-locked .toc-overlay { display: none !important; }
 </style>
 </head>
 <body class="auth-locked">
@@ -1166,6 +1320,35 @@
   </div>
 </div>
 
+<!-- ============ TOC SUMÁRIO ============ -->
+<button type="button" class="toc-handle" id="toc-handle" aria-label="Abrir sumário" aria-controls="toc-drawer" aria-expanded="false">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  <span class="toc-handle-label">Sumário</span>
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<div class="toc-overlay" id="toc-overlay" aria-hidden="true"></div>
+<aside class="toc-drawer" id="toc-drawer" aria-label="Sumário do relatório" aria-hidden="true">
+  <div class="toc-drawer-head">
+    <span class="toc-drawer-title">Sumário</span>
+    <button type="button" class="toc-close" id="toc-close" aria-label="Fechar sumário">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <ol class="toc-list">
+    <li><a href="#tldr" data-toc-target="tldr"><span class="toc-num">01</span>TL;DR para o comercial</a></li>
+    <li><a href="#nuvem" data-toc-target="nuvem"><span class="toc-num">02</span>Nuvem de palavras</a></li>
+    <li><a href="#clusters" data-toc-target="clusters"><span class="toc-num">03</span>Clusters semânticos</a></li>
+    <li><a href="#ranking" data-toc-target="ranking"><span class="toc-num">04</span>Ranking de termos</a></li>
+    <li><a href="#bigramas" data-toc-target="bigramas"><span class="toc-num">05</span>Bigramas</a></li>
+    <li><a href="#insights" data-toc-target="insights"><span class="toc-num">06</span>Insights estratégicos</a></li>
+    <li><a href="#objecoes" data-toc-target="objecoes"><span class="toc-num">07</span>Sinais minoritários</a></li>
+    <li><a href="#aplicacoes" data-toc-target="aplicacoes"><span class="toc-num">08</span>Aplicações táticas</a></li>
+    <li><a href="#frases" data-toc-target="frases"><span class="toc-num">09</span>Banco de frases-âncora</a></li>
+    <li><a href="#metodologia" data-toc-target="metodologia"><span class="toc-num">10</span>Metodologia</a></li>
+  </ol>
+  <div class="toc-drawer-foot">Esc para fechar</div>
+</aside>
+
 <!-- ============ BRAND BAR ============ -->
 <div class="container brand-bar">
   <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="brand-logo">
@@ -1179,7 +1362,7 @@
 </div>
 
 <!-- ============ HERO ============ -->
-<header class="container hero">
+<header class="container hero" id="topo">
   <div class="eyebrow">Análise Semântica · Jornada PG3 · v1.1</div>
   <h1>O que os profissionais <em>realmente</em> dizem sobre prescrever para grupos especiais</h1>
   <p class="subtitle">Leitura estratégica de 197 comentários abertos coletados na fase preparatória da jornada — vocabulário, dores e oportunidades extraídas das próprias palavras de quem ainda não comprou, mas declarou intenção.</p>
@@ -1205,7 +1388,7 @@
 </header>
 
 <!-- ============ TL;DR PARA O COMERCIAL ============ -->
-<section class="container tldr-section">
+<section class="container tldr-section" id="tldr">
   <div class="tldr-card">
     <img src="images/brand/logo-white.png" alt="Instituto Adapta" class="tldr-logo">
     <div class="tldr-eyebrow">TL;DR · Para o time comercial — leia primeiro</div>
@@ -1237,7 +1420,7 @@
 </section>
 
 <!-- ============ CLOUD ============ -->
-<section class="container cloud-section">
+<section class="container cloud-section" id="nuvem">
   <div class="cloud-frame">
     <div class="cloud-svg" role="img" aria-label="Nuvem de palavras coloridas por cluster semantico">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 580" preserveAspectRatio="xMidYMid meet" font-family="'Plus Jakarta Sans', sans-serif" aria-label="Nuvem de palavras com cores por cluster semantico">
@@ -1303,7 +1486,7 @@
 </section>
 
 <!-- ============ SECTION 1: CLUSTERS ============ -->
-<section class="container section">
+<section class="container section" id="clusters">
   <div class="section-marker">
     <span class="section-number">/ 01</span>
     <h2 class="section-title">Os quatro <em>clusters semânticos</em></h2>
@@ -1409,7 +1592,7 @@
 </section>
 
 <!-- ============ SECTION 2: RANKING ============ -->
-<section class="container section">
+<section class="container section" id="ranking">
   <div class="section-marker">
     <span class="section-number">/ 02</span>
     <h2 class="section-title">Ranking das <em>20 palavras</em> mais frequentes</h2>
@@ -1452,7 +1635,7 @@
 </section>
 
 <!-- ============ SECTION 2.5: BIGRAMAS ============ -->
-<section class="container section">
+<section class="container section" id="bigramas">
   <div class="section-marker">
     <span class="section-number">/ 02.5</span>
     <h2 class="section-title">Bigramas — <em>o que aparece junto</em></h2>
@@ -1522,7 +1705,7 @@
 </section>
 
 <!-- ============ SECTION 3: INSIGHTS ============ -->
-<section class="insights-section">
+<section class="insights-section" id="insights">
   <div class="container">
     <div class="section-marker">
       <span class="section-number">/ 03</span>
@@ -1567,7 +1750,7 @@
 </section>
 
 <!-- ============ SECTION 3.5: SINAIS MINORITÁRIOS ============ -->
-<section class="signals-section">
+<section class="signals-section" id="objecoes">
   <div class="container">
     <div class="section-marker">
       <span class="section-number">/ 03.5</span>
@@ -1618,7 +1801,7 @@
 </section>
 
 <!-- ============ SECTION 4: APLICAÇÕES ============ -->
-<section class="container section">
+<section class="container section" id="aplicacoes">
   <div class="section-marker">
     <span class="section-number">/ 04</span>
     <h2 class="section-title">Aplicações <em>táticas</em></h2>
@@ -1695,7 +1878,7 @@
 </section>
 
 <!-- ============ SECTION 5: BANCO DE FRASES-ÂNCORA ============ -->
-<section class="container section">
+<section class="container section" id="frases">
   <div class="section-marker">
     <span class="section-number">/ 05</span>
     <h2 class="section-title">Banco de <em>frases-âncora</em></h2>
@@ -1804,7 +1987,7 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="container">
+<footer class="container" id="metodologia">
   <div class="foot-brand">
     <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="foot-logo">
     <span class="foot-brand-tag">Inteligência comercial · Uso interno</span>
@@ -1883,6 +2066,63 @@
       logout.addEventListener('click', () => {
         try { sessionStorage.removeItem(KEY); } catch (e) {}
         location.reload();
+      });
+    }
+
+    // TOC drawer
+    const tocHandle = document.getElementById('toc-handle');
+    const tocClose = document.getElementById('toc-close');
+    const tocOverlay = document.getElementById('toc-overlay');
+    const tocDrawer = document.getElementById('toc-drawer');
+    const tocLinks = document.querySelectorAll('.toc-list a[data-toc-target]');
+
+    function openToc() {
+      document.body.classList.add('toc-open');
+      tocHandle && tocHandle.setAttribute('aria-expanded', 'true');
+      tocDrawer && tocDrawer.setAttribute('aria-hidden', 'false');
+    }
+    function closeToc() {
+      document.body.classList.remove('toc-open');
+      tocHandle && tocHandle.setAttribute('aria-expanded', 'false');
+      tocDrawer && tocDrawer.setAttribute('aria-hidden', 'true');
+    }
+    function toggleToc() {
+      document.body.classList.contains('toc-open') ? closeToc() : openToc();
+    }
+
+    tocHandle && tocHandle.addEventListener('click', toggleToc);
+    tocClose && tocClose.addEventListener('click', closeToc);
+    tocOverlay && tocOverlay.addEventListener('click', closeToc);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.classList.contains('toc-open')) closeToc();
+    });
+
+    tocLinks.forEach(a => {
+      a.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        const id = a.getAttribute('data-toc-target');
+        const target = document.getElementById(id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Active section tracking
+    const sectionIds = Array.from(tocLinks).map(a => a.getAttribute('data-toc-target'));
+    const setActive = (id) => {
+      tocLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-toc-target') === id);
+      });
+    };
+    if ('IntersectionObserver' in window && sectionIds.length) {
+      const obs = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActive(visible[0].target.id);
+      }, { rootMargin: '-30% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+      sectionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) obs.observe(el);
       });
     }
 
