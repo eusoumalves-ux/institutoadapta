@@ -1146,6 +1146,187 @@
     .tldr-card { padding: 32px 24px; }
   }
 
+  /* ============ BUSCA PARTICIPANTES ============ */
+  .search-section { padding: 80px 0 60px; border-top: 1px solid var(--rule); }
+
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--rule);
+    margin-bottom: 18px;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .search-box:focus-within {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-soft);
+  }
+  .search-box .search-icon {
+    position: absolute;
+    left: 20px;
+    color: var(--ink-mute);
+    pointer-events: none;
+  }
+  .search-box input {
+    flex: 1;
+    padding: 18px 50px 18px 56px;
+    border: none;
+    outline: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    background: transparent;
+    color: var(--ink);
+    width: 100%;
+  }
+  .search-box input::placeholder { color: var(--ink-mute); }
+  .search-clear {
+    position: absolute;
+    right: 14px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--ink-soft);
+    font-size: 14px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    transition: all 0.18s ease;
+  }
+  .search-clear:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .search-box.has-value .search-clear { display: inline-flex; }
+
+  .search-meta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-weight: 600;
+  }
+  .search-meta strong { color: var(--blue); font-weight: 700; }
+
+  .search-results { display: grid; gap: 16px; }
+
+  .participant-card {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 24px 26px;
+    position: relative;
+  }
+  .participant-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px; height: 2px;
+    background: var(--blue);
+  }
+  .participant-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .participant-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .participant-email {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    word-break: break-all;
+    font-weight: 500;
+  }
+  .participant-count {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--blue);
+    font-weight: 700;
+    background: var(--blue-soft);
+    padding: 6px 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .participant-comments { display: grid; gap: 14px; }
+  .comment-item {
+    padding: 14px 16px;
+    background: var(--paper);
+    border-left: 2px solid var(--rule);
+  }
+  .comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-mute);
+    font-weight: 600;
+  }
+  .comment-nota {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    background: var(--blue);
+    color: white;
+    border-radius: 99px;
+    letter-spacing: 0.05em;
+  }
+  .comment-prompt {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    font-style: italic;
+    line-height: 1.4;
+    padding: 6px 10px;
+    background: white;
+    border-left: 2px solid var(--blue-soft);
+  }
+  .comment-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .comment-text mark {
+    background: rgba(0, 210, 127, 0.22);
+    color: var(--ink);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .search-empty {
+    padding: 48px 24px;
+    text-align: center;
+    background: var(--paper-deep);
+    border: 1px dashed var(--rule);
+    color: var(--ink-mute);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+  }
+
   /* ============ TOC SIDEBAR ============ */
   .toc-handle {
     position: fixed;
@@ -1376,15 +1557,16 @@
   </div>
   <ol class="toc-list">
     <li><a href="#tldr" data-toc-target="tldr"><span class="toc-num">01</span>TL;DR para o comercial</a></li>
-    <li><a href="#nuvem" data-toc-target="nuvem"><span class="toc-num">02</span>Nuvem de palavras</a></li>
-    <li><a href="#clusters" data-toc-target="clusters"><span class="toc-num">03</span>Clusters semânticos</a></li>
-    <li><a href="#ranking" data-toc-target="ranking"><span class="toc-num">04</span>Ranking de termos</a></li>
-    <li><a href="#bigramas" data-toc-target="bigramas"><span class="toc-num">05</span>Bigramas</a></li>
-    <li><a href="#insights" data-toc-target="insights"><span class="toc-num">06</span>Insights estratégicos</a></li>
-    <li><a href="#objecoes" data-toc-target="objecoes"><span class="toc-num">07</span>Sinais minoritários</a></li>
-    <li><a href="#aplicacoes" data-toc-target="aplicacoes"><span class="toc-num">08</span>Aplicações táticas</a></li>
-    <li><a href="#frases" data-toc-target="frases"><span class="toc-num">09</span>Banco de frases-âncora</a></li>
-    <li><a href="#metodologia" data-toc-target="metodologia"><span class="toc-num">10</span>Metodologia</a></li>
+    <li><a href="#busca" data-toc-target="busca"><span class="toc-num">02</span>Buscar participante</a></li>
+    <li><a href="#nuvem" data-toc-target="nuvem"><span class="toc-num">03</span>Nuvem de palavras</a></li>
+    <li><a href="#clusters" data-toc-target="clusters"><span class="toc-num">04</span>Clusters semânticos</a></li>
+    <li><a href="#ranking" data-toc-target="ranking"><span class="toc-num">05</span>Ranking de termos</a></li>
+    <li><a href="#bigramas" data-toc-target="bigramas"><span class="toc-num">06</span>Bigramas</a></li>
+    <li><a href="#insights" data-toc-target="insights"><span class="toc-num">07</span>Insights estratégicos</a></li>
+    <li><a href="#objecoes" data-toc-target="objecoes"><span class="toc-num">08</span>Sinais minoritários</a></li>
+    <li><a href="#aplicacoes" data-toc-target="aplicacoes"><span class="toc-num">09</span>Aplicações táticas</a></li>
+    <li><a href="#frases" data-toc-target="frases"><span class="toc-num">10</span>Banco de frases-âncora</a></li>
+    <li><a href="#metodologia" data-toc-target="metodologia"><span class="toc-num">11</span>Metodologia</a></li>
   </ol>
   <div class="toc-drawer-foot">Esc para fechar</div>
 </aside>
@@ -1459,6 +1641,23 @@
       A maioria dos profissionais que vê esse curso não tem dúvida sobre o que estudar — tem medo de errar na prática. O que te trouxe até aqui: aprender mais, ou prescrever com mais segurança?
     </div>
   </div>
+</section>
+
+<!-- ============ BUSCA PARTICIPANTES ============ -->
+<section class="container search-section" id="busca">
+  <div class="section-marker">
+    <span class="section-number">/ Ferramenta</span>
+    <h2 class="section-title">Buscar <em>participante</em></h2>
+  </div>
+  <p class="section-intro">Digite nome ou email para encontrar um lead da jornada preparatória e ver todas as interações que ele fez nos comentários abertos. Use para preparar abordagens individualizadas.</p>
+
+  <div class="search-box" id="search-box">
+    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.5" y2="16.5"/></svg>
+    <input type="search" id="search-input" placeholder="Buscar por nome ou email..." autocomplete="off" spellcheck="false" aria-label="Buscar participante por nome ou email">
+    <button type="button" class="search-clear" id="search-clear" aria-label="Limpar busca">×</button>
+  </div>
+  <div class="search-meta" id="search-meta"></div>
+  <div class="search-results" id="search-results"></div>
 </section>
 
 <!-- ============ CLOUD ============ -->
@@ -2056,6 +2255,7 @@
 
 </main>
 
+<script src="participantes.js"></script>
 <script>
   (function () {
     const HASH = 'ba4f759972f640011da3cd84b75ae54009fbd97e7b3bd913961d59b6cd743f7e';
@@ -2169,6 +2369,112 @@
         if (el) obs.observe(el);
       });
     }
+
+    // Search participantes
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    const searchBox = document.getElementById('search-box');
+    const searchResults = document.getElementById('search-results');
+    const searchMeta = document.getElementById('search-meta');
+    const PARTICIPANTS = (window.ADAPTA_PARTICIPANTS || []);
+
+    function normalize(s) {
+      return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+    function escapeHtml(s) {
+      return (s || '').toString()
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function highlight(text, q) {
+      if (!q) return escapeHtml(text);
+      const nText = normalize(text);
+      const nQ = normalize(q);
+      const idx = nText.indexOf(nQ);
+      if (idx < 0) return escapeHtml(text);
+      return escapeHtml(text.slice(0, idx)) + '<mark>' + escapeHtml(text.slice(idx, idx + q.length)) + '</mark>' + escapeHtml(text.slice(idx + q.length));
+    }
+
+    function renderSearch(query) {
+      if (!searchResults || !searchMeta) return;
+      const total = PARTICIPANTS.length;
+      const q = (query || '').trim();
+
+      searchBox && searchBox.classList.toggle('has-value', q.length > 0);
+
+      if (q.length === 0) {
+        searchResults.innerHTML = '';
+        if (total === 0) {
+          searchMeta.innerHTML = '<em style="color: var(--ink-mute); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 13px;">Base de dados sendo carregada — em breve com todos os participantes da jornada.</em>';
+        } else {
+          searchMeta.innerHTML = '<strong>' + total + '</strong> participantes na base · digite para filtrar';
+        }
+        return;
+      }
+
+      const nq = normalize(q);
+      const matches = PARTICIPANTS.filter(p =>
+        normalize(p.name).includes(nq) || normalize(p.email).includes(nq)
+      );
+
+      if (matches.length === 0) {
+        searchMeta.innerHTML = 'Nenhum participante encontrado para "' + escapeHtml(q) + '"';
+        searchResults.innerHTML = '<div class="search-empty">Tente outra grafia, parte do nome ou outra parte do email.</div>';
+        return;
+      }
+
+      searchMeta.innerHTML = '<strong>' + matches.length + '</strong> ' + (matches.length === 1 ? 'encontrado' : 'encontrados') + ' para "' + escapeHtml(q) + '"';
+
+      const html = matches.slice(0, 30).map(p => {
+        const commentsHtml = (p.comments || []).map(c => `
+          <div class="comment-item">
+            <div class="comment-meta">
+              ${c.nota != null ? `<span class="comment-nota">★ ${c.nota}</span>` : ''}
+              ${c.ts ? `<span>${escapeHtml(c.ts)}</span>` : ''}
+            </div>
+            ${c.prompt ? `<div class="comment-prompt">${escapeHtml(c.prompt)}</div>` : ''}
+            <div class="comment-text">${escapeHtml(c.text || '')}</div>
+          </div>
+        `).join('');
+        const count = (p.comments || []).length;
+        return `
+          <div class="participant-card">
+            <div class="participant-head">
+              <div>
+                <div class="participant-name">${highlight(p.name, q)}</div>
+                <div class="participant-email">${highlight(p.email, q)}</div>
+              </div>
+              <span class="participant-count">${count} ${count === 1 ? 'interação' : 'interações'}</span>
+            </div>
+            <div class="participant-comments">${commentsHtml}</div>
+          </div>
+        `;
+      }).join('');
+
+      const moreNote = matches.length > 30
+        ? `<div class="search-empty" style="margin-top: 12px;">Mostrando os primeiros 30 de ${matches.length}. Refine a busca para ver os demais.</div>`
+        : '';
+      searchResults.innerHTML = html + moreNote;
+    }
+
+    if (searchInput) {
+      let timer;
+      searchInput.addEventListener('input', (ev) => {
+        clearTimeout(timer);
+        const v = ev.target.value;
+        timer = setTimeout(() => renderSearch(v), 80);
+      });
+    }
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
+        renderSearch('');
+      });
+    }
+    renderSearch('');
 
     // Copy-to-clipboard for phrase cards
     document.addEventListener('click', (ev) => {
