@@ -234,6 +234,151 @@ ENTRIES = [
     ('Matheus Alves', 'w3malves@gmail.com', 5, 'final', '21/05/2026 01:46', 'Ganhar dinheiro'),
     ('Matheus Alves', 'w3malves@gmail.com', 5, 'glicemico', '21/05/2026 01:24', 'Vamo que vamo'),
     ('Matheus Alves', 'w3malves@gmail.com', 5, 'pressao', '20/05/2026 21:04', 'Tenho medo de prescrever errado'),
+
+    # === LOTE 4 (23/05/2026 dia inteiro + complementos de 22/05) ===
+    # Screenshot 1 - 23/05 13:47 -> 11:59
+    ('WILIAM JUNIOR BUENO', 'wiliamjuniorbueno@gmail.com', 5, 'vamos', '23/05/2026 13:47', 'Personal Trainer: WILIAM JUNIOR BUENO CREF9/PR: 044934-G/PR'),
+    ('Andreza Cristina Rodrigues Oliveira', 'tsigaga@gmail.com', 5, 'vamos', '23/05/2026 13:47', 'Bom'),
+    ('Rafael Santiago Geremias', 'rafaelsgeremias@gmail.com', 5, 'vamos', '23/05/2026 13:37', 'Excelente'),
+    ('João Paulo Ferraz de Castro Teixeira', 'jpmusculacao@gmail.com', 5, 'vamos', '23/05/2026 13:36', 'Obrigado! Preciso mesmo aprender o máximo que eu puder para prescrever treinos adequados para este público, e com segurança de que estou fazendo a coisa certa. Acredito também que trabalhar neste nixo trará à mim uma satisfação pessoal e profissional sem paralelos. Obrigado'),
+    ('Letícia', 'leticialau7@gmail.com', 5, 'vamos', '23/05/2026 13:34', 'entendo a importancia e me intersso pelo assunto por isso quero me especializar'),
+    ('Fabio Moledo', 'fabiomoledo@hotmail.com', 5, 'vamos', '23/05/2026 13:31', 'O único caminho é o estudo'),
+    ('Stephanie Aline de Oliveira', 'teezinha.oliveira02@gmail.com', 5, 'vamos', '23/05/2026 13:29', 'Muito bom'),
+    ('Henrique Previato Pereira', 'hpreviato@yahoo.com.br', 5, 'glicemico', '23/05/2026 13:28', 'Ok'),
+    ('Lucas Tiburtino de Lacerda', 'lucastiburtino01@gmail.com', 5, 'pressao', '23/05/2026 13:28', 'É uma responsabilidade muito grande, caso seja feita errada, custará a vida do paciente em exercício, muito importante esse aprendizado!'),
+    ('Jeilso Feitosa da Silva', 'jasonkan25@gmail.com', 5, 'vamos', '23/05/2026 13:25', 'Estou achando interessante.'),
+    ('Cassiano Leal', 'lealcassiano@gmail.com', 5, 'pressao', '23/05/2026 13:20', 'Muito bem organizado e didático'),
+    ('Kawan Almeida dos Santos', 'kawanguga200@gmail.com', 4, 'vamos', '23/05/2026 13:14', 'Excelente assunto abortado, precisamos de mais profissionais capacitados e vamos em busca de aumentar o nosso conhecimento.'),
+    ('Vicente Nascimento', 'nascivi@yahoo.com.br', 5, 'final', '23/05/2026 13:13', 'Ser humano e eficiente em proporcionar segurança e uma vida saudável aos clientes.'),
+    ('Jason Paulina dos Santos', 'chefe.jason@gmail.com', 5, 'final', '23/05/2026 13:12', 'Muito bom'),
+    ('Josafa', 'jo.cris.sarah@gmail.com', 5, 'vamos', '23/05/2026 13:11', 'Estou ansioso para participar do workshop.'),
+    ('Augusto Cid Perez Verndi', 'augustocpv@gmail.com', 5, 'vamos', '23/05/2026 13:10', 'Excelente'),
+    ('Ana Julia Oliveira Alves', 'ana-juliaa_2009@outlook.com', 5, 'vamos', '23/05/2026 13:10', 'Adorei como fazem a preparação para o evento'),
+    ('Liliane Codogno Lima', 'liliane_codogno@yahoo.com.br', 5, 'vamos', '23/05/2026 13:09', 'Muito bom'),
+    ('Gabriel Fernando Barbosa', 'gabrielfb1994@gmail.com', 5, 'final', '23/05/2026 13:08', 'Muito bom!'),
+    ('Rodrigo Frigério', 'rodrigofrigerio.professor@gmail.com', 5, 'vamos', '23/05/2026 13:08', 'Top, aguardando ansiosamente o workshop!!!'),
+    ('Jason Paulina dos Santos', 'chefe.jason@gmail.com', 5, 'glicemico', '23/05/2026 13:07', 'Muito bom'),
+    ('Gabriel Fernando Barbosa', 'gabrielfb1994@gmail.com', 5, 'glicemico', '23/05/2026 13:07', 'Muito bomNmN'),
+    ('Vicente Nascimento', 'nascivi@yahoo.com.br', 5, 'glicemico', '23/05/2026 13:04', 'Ficou mais claro o entendimento deste equilíbrio.'),
+    ('Gabriel Fernando Barbosa', 'gabrielfb1994@gmail.com', 5, 'pressao', '23/05/2026 13:04', 'Muito bom'),
+    ('Jeferson Vieira', 'jefsi.303@gmail.com', 5, 'final', '23/05/2026 12:46', 'Muitos informação relevante para o aperfeiçoamento'),
+    ('Ivânio José Augusto de Sousa', 'ivaniotx@hotmail.com', 5, 'final', '23/05/2026 12:38', 'Prestar o melhor serviço possível aos meus alunos.'),
+    ('Rafaela Silva do Nascimento', 'rafaelarsn76@gmail.com', 5, 'vamos', '23/05/2026 12:36', 'Fase bem compreensiva, fácil de entender!!!! Agora, é só estudar e se dedicar ao aprendizado, transformando teoria em prática.'),
+    ('Victor dos Santos Garcia', 'v91garcia@gmail.com', 5, 'final', '23/05/2026 12:29', 'Crescimento profissional'),
+    ('Ivânio José Augusto de Sousa', 'ivaniotx@hotmail.com', 5, 'glicemico', '23/05/2026 12:28', 'Excelente!'),
+    ('Fernando Luís da Silva', 'personalfernandoluis@gmail.com', 5, 'vamos', '23/05/2026 12:22', 'São novos desafios e precisamos sempre estar atualizados.'),
+    ('Idel Fuks', 'iwfuks@gmail.com', 5, 'final', '23/05/2026 12:17', 'Proporcionar qualidade de vida à população.'),
+    ('Vicente Nascimento', 'nascivi@yahoo.com.br', 5, 'pressao', '23/05/2026 12:15', 'Prescrever a atividade adequada, não oferecendo riscos'),
+    ('Jaqueline Leandro Pimenta', 'Jaque.l.pimenta@gmail.com', 5, 'vamos', '23/05/2026 12:15', 'Ansiosa'),
+    ('Victor dos Santos Garcia', 'v91garcia@gmail.com', 5, 'glicemico', '23/05/2026 12:12', 'Vou sempre procurar um começo mais tranquilo até ter total controle do aluno.'),
+    ('Idel Fuks', 'iwfuks@gmail.com', 5, 'glicemico', '23/05/2026 11:59', 'Com certeza uma avaliação criteriosa e estrutura em ciências, experimentos e constatações de pesquisas iram proporcionar segurança e principalmente HUMANIDADE!'),
+
+    # Screenshot 4 - 23/05 11:52 -> 01:20
+    ('Victor dos Santos Garcia', 'v91garcia@gmail.com', 5, 'pressao', '23/05/2026 11:52', 'Procuro estudar o aluno antes para prescrever um treino a ele.'),
+    ('Victor dos Santos Garcia', 'v91garcia@gmail.com', 5, 'aplica', '23/05/2026 11:42', 'Idoso'),
+    ('Victor dos Santos Garcia', 'v91garcia@gmail.com', 5, 'vamos', '23/05/2026 11:32', 'Excelente'),
+    ('Ivânio José Augusto de Sousa', 'ivaniotx@hotmail.com', 5, 'pressao', '23/05/2026 11:31', 'Excelente!'),
+    ('Vicente Nascimento', 'nascivi@yahoo.com.br', 4, 'aplica', '23/05/2026 11:23', 'Hipertenso e diabético'),
+    ('Jéssica Souza', 'jeeh_yasmin@hotmail.com', 2, 'aplica', '23/05/2026 11:23', 'Atualmente não atuo na área, mas pretendo atuar com mulheres 30+ e grupos para a terceira idade.'),
+    ('ANDRÉA LOPES DE SOUSA BARRETO', 'andreabarretopb@gmail.com', 5, 'vamos', '23/05/2026 11:20', 'Estudar é o melhor caminho a seguir.'),
+    ('Henrique Previato Pereira', 'hpreviato@yahoo.com.br', 5, 'pressao', '23/05/2026 11:18', 'Muito bom'),
+    ('Gabriel Fernando Barbosa', 'gabrielfb1994@gmail.com', 5, 'aplica', '23/05/2026 11:13', 'Muito bom!'),
+    ('Adriana Deroldo', 'deroldoadriana@gmail.com', 5, 'pressao', '23/05/2026 11:12', 'Que o profissional de EF, deva atuar com atenção e responsabilidade as condições fisiológicas do aluno, para alcançar os objetivos durante o tratamento.'),
+    ('Laís de Fátima da Silva', 'layisssilva52@gmail.com', 5, 'final', '23/05/2026 11:03', 'Fazer a diferença'),
+    ('Henrique Previato Pereira', 'hpreviato@yahoo.com.br', 5, 'aplica', '23/05/2026 10:59', 'Ok'),
+    ('Josias Vieira Camargo', 'josias.camargo@hotmail.com', 5, 'vamos', '23/05/2026 10:55', 'Muito bom, obrigado.'),
+    ('Adriana Deroldo', 'deroldoadriana@gmail.com', 5, 'aplica', '23/05/2026 10:46', 'Trabalho com pessoas idosas'),
+    ('Ari Rossett Junior', 'personal.ari@gmail.com', 5, 'aplica', '23/05/2026 10:46', 'O grupo com o qual eu mais trabalho são os idosos, no entanto também quero iniciar os trabalhos com portadores de cardiopatia e este conteúdo me ajudará muito.'),
+    ('Wellington Clayton de Oliveira', 'amaral.personaltrainer@gmail.com', 5, 'vamos', '23/05/2026 10:38', '👍'),
+    ('Vicente Nascimento', 'nascivi@yahoo.com.br', 5, 'vamos', '23/05/2026 10:35', 'Módulo objetivo'),
+    ('Larissa Albino', 'albino.bella@gmail.com', 4, 'vamos', '23/05/2026 10:32', 'Ansiosa para começar'),
+    ('Adriana Deroldo', 'deroldoadriana@gmail.com', 5, 'vamos', '23/05/2026 10:10', 'De fato, o profissional de Educação Física, hoje precisa, estar sempre atualizando para atender as demandas e os diversos públicos.'),
+    ('Ricardo Filho', 'kakapersonal@hotmail.com', 5, 'pressao', '23/05/2026 09:50', 'Me sinto preparado!'),
+    ('David', 'David_bossanova@yahoo.com.br', 5, 'final', '23/05/2026 07:46', 'Ajudar na evolução do ser humano como pessoa'),
+    ('David', 'David_bossanova@yahoo.com.br', 5, 'glicemico', '23/05/2026 07:43', 'Após uma boa anamnese da sim pra prescrever com segurança pro aluno'),
+    ('David', 'David_bossanova@yahoo.com.br', 5, 'pressao', '23/05/2026 07:36', 'Muito bem'),
+    ('David', 'David_bossanova@yahoo.com.br', 5, 'aplica', '23/05/2026 07:32', 'Tea'),
+    ('Jason Paulina dos Santos', 'chefe.jason@gmail.com', 5, 'pressao', '23/05/2026 07:24', 'Bom de mais'),
+    ('Jason Paulina dos Santos', 'chefe.jason@gmail.com', 5, 'aplica', '23/05/2026 07:18', 'Muito legal'),
+    ('Lucas Guimarães Braga', 'lucasbraga92@live.com', 5, 'aplica', '23/05/2026 07:16', 'Idoso, neurodivergente, diabeticos'),
+    ('Maycon acunha', 'Mayconacunha@gmail.com', 5, 'vamos', '23/05/2026 06:35', 'Muito bom estou animado para expandir ainda mais meus conhecimentos'),
+    ('Rogério Soares Mendes', 'soaresmendes@hotmail.com', 4, 'pressao', '23/05/2026 03:31', 'Pelo conhecido que tenho, fico confortável em preservar os exercícios.'),
+    ('Rogério Soares Mendes', 'soaresmendes@hotmail.com', 5, 'aplica', '23/05/2026 02:06', 'Muito bom.'),
+    ('Emerson', 'emerson.redf@yahoo.com.br', 5, 'vamos', '23/05/2026 01:57', 'Acredito que o curso será importante para minha função de educador físico.'),
+    ('Luana Grave Delavia', 'luanarihanna750@gmail.com', 5, 'final', '23/05/2026 01:28', 'Ótimo'),
+    ('Alexandre de Oliveira Souza', 'aleolisouza@gmail.com', 5, 'final', '23/05/2026 01:25', 'Dar melhores condições física as pessoas que praticam esporte, desde crianças ate os idosos'),
+    ('Luana Grave Delavia', 'luanarihanna750@gmail.com', 5, 'glicemico', '23/05/2026 01:20', 'Ótimo'),
+
+    # Screenshot 3 - 23/05 01:19 -> 22/05 23:34
+    ('Alexandre de Oliveira Souza', 'aleolisouza@gmail.com', 5, 'glicemico', '23/05/2026 01:19', 'Sim, sinto que sou capaz sim... mas creio que preciso me aprofundar mais...'),
+    ('Daniele Feriani', 'df.danifferiani@gmail.com', 5, 'aplica', '23/05/2026 01:18', 'Cardiopatas.'),
+    ('Luana Grave Delavia', 'luanarihanna750@gmail.com', 5, 'pressao', '23/05/2026 01:15', 'Ótimo'),
+    ('Aldemar Moreira Pires', 'Dema_preto@hotmail.com', 5, 'aplica', '23/05/2026 01:11', 'Quero trabalhar com idoso tentar dar uma vida mais saudável a eles'),
+    ('Bruna Delella', 'bruna.delella@outlook.com', 5, 'pressao', '23/05/2026 01:06', 'Hoje me sinto muito mais segura para prescrever exercicio para um hipertenso'),
+    ('Andressa de Lima Manzini', 'andressalimamanzini@gmail.com', 5, 'final', '23/05/2026 01:02', 'Ser um profissional capacitado e de referência, com conhecimentos necessários e com segurança para atuar com grupos especiais'),
+    ('Luana Grave Delavia', 'luanarihanna750@gmail.com', 5, 'aplica', '23/05/2026 01:00', 'Ótimo'),
+    ('Alexandre de Oliveira Souza', 'aleolisouza@gmail.com', 5, 'pressao', '23/05/2026 00:59', 'Um pouco mais preparado pra nao passar do limite.'),
+    ('Luana Grave Delavia', 'luanarihanna750@gmail.com', 5, 'vamos', '23/05/2026 00:58', 'Ótimo'),
+    ('Daniela Bruniera Arruda', 'danifazenda16@gmail.com', 5, 'aplica', '23/05/2026 00:58', 'Conhecimento pré aula 👏🏼👏🏼👏🏼'),
+    ('Rafael de Menezes', 'rfimenezes82@gmail.com', 5, 'final', '23/05/2026 00:55', 'Formação continuada, com aproveitamento do que o mercado atual pode oferecer'),
+    ('Anderson Carvalho', 'andersoncpersonal@gmail.com', 5, 'vamos', '23/05/2026 00:55', 'Já atuo nessa área a alguns anos. Acredito ter um bom conhecimento teórico e experiência prática, mas estou com bastante expectativa de ter novos aprendizados e atualizar o pouco do que sei! Oportunidade de ouro!'),
+    ('Rafael de Menezes', 'rfimenezes82@gmail.com', 4, 'glicemico', '23/05/2026 00:48', 'Ainda não me sinto capaz, preciso de mais conhecimentos'),
+    ('Juscelino Rodrigues Lima', 'jorgejuscelino40@gmail.com', 5, 'vamos', '23/05/2026 00:44', 'Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas'),
+    ('Andressa de Lima Manzini', 'andressalimamanzini@gmail.com', 5, 'glicemico', '23/05/2026 00:43', 'Ainda não me sinto preparada'),
+    ('Laís de Fátima da Silva', 'layisssilva52@gmail.com', 2, 'glicemico', '23/05/2026 00:27', 'Estou ansiosa'),
+    ('Douglas Jefferson Gonçalves', 'douglasjefferson1980@gmail.com', 5, 'final', '23/05/2026 00:21', 'Eu como professor de educação física, procuro ser o melhor e mais eficiente aos meus alunos, procurar prescrever o melhor exercício para podermos chegar com segurança aos objetivos traçados.'),
+    ('Mauricio Laham', 'mauriciolaham@gmail.com', 5, 'pressao', '23/05/2026 00:19', 'Muito importante mesmo.'),
+    ('Rafael de Menezes', 'rfimenezes82@gmail.com', 4, 'pressao', '23/05/2026 00:18', 'Com as aulas desta trilha, consigo entender um pouco mais sobre este processo, mas ainda sinto que preciso de mais conhecimento para trazer mais segurança'),
+    ('Andréia de Souza Carvalho', 'deia-carvalho91@hotmail.com', 5, 'final', '23/05/2026 00:13', 'Amei o conteúdo, muito produtivo!'),
+    ('Douglas Jefferson Gonçalves', 'douglasjefferson1980@gmail.com', 5, 'glicemico', '23/05/2026 00:12', 'Importantes informações para gente que trabalha com alunos atletas amadores e alto rendimento, ficar atento aos sinais e reações dos atletas, assim podendo oferecer o melhor treino com maior segurança'),
+    ('Mauricio Laham', 'mauriciolaham@gmail.com', 5, 'aplica', '23/05/2026 00:06', 'Insuficiência cardíaca e hipertensos.'),
+    ('Laís de Fátima da Silva', 'layisssilva52@gmail.com', 5, 'pressao', '23/05/2026 00:05', 'Ainda tenho insegurança'),
+    ('Douglas Jefferson Gonçalves', 'douglasjefferson1980@gmail.com', 4, 'pressao', '23/05/2026 00:00', 'Temos que ficar atentos aos sinais de resposta dos alunos, para saber se ele está fazendo os exercícios de forma correta e sua pressão adequada ao movimento'),
+    ('Alexandre de Oliveira Souza', 'aleolisouza@gmail.com', 5, 'aplica', '22/05/2026 23:57', 'Não aplico ainda pois estou na faculdade ainda... ainda nao tenho definido qual area atuar, mas obter conhecimento e estudos nunca é de mais... tenho tendencia a trabalhar com a terceira idade pois trabalho na secretaria de esportes da cidade, aonde atendemos hipertensos, diabeticos entre outros.'),
+    ('Rogeria Maria da Silva', 'rmsilva26@gmail.com', 5, 'vamos', '22/05/2026 23:56', 'A jornada está bem esclarecedora. 👏🏼👏🏼👏🏼'),
+    ('Rafael de Menezes', 'rfimenezes82@gmail.com', 3, 'aplica', '22/05/2026 23:54', 'Eu trabalho com grupos da 3ª idade.'),
+    ('Andréia de Souza Carvalho', 'deia-carvalho91@hotmail.com', 5, 'glicemico', '22/05/2026 23:51', 'Conteúdo rico'),
+    ('Douglas Jefferson Gonçalves', 'douglasjefferson1980@gmail.com', 5, 'aplica', '22/05/2026 23:49', 'Eu trabalho com alunos atletas amadores que trabalha com a frequência cardíaca mais rapida e volta a calma'),
+    ('Laís de Fátima da Silva', 'layisssilva52@gmail.com', 5, 'aplica', '22/05/2026 23:48', 'Todos os tipos, idoso, todos os tipos de problemas ortopédicos, diabético, hipertensos, obesos e bariátricos'),
+    ('Gisele Soares de Jesus', 'giselestudio20@hotmail.com', 5, 'vamos', '22/05/2026 23:46', 'Muito necessário esse curso'),
+    ('Douglas Jefferson Gonçalves', 'douglasjefferson1980@gmail.com', 5, 'vamos', '22/05/2026 23:41', 'Gostei muito das informações, da forma de explicação recomendo parabéns e obrigado pela oportunidade de receber mais informações'),
+    ('Daniel Almeida Ribeiro', 'drdanielribeiro23@gmail.com', 5, 'vamos', '22/05/2026 23:37', 'É muito legal a iniciativa de ministrar cursos de capacitação para os profissionais, com certeza isso impactará à nossa classe.'),
+
+    # Screenshot 2 - 22/05 23:34 -> 22:04
+    ('Andressa de Lima Manzini', 'andressalimamanzini@gmail.com', 5, 'pressao', '22/05/2026 23:34', 'Estou um pouco mais confiante'),
+    ('Thomaz Jefferson Pereira Ramos', 'thomazjeffersontom@gmail.com', 5, 'final', '22/05/2026 23:32', 'Ótimo'),
+    ('Renan da Silva Ramos', 'reenan.ramos18@gmail.com', 2, 'aplica', '22/05/2026 23:30', 'Idosos'),
+    ('Josiane Peixoto dos Santos Simões', 'jo.peixoto.js@gmail.com', 5, 'vamos', '22/05/2026 23:27', 'Mto feliz em ter essa oportunidade de ampliar meus conhecimentos'),
+    ('Thomaz Jefferson Pereira Ramos', 'thomazjeffersontom@gmail.com', 5, 'glicemico', '22/05/2026 23:25', 'Excelente 🌟😊'),
+    ('Mauricio Laham', 'mauriciolaham@gmail.com', 5, 'vamos', '22/05/2026 23:19', 'Fundamental esse entendimento. Muitos personals não sabem o que estão fazendo.'),
+    ('Átila Gomes da Costa', 'acadsansao@gmail.com', 5, 'final', '22/05/2026 23:15', 'Ter capacidade de oferecer o melhor para todos os tipos e idades de pessoas'),
+    ('Suely Tambalo', 'Sutambalo@yahoo.com.br', 4, 'pressao', '22/05/2026 23:13', 'Ainda preciso aprender mais sobre isdo'),
+    ('Renan da Silva Ramos', 'reenan.ramos18@gmail.com', 5, 'vamos', '22/05/2026 23:05', 'Conteudo bom e proveitoso 👍'),
+    ('Jones Pires de Oliveira', 'jonespires@gmail.com', 5, 'final', '22/05/2026 22:56', 'Bom'),
+    ('Suely Tambalo', 'Sutambalo@yahoo.com.br', 5, 'aplica', '22/05/2026 22:54', 'Idosos com comirbidades variadas'),
+    ('Ana Margarida Fernandes Pinto Anastácio', 'anafpanastacio@gmail.com', 3, 'pressao', '22/05/2026 22:53', 'Preciso ficar mais segura.'),
+    ('Jones Pires de Oliveira', 'jonespires@gmail.com', 5, 'glicemico', '22/05/2026 22:50', 'Mto bom'),
+    ('Eda Maria Wiggert Ferreira Zaniolo', 'emwzaniolo@gmail.com', 5, 'vamos', '22/05/2026 22:48', 'Muito interessante o formato dos ensinamentos'),
+    ('Edvane de Sousa Lima', 'edsousalima@gmail.com', 5, 'aplica', '22/05/2026 22:44', 'Tenho aplicação na prática, porém sei que preciso melhorar bastante; e meu público, são os idosos!'),
+    ('Rita', 'personal.kassia@gmail.com', 5, 'final', '22/05/2026 22:42', 'Ajudar, cuidar, transformar vidas, através da minha profissão dar uma vida mais ativa e com mais qualidade às pessoas.'),
+    ('Monica Maria da Silva Barbosa', 'monica_kinhabarbosa@hotmail.com', 5, 'vamos', '22/05/2026 22:40', 'Eu estou muito feliz em poder continuar estudando e aprendendo com profissionais tão capacitados espero a cada dia melhorar meus atendimentos e meu financeiro.'),
+    ('Jones Pires de Oliveira', 'jonespires@gmail.com', 5, 'pressao', '22/05/2026 22:37', 'Nota 10'),
+    ('Ana Margarida Fernandes Pinto Anastácio', 'anafpanastacio@gmail.com', 3, 'aplica', '22/05/2026 22:37', 'Diabéticos'),
+    ('Andressa de Lima Manzini', 'andressalimamanzini@gmail.com', 1, 'aplica', '22/05/2026 22:36', 'Pretendo trabalhar com idosos'),
+    ('Thomaz Jefferson Pereira Ramos', 'thomazjeffersontom@gmail.com', 5, 'pressao', '22/05/2026 22:36', 'Realmente a pressão arterial é um "divisor de aguas" no que compete uma prescrição de exercício e acompanhamento do aluno.'),
+    ('Alex Douglas Oliveira Pinto', 'alexdop2018@gmail.com', 5, 'vamos', '22/05/2026 22:35', 'Expectativa de colher algumas informações específicas já neste workshop.'),
+    ('Rita', 'personal.kassia@gmail.com', 5, 'glicemico', '22/05/2026 22:35', 'Quero ter mais conhecimento sobre esse grupo.'),
+    ('Marcelo Dantas Ribeiro', 'secagordura24@gmail.com', 5, 'vamos', '22/05/2026 22:33', 'Foi uma jornada muito proveitosa e objetiva. O conteúdo reforçou de avaliar cada aluno de forma individualizada, principalmente quando falamos de grupos especiais, respeitando limitações, condições de saúde e segurança na prescrição do treinamento. Foi um aprendizado muito importante para minha atuação profissional. Não vejo a hora de iniciar o workshop.'),
+    ('Rita', 'personal.kassia@gmail.com', 5, 'pressao', '22/05/2026 22:28', 'Adquirir mais conhecimento.'),
+    ('Gisele Tizatto', 'giseletizzato@hotmail.com', 5, 'glicemico', '22/05/2026 22:27', 'Não me sinto ainda preparada para prescrever exercícios p diabéticos com segurança. Preciso me aprofundar mais no conteúdo. Para prescrever exercícios com segurança p meus alunos.'),
+    ('Suely Tambalo', 'Sutambalo@yahoo.com.br', 5, 'vamos', '22/05/2026 22:23', 'Monitorar sinais e riscos durante os exercicios'),
+    ('IRAN OLIVEIRA', 'iradoju@gmail.com', 5, 'vamos', '22/05/2026 22:21', 'Obrigado!'),
+    ('Rita', 'personal.kassia@gmail.com', 5, 'aplica', '22/05/2026 22:21', 'Alguns dos pontos.'),
+    ('Thomaz Jefferson Pereira Ramos', 'thomazjeffersontom@gmail.com', 5, 'aplica', '22/05/2026 22:14', 'Excelente explicação sobre sistema cardiovascular e seus receptores'),
+    ('Francisco Chagas Marques Martins', 'Prof.fran.personal@gmail.com', 5, 'final', '22/05/2026 22:09', 'Surpreendente'),
+    ('Átila Gomes da Costa', 'acadsansao@gmail.com', 5, 'glicemico', '22/05/2026 22:07', 'Me sinto mais seguro com todas informações e também com seus sintomas'),
+    ('Ana Margarida Fernandes Pinto Anastácio', 'anafpanastacio@gmail.com', 5, 'vamos', '22/05/2026 22:04', 'Muito importante essa preocupação com o público especial. Precisamos ter mais segurança em atender. Estou animada'),
+    ('Wesley Alex', 'wesleyalex79@gmail.com', 5, 'vamos', '22/05/2026 22:04', 'Show'),
 ]
 
 
@@ -526,10 +671,17 @@ def make_suggestions(p, participant_idx=0):
 
 
 def main():
-    # Dedupe por email: agrupa comments
+    # Dedupe por email: agrupa comments. Pula entries duplicadas (mesmo email + ts + text).
     by_email = OrderedDict()
+    seen_comments = set()
+    dup_count = 0
     for name, email, nota, prompt_key, ts, text in ENTRIES:
         key = email.strip().lower()
+        comment_key = (key, ts.strip(), text.strip())
+        if comment_key in seen_comments:
+            dup_count += 1
+            continue
+        seen_comments.add(comment_key)
         if key not in by_email:
             by_email[key] = {
                 'name': name,
@@ -537,7 +689,6 @@ def main():
                 'comments': [],
             }
         else:
-            # Mantém o nome com mais caracteres (provável ortografia mais completa)
             if len(name) > len(by_email[key]['name']):
                 by_email[key]['name'] = name
         tags = detect_tags(text)
@@ -548,6 +699,8 @@ def main():
             'text': text,
             'tags': tags,
         })
+    if dup_count:
+        print(f'(dedup: {dup_count} entries duplicadas ignoradas)')
 
     # Gera sugestoes para cada participante (com indice para variar opener)
     for idx, p in enumerate(by_email.values()):
