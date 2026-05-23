@@ -200,6 +200,91 @@ ENTRIES = [
 ]
 
 
+# ===================== TAGS =====================
+# Cada tag aponta para uma categoria + label visivel.
+# A deteccao usa keywords (case + accent insensitive) presentes no texto do comment.
+TAG_CATALOG = OrderedDict([
+    # PAIN: dores e friccoes do lead
+    ('medo',            {'label': 'Medo de prescrever',  'category': 'pain'}),
+    ('inseguro',        {'label': 'Insegurança',         'category': 'pain'}),
+    ('duvida',          {'label': 'Tem dúvida',          'category': 'pain'}),
+    ('critica-formato', {'label': 'Crítica ao formato',  'category': 'pain'}),
+    ('logistica',       {'label': 'Logística difícil',   'category': 'pain'}),
+
+    # GOAL: aspiracoes e objetivos
+    ('ganhar-dinheiro', {'label': 'Quer ganhar dinheiro','category': 'goal'}),
+    ('ser-referencia',  {'label': 'Quer ser referência', 'category': 'goal'}),
+    ('mercado',         {'label': 'Vê oportunidade no mercado', 'category': 'goal'}),
+    ('pediu-mais',      {'label': 'Quer mais conteúdo',  'category': 'goal'}),
+    ('atualizacao',     {'label': 'Busca atualização',   'category': 'goal'}),
+
+    # CLINICAL: publico que atende ou quer atender
+    ('atende-idosos',       {'label': 'Atende idosos',       'category': 'clinical'}),
+    ('atende-hipertensos',  {'label': 'Hipertensos',         'category': 'clinical'}),
+    ('atende-diabeticos',   {'label': 'Diabéticos',          'category': 'clinical'}),
+    ('atende-cardiacos',    {'label': 'Cardíacos',           'category': 'clinical'}),
+    ('atende-oncologicos',  {'label': 'Oncológicos',         'category': 'clinical'}),
+    ('comorbidades',        {'label': 'Comorbidades múltiplas', 'category': 'clinical'}),
+    ('reabilitacao',        {'label': 'Reabilitação',        'category': 'clinical'}),
+    ('obesidade',           {'label': 'Obesidade',           'category': 'clinical'}),
+
+    # HOT: lead quente (alta probabilidade de fechar)
+    ('cliente-atual',   {'label': 'Já é aluno Adapta',  'category': 'hot'}),
+    ('preparado',       {'label': 'Já se sente preparado','category': 'hot'}),
+
+    # NEUTRAL: contexto util mas neutro
+    ('iniciante',       {'label': 'Quer começar no nicho','category': 'neutral'}),
+    ('ansiedade',       {'label': 'Ansioso pelo curso', 'category': 'neutral'}),
+])
+
+# Keywords sem acento, lower-case. Match substring tolerante a acentos.
+TAG_KEYWORDS = {
+    'medo':            ['medo de prescrever', 'medo', 'tenho medo'],
+    'inseguro':        ['insegura', 'inseguro', 'nao me sent', 'nao me sinto', 'pouco de duvida na pratica', 'nao tenho confianca', 'nao sentiria confiante', 'nao me sentia confiante'],
+    'duvida':          ['duvida', 'preciso aprender', 'me aprofundar', 'tenho que aprofundar', 'preciso saber', 'preciso me aprofundar'],
+    'critica-formato': ['so vi explicacoes', 'esperava', 'introdutorio', 'so recebi orientacoes', 'achei que teria', 'nota agora e muito cedo', 'nao tem muito o que falar'],
+    'logistica':       ['interior', 'logistica', 'distancia', 'so na capital', 'morando no interior'],
+
+    'ganhar-dinheiro': ['ganhar dinheiro', 'faturar', 'rentab'],
+    'ser-referencia':  ['me tornar referencia', 'tornar referencia', 'ser referencia', 'me destacar'],
+    'mercado':         ['falta de profissionais', 'muito procurada', 'mercado', 'demanda', 'oferta no mercado'],
+    'pediu-mais':      ['gostaria de mais', 'mais conteudo', 'quero saber mais', 'mais informacoes', 'aprender mais', 'querendo aprender mais', 'mais aprofund', 'desejo entender mais', 'quero aprender'],
+    'atualizacao':     ['atualizar', 'atualizacao', 'reciclagem', 'me atualizar'],
+
+    'atende-idosos':       ['idosos', 'pessoas mais velhas', '60 anos', '93 anos', 'pessoal de mais idade', 'idade 40+'],
+    'atende-hipertensos':  ['hipertenso', 'pressao alta', 'hipertensao', 'pressao arterial'],
+    'atende-diabeticos':   ['diabetic', 'diabetes', 'glicemico', 'glicemic', 'diabete'],
+    'atende-cardiacos':    ['cardiaco', 'cardiopata', 'problema cardiaco', 'frequencia cardiaca'],
+    'atende-oncologicos':  ['oncologic', 'cancer'],
+    'comorbidades':        ['comorbidade', 'multipatologia', 'varias patologias'],
+    'reabilitacao':        ['reabilitacao', 'pos cirurgia', 'pilates ou musculacao'],
+    'obesidade':           ['obesidade', 'obeso', 'sobrepeso'],
+
+    'cliente-atual':   ['sou aluna da pos', 'sou aluno da pos', 'ja sou aluna', 'ja sou aluno', 'fiz a imersao', 'me inscrevi na black', 'aluna da pos'],
+    'preparado':       ['me sinto preparado', 'me sinto bem mais seguro', 'me sinto bem e confortavel', 'me sinto capaz', 'sinto capaz da prescre', 'mim sinto capaz', 'sinto bem e confortavel'],
+
+    'iniciante':       ['querendo comecar', 'comecar a trabalhar', 'ainda estou aprendendo', 'primeira fase', 'reingressar', 'estou aprendendo a lidar', 'iniciar um programa'],
+    'ansiedade':       ['ansiosa', 'ansioso', 'empolgado', 'empolgada', 'ansiosa pelo', 'ansiosa para', 'ansioso para'],
+}
+
+
+def _strip_accents(s):
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+
+
+def detect_tags(text):
+    """Retorna lista de tag keys que casam com o texto do comment."""
+    normalized = _strip_accents((text or '').lower())
+    matched = []
+    for tag_key, keywords in TAG_KEYWORDS.items():
+        for kw in keywords:
+            if kw in normalized:
+                matched.append(tag_key)
+                break
+    return matched
+
+
 def first_name(name):
     parts = name.strip().split()
     if not parts:
@@ -418,11 +503,13 @@ def main():
             # Mantém o nome com mais caracteres (provável ortografia mais completa)
             if len(name) > len(by_email[key]['name']):
                 by_email[key]['name'] = name
+        tags = detect_tags(text)
         by_email[key]['comments'].append({
             'nota': nota,
             'prompt': PROMPTS[prompt_key],
             'ts': ts,
             'text': text,
+            'tags': tags,
         })
 
     # Gera sugestoes para cada participante (com indice para variar opener)
@@ -434,24 +521,42 @@ def main():
     parts = list(by_email.values())
     parts.sort(key=lambda p: p['name'].lower())
 
+    # Estatistica de tags
+    tag_counts = {k: 0 for k in TAG_CATALOG}
+    for p in parts:
+        for c in p['comments']:
+            for t in c.get('tags', []):
+                tag_counts[t] = tag_counts.get(t, 0) + 1
+
     # Gera JS
     lines = [
         '/*',
         ' * Base de participantes da jornada preparatoria PG3.',
         ' *',
         ' * Estrutura:',
-        ' *   { name, email, comments: [ { nota, prompt, ts, text } ] }',
+        ' *   { name, email, archetype, comments: [ { nota, prompt, ts, text, tags } ], suggestions: [...] }',
         ' *',
         ' * Gerado por build-participantes.py a partir dos lotes de prints.',
         f' * Total: {sum(len(p["comments"]) for p in parts)} comentarios de {len(parts)} participantes unicos.',
         ' */',
+        'window.ADAPTA_TAGS = ' + json.dumps(dict(TAG_CATALOG), ensure_ascii=False, indent=2) + ';',
+        '',
+        'window.ADAPTA_TAG_COUNTS = ' + json.dumps(tag_counts, ensure_ascii=False) + ';',
+        '',
         'window.ADAPTA_PARTICIPANTS = ' + json.dumps(parts, ensure_ascii=False, indent=2) + ';',
     ]
     out = '\n'.join(lines) + '\n'
     with open('participantes.js', 'w', encoding='utf-8') as f:
         f.write(out)
 
+    total_tagged = sum(1 for p in parts for c in p['comments'] if c.get('tags'))
+    used_tags = sum(1 for v in tag_counts.values() if v > 0)
     print(f'OK · {len(parts)} participantes · {sum(len(p["comments"]) for p in parts)} comentarios')
+    print(f'Tags · {used_tags}/{len(TAG_CATALOG)} tags em uso · {total_tagged} comentarios com pelo menos 1 tag')
+    print('Top tags:')
+    for k, v in sorted(tag_counts.items(), key=lambda x: -x[1])[:10]:
+        if v > 0:
+            print(f'  {v:>3}  {TAG_CATALOG[k]["label"]}')
 
 
 if __name__ == '__main__':

@@ -1382,7 +1382,7 @@
 
   .search-filters {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     margin-bottom: 18px;
   }
@@ -1443,6 +1443,9 @@
     min-height: 18px;
   }
 
+  @media (max-width: 900px) {
+    .search-filters { grid-template-columns: 1fr 1fr; }
+  }
   @media (max-width: 640px) {
     .search-filters { grid-template-columns: 1fr; }
   }
@@ -1561,6 +1564,48 @@
     padding: 0 2px;
     border-radius: 2px;
   }
+
+  .comment-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 9px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.14s ease;
+    border: 1px solid transparent;
+    user-select: none;
+  }
+  .tag-chip::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .tag-chip:hover { transform: translateY(-1px); }
+  .tag-chip.pain { background: rgba(220, 38, 38, 0.08); color: #B91C1C; border-color: rgba(220, 38, 38, 0.18); }
+  .tag-chip.pain:hover { background: rgba(220, 38, 38, 0.15); }
+  .tag-chip.goal { background: rgba(0, 210, 127, 0.10); color: #047857; border-color: rgba(0, 210, 127, 0.22); }
+  .tag-chip.goal:hover { background: rgba(0, 210, 127, 0.18); }
+  .tag-chip.clinical { background: rgba(17, 107, 248, 0.08); color: var(--blue-deep); border-color: rgba(17, 107, 248, 0.18); }
+  .tag-chip.clinical:hover { background: rgba(17, 107, 248, 0.14); }
+  .tag-chip.hot { background: rgba(184, 137, 58, 0.12); color: #92580E; border-color: rgba(184, 137, 58, 0.30); }
+  .tag-chip.hot:hover { background: rgba(184, 137, 58, 0.20); }
+  .tag-chip.neutral { background: rgba(63, 72, 86, 0.08); color: var(--ink-soft); border-color: var(--rule); }
+  .tag-chip.neutral:hover { background: rgba(63, 72, 86, 0.15); }
+  .tag-chip.active { box-shadow: 0 0 0 2px currentColor; transform: translateY(-1px); }
 
   .search-empty {
     padding: 48px 24px;
@@ -2057,6 +2102,12 @@
       <label class="filter-label" for="filter-date">Data da resposta</label>
       <select id="filter-date" class="filter-select" aria-label="Filtrar por data da resposta">
         <option value="todas">Todas as datas</option>
+      </select>
+    </div>
+    <div class="filter-field">
+      <label class="filter-label" for="filter-tag">Tag de sinal</label>
+      <select id="filter-tag" class="filter-select" aria-label="Filtrar por tag de sinal">
+        <option value="todas">Todas as tags</option>
       </select>
     </div>
   </div>
@@ -2947,8 +2998,11 @@ ${clone.innerHTML}
     const searchMeta = document.getElementById('search-meta');
     const filterPrompt = document.getElementById('filter-prompt');
     const filterDate = document.getElementById('filter-date');
+    const filterTag = document.getElementById('filter-tag');
     const filterReset = document.getElementById('filter-reset');
     const PARTICIPANTS = (window.ADAPTA_PARTICIPANTS || []);
+    const TAG_CATALOG = (window.ADAPTA_TAGS || {});
+    const TAG_COUNTS = (window.ADAPTA_TAG_COUNTS || {});
 
     // Popula opcoes de data com base nos comments existentes
     function dateOf(ts) { return (ts || '').slice(0, 10); }
@@ -2974,6 +3028,31 @@ ${clone.innerHTML}
     }
     populateDateFilter();
 
+    function populateTagFilter() {
+      if (!filterTag) return;
+      // Agrupa por categoria
+      const groups = {pain: [], goal: [], clinical: [], hot: [], neutral: []};
+      const groupLabels = {pain: 'Dores e fricções', goal: 'Aspirações', clinical: 'Público clínico', hot: 'Sinais quentes', neutral: 'Contexto'};
+      Object.entries(TAG_CATALOG).forEach(([key, meta]) => {
+        const count = TAG_COUNTS[key] || 0;
+        if (count === 0) return; // so mostra tags com pelo menos 1 ocorrencia
+        (groups[meta.category] || groups.neutral).push({ key, label: meta.label, count });
+      });
+      ['pain', 'goal', 'clinical', 'hot', 'neutral'].forEach(cat => {
+        if (!groups[cat] || groups[cat].length === 0) return;
+        const og = document.createElement('optgroup');
+        og.label = groupLabels[cat];
+        groups[cat].forEach(({ key, label, count }) => {
+          const opt = document.createElement('option');
+          opt.value = key;
+          opt.textContent = `${label} (${count})`;
+          og.appendChild(opt);
+        });
+        filterTag.appendChild(og);
+      });
+    }
+    populateTagFilter();
+
     function normalize(s) {
       return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     }
@@ -2996,13 +3075,15 @@ ${clone.innerHTML}
         q: (searchInput && searchInput.value || '').trim(),
         prompt: filterPrompt ? filterPrompt.value : 'todas',
         date: filterDate ? filterDate.value : 'todas',
+        tag: filterTag ? filterTag.value : 'todas',
       };
     }
 
     function updateFilterUIState(f) {
       if (filterPrompt) filterPrompt.classList.toggle('active', f.prompt !== 'todas');
       if (filterDate) filterDate.classList.toggle('active', f.date !== 'todas');
-      const any = f.q.length > 0 || f.prompt !== 'todas' || f.date !== 'todas';
+      if (filterTag) filterTag.classList.toggle('active', f.tag !== 'todas');
+      const any = f.q.length > 0 || f.prompt !== 'todas' || f.date !== 'todas' || f.tag !== 'todas';
       if (filterReset) filterReset.classList.toggle('show', any);
     }
 
@@ -3014,7 +3095,7 @@ ${clone.innerHTML}
       searchBox && searchBox.classList.toggle('has-value', f.q.length > 0);
       updateFilterUIState(f);
 
-      const anyFilter = f.q.length > 0 || f.prompt !== 'todas' || f.date !== 'todas';
+      const anyFilter = f.q.length > 0 || f.prompt !== 'todas' || f.date !== 'todas' || f.tag !== 'todas';
 
       if (!anyFilter) {
         searchResults.innerHTML = '';
@@ -3027,17 +3108,17 @@ ${clone.innerHTML}
       }
 
       const nq = normalize(f.q);
-      // Comment-level match: o filtro de pergunta/data precisa bater no MESMO comentario
+      // Comment-level match: pergunta/data/tag precisam bater no MESMO comentario
       const commentMatchesFilters = (c) => {
         if (f.prompt !== 'todas' && c.prompt !== f.prompt) return false;
         if (f.date !== 'todas' && dateOf(c.ts) !== f.date) return false;
+        if (f.tag !== 'todas' && !(c.tags || []).includes(f.tag)) return false;
         return true;
       };
       const matches = PARTICIPANTS.filter(p => {
         if (f.q && !(normalize(p.name).includes(nq) || normalize(p.email).includes(nq))) return false;
-        // Se algum filtro de pergunta/data estiver ativo, exige pelo menos um comment que case TUDO
-        const promptOrDateActive = f.prompt !== 'todas' || f.date !== 'todas';
-        if (promptOrDateActive && !(p.comments || []).some(commentMatchesFilters)) return false;
+        const commentFilterActive = f.prompt !== 'todas' || f.date !== 'todas' || f.tag !== 'todas';
+        if (commentFilterActive && !(p.comments || []).some(commentMatchesFilters)) return false;
         return true;
       });
 
@@ -3056,6 +3137,10 @@ ${clone.innerHTML}
         summaryBits.push('pergunta: <strong>' + escapeHtml(lbl) + '</strong>');
       }
       if (f.date !== 'todas') summaryBits.push('data: <strong>' + escapeHtml(f.date) + '</strong>');
+      if (f.tag !== 'todas') {
+        const tagMeta = TAG_CATALOG[f.tag];
+        summaryBits.push('tag: <strong>' + escapeHtml(tagMeta ? tagMeta.label : f.tag) + '</strong>');
+      }
 
       if (matches.length === 0) {
         searchMeta.innerHTML = 'Nenhum participante encontrado · ' + summaryBits.join(' · ');
@@ -3085,6 +3170,17 @@ ${clone.innerHTML}
           return true;
         });
         const filteredCount = visibleComments.length;
+        const renderTags = (tags) => {
+          if (!tags || tags.length === 0) return '';
+          const chips = tags.map(tk => {
+            const meta = TAG_CATALOG[tk];
+            if (!meta) return '';
+            const active = f.tag === tk ? 'active' : '';
+            return `<span class="tag-chip ${meta.category} ${active}" data-tag="${escapeHtml(tk)}" title="Filtrar por: ${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</span>`;
+          }).join('');
+          return `<div class="comment-tags">${chips}</div>`;
+        };
+
         const commentsHtml = visibleComments.map(c => `
           <div class="comment-item">
             <div class="comment-meta">
@@ -3093,6 +3189,7 @@ ${clone.innerHTML}
             </div>
             ${c.prompt ? `<div class="comment-prompt">${escapeHtml(c.prompt)}</div>` : ''}
             <div class="comment-text">${escapeHtml(c.text || '')}</div>
+            ${renderTags(c.tags)}
           </div>
         `).join('');
         const count = totalCount;
@@ -3170,12 +3267,27 @@ ${clone.innerHTML}
     }
     if (filterPrompt) filterPrompt.addEventListener('change', () => renderSearch());
     if (filterDate) filterDate.addEventListener('change', () => renderSearch());
+    if (filterTag) filterTag.addEventListener('change', () => renderSearch());
     if (filterReset) {
       filterReset.addEventListener('click', () => {
         if (searchInput) searchInput.value = '';
         if (filterPrompt) filterPrompt.value = 'todas';
         if (filterDate) filterDate.value = 'todas';
+        if (filterTag) filterTag.value = 'todas';
         renderSearch();
+      });
+    }
+
+    // Click em chip de tag dentro de um card filtra por aquela tag
+    if (searchResults) {
+      searchResults.addEventListener('click', (ev) => {
+        const chip = ev.target.closest('.tag-chip[data-tag]');
+        if (!chip || !filterTag) return;
+        const tk = chip.getAttribute('data-tag');
+        filterTag.value = (filterTag.value === tk) ? 'todas' : tk;
+        renderSearch();
+        // Scroll suave para topo da search section
+        document.getElementById('busca').scrollIntoView({behavior: 'smooth', block: 'start'});
       });
     }
     renderSearch();

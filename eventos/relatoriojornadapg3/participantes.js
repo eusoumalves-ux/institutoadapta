@@ -2,11 +2,104 @@
  * Base de participantes da jornada preparatoria PG3.
  *
  * Estrutura:
- *   { name, email, comments: [ { nota, prompt, ts, text } ] }
+ *   { name, email, archetype, comments: [ { nota, prompt, ts, text, tags } ], suggestions: [...] }
  *
  * Gerado por build-participantes.py a partir dos lotes de prints.
  * Total: 173 comentarios de 100 participantes unicos.
  */
+window.ADAPTA_TAGS = {
+  "medo": {
+    "label": "Medo de prescrever",
+    "category": "pain"
+  },
+  "inseguro": {
+    "label": "Insegurança",
+    "category": "pain"
+  },
+  "duvida": {
+    "label": "Tem dúvida",
+    "category": "pain"
+  },
+  "critica-formato": {
+    "label": "Crítica ao formato",
+    "category": "pain"
+  },
+  "logistica": {
+    "label": "Logística difícil",
+    "category": "pain"
+  },
+  "ganhar-dinheiro": {
+    "label": "Quer ganhar dinheiro",
+    "category": "goal"
+  },
+  "ser-referencia": {
+    "label": "Quer ser referência",
+    "category": "goal"
+  },
+  "mercado": {
+    "label": "Vê oportunidade no mercado",
+    "category": "goal"
+  },
+  "pediu-mais": {
+    "label": "Quer mais conteúdo",
+    "category": "goal"
+  },
+  "atualizacao": {
+    "label": "Busca atualização",
+    "category": "goal"
+  },
+  "atende-idosos": {
+    "label": "Atende idosos",
+    "category": "clinical"
+  },
+  "atende-hipertensos": {
+    "label": "Hipertensos",
+    "category": "clinical"
+  },
+  "atende-diabeticos": {
+    "label": "Diabéticos",
+    "category": "clinical"
+  },
+  "atende-cardiacos": {
+    "label": "Cardíacos",
+    "category": "clinical"
+  },
+  "atende-oncologicos": {
+    "label": "Oncológicos",
+    "category": "clinical"
+  },
+  "comorbidades": {
+    "label": "Comorbidades múltiplas",
+    "category": "clinical"
+  },
+  "reabilitacao": {
+    "label": "Reabilitação",
+    "category": "clinical"
+  },
+  "obesidade": {
+    "label": "Obesidade",
+    "category": "clinical"
+  },
+  "cliente-atual": {
+    "label": "Já é aluno Adapta",
+    "category": "hot"
+  },
+  "preparado": {
+    "label": "Já se sente preparado",
+    "category": "hot"
+  },
+  "iniciante": {
+    "label": "Quer começar no nicho",
+    "category": "neutral"
+  },
+  "ansiedade": {
+    "label": "Ansioso pelo curso",
+    "category": "neutral"
+  }
+};
+
+window.ADAPTA_TAG_COUNTS = {"medo": 0, "inseguro": 3, "duvida": 9, "critica-formato": 4, "logistica": 1, "ganhar-dinheiro": 0, "ser-referencia": 0, "mercado": 3, "pediu-mais": 5, "atualizacao": 4, "atende-idosos": 12, "atende-hipertensos": 8, "atende-diabeticos": 10, "atende-cardiacos": 5, "atende-oncologicos": 3, "comorbidades": 4, "reabilitacao": 3, "obesidade": 1, "cliente-atual": 1, "preparado": 4, "iniciante": 6, "ansiedade": 9};
+
 window.ADAPTA_PARTICIPANTS = [
   {
     "name": "Alan Olimpio",
@@ -16,7 +109,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 15:47",
-        "text": "Vamos lá"
+        "text": "Vamos lá",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -56,7 +150,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 01:51",
-        "text": "Espero muito ansioso para estar aprendendo e poder ter mais conhecimento para poder ajudar pessoas não só de grupos especiais mas qualquer pessoas que eventualmente pode ser meu aluno"
+        "text": "Espero muito ansioso para estar aprendendo e poder ter mais conhecimento para poder ajudar pessoas não só de grupos especiais mas qualquer pessoas que eventualmente pode ser meu aluno",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -96,13 +193,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 19:17",
-        "text": "Essa aqui é na fase 1"
+        "text": "Essa aqui é na fase 1",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:15",
-        "text": "Corrige essa pergunta jovem"
+        "text": "Corrige essa pergunta jovem",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -142,31 +241,41 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 17:11",
-        "text": "Atender de forma eficiente grupos especiais."
+        "text": "Atender de forma eficiente grupos especiais.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 17:01",
-        "text": "Quase pronto."
+        "text": "Quase pronto.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 16:29",
-        "text": "Com um pouco de dúvida na prática ainda."
+        "text": "Com um pouco de dúvida na prática ainda.",
+        "tags": [
+          "inseguro",
+          "duvida"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 16:12",
-        "text": "Hipertensos"
+        "text": "Hipertensos",
+        "tags": [
+          "atende-hipertensos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:27",
-        "text": "Conteúdo bastante interessante e curioso para o que está por vir!"
+        "text": "Conteúdo bastante interessante e curioso para o que está por vir!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -206,7 +315,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:54",
-        "text": "Interessante essa forma de aprendizado..."
+        "text": "Interessante essa forma de aprendizado...",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -246,13 +356,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 12:11",
-        "text": "Bom"
+        "text": "Bom",
+        "tags": []
       },
       {
         "nota": 4,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:31",
-        "text": "Muito bom aprendi"
+        "text": "Muito bom aprendi",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -292,7 +404,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:27",
-        "text": "Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental"
+        "text": "Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -332,7 +445,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:40",
-        "text": "A primeira fase está sendo excelente!"
+        "text": "A primeira fase está sendo excelente!",
+        "tags": [
+          "iniciante"
+        ]
       }
     ],
     "suggestions": [
@@ -372,13 +488,18 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 16:02",
-        "text": "Gosto de trabalhar com idosos, devida a ter maior controle da frequência cardiaca por recomendações médicas"
+        "text": "Gosto de trabalhar com idosos, devida a ter maior controle da frequência cardiaca por recomendações médicas",
+        "tags": [
+          "atende-idosos",
+          "atende-cardiacos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:58",
-        "text": "Foram questões bem elaboradas, totalmente com aspectos referentes ao curso, isso nos enriquece o conhecimento, e abre um leque importante para conquistas de novo plano de trabalho."
+        "text": "Foram questões bem elaboradas, totalmente com aspectos referentes ao curso, isso nos enriquece o conhecimento, e abre um leque importante para conquistas de novo plano de trabalho.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -418,13 +539,21 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 12:26",
-        "text": "Atualmente, trabalho com alunos para reabilitação através do Pilates ou musculação. Porém, tenho interesse de aprender mais sobre o público do grupo especiais."
+        "text": "Atualmente, trabalho com alunos para reabilitação através do Pilates ou musculação. Porém, tenho interesse de aprender mais sobre o público do grupo especiais.",
+        "tags": [
+          "pediu-mais",
+          "reabilitacao"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 03:32",
-        "text": "A reabilitação também é muito procurada no mercado."
+        "text": "A reabilitação também é muito procurada no mercado.",
+        "tags": [
+          "mercado",
+          "reabilitacao"
+        ]
       }
     ],
     "suggestions": [
@@ -464,13 +593,17 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 19:44",
-        "text": "Estou entrando melhor"
+        "text": "Estou entrando melhor",
+        "tags": []
       },
       {
         "nota": 3,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 19:28",
-        "text": "Diabetes"
+        "text": "Diabetes",
+        "tags": [
+          "atende-diabeticos"
+        ]
       }
     ],
     "suggestions": [
@@ -510,7 +643,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 15:33",
-        "text": "Gostei"
+        "text": "Gostei",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -550,7 +684,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 02:57",
-        "text": "Interessante"
+        "text": "Interessante",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -590,7 +725,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 11:42",
-        "text": "Conteúdo excelente"
+        "text": "Conteúdo excelente",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -630,7 +766,11 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:32",
-        "text": "Estou muito ansiosa para aprender tudo o que preciso saber, para ser uma profissional de competência e com referência nessa área"
+        "text": "Estou muito ansiosa para aprender tudo o que preciso saber, para ser uma profissional de competência e com referência nessa área",
+        "tags": [
+          "duvida",
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -670,19 +810,24 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 03:19",
-        "text": "Conteúdo rico!"
+        "text": "Conteúdo rico!",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 02:43",
-        "text": "Reabilitação"
+        "text": "Reabilitação",
+        "tags": [
+          "reabilitacao"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:44",
-        "text": "Estou amando as informações até agora abordada!"
+        "text": "Estou amando as informações até agora abordada!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -722,13 +867,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 20:03",
-        "text": "Tea"
+        "text": "Tea",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 00:23",
-        "text": "Bem dinâmico e de fácil absorção"
+        "text": "Bem dinâmico e de fácil absorção",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -768,25 +915,34 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "21/05/2026 18:12",
-        "text": "Me tornar uma referência como profissional de EF."
+        "text": "Me tornar uma referência como profissional de EF.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "21/05/2026 18:06",
-        "text": "Desejo entender mais e melhor como o controle glicêmico pode me ajudar a prescrever treinos."
+        "text": "Desejo entender mais e melhor como o controle glicêmico pode me ajudar a prescrever treinos.",
+        "tags": [
+          "pediu-mais",
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 4,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 17:50",
-        "text": "Com mais conhecimento sobre o sistema vascular, a prescrição de exercícios se torna mais assertiva."
+        "text": "Com mais conhecimento sobre o sistema vascular, a prescrição de exercícios se torna mais assertiva.",
+        "tags": []
       },
       {
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 17:32",
-        "text": "Alunos diabéticos"
+        "text": "Alunos diabéticos",
+        "tags": [
+          "atende-diabeticos"
+        ]
       }
     ],
     "suggestions": [
@@ -826,7 +982,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 15:50",
-        "text": "O módulo apresentou conceitos importantíssimos para que possamos atuar com grupos especiais e o melhor, estes conhecimento é transmitido de uma maneira que facilita o aprendizado."
+        "text": "O módulo apresentou conceitos importantíssimos para que possamos atuar com grupos especiais e o melhor, estes conhecimento é transmitido de uma maneira que facilita o aprendizado.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -866,13 +1023,22 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 12:04",
-        "text": "Já tenho alunos idosos, tb com diabetes tipo 2, e hipertensão."
+        "text": "Já tenho alunos idosos, tb com diabetes tipo 2, e hipertensão.",
+        "tags": [
+          "atende-idosos",
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 09:50",
-        "text": "Já sou aluna da pós, me inscrevi na black infinita em novembro do ano passado, foi a melhor decisão que tomei, estou gostando muito, já tenho alunos de grupos especiais e o conteúdo da pós está me deixando mais segura para trabalhar. Fiz a imersão em janeiro e vou fazer essa novamente, ainda estou insegura para realizar avaliações, e acredito que essa imersão irá me trazer mais segurança."
+        "text": "Já sou aluna da pós, me inscrevi na black infinita em novembro do ano passado, foi a melhor decisão que tomei, estou gostando muito, já tenho alunos de grupos especiais e o conteúdo da pós está me deixando mais segura para trabalhar. Fiz a imersão em janeiro e vou fazer essa novamente, ainda estou insegura para realizar avaliações, e acredito que essa imersão irá me trazer mais segurança.",
+        "tags": [
+          "inseguro",
+          "cliente-atual"
+        ]
       }
     ],
     "suggestions": [
@@ -912,13 +1078,19 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 07:01",
-        "text": "Diabético"
+        "text": "Diabético",
+        "tags": [
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 06:40",
-        "text": "Muito empolgado para aprender e poder atender os grupos especiais com segurança"
+        "text": "Muito empolgado para aprender e poder atender os grupos especiais com segurança",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -958,19 +1130,22 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 13:12",
-        "text": "Muito bom"
+        "text": "Muito bom",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 18:21",
-        "text": "Bom demais"
+        "text": "Bom demais",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:25",
-        "text": "Conteúdo muito bom, fácil leitura"
+        "text": "Conteúdo muito bom, fácil leitura",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1010,7 +1185,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:36",
-        "text": "Estou cheia de curiosidades e querendo aprender mais."
+        "text": "Estou cheia de curiosidades e querendo aprender mais.",
+        "tags": [
+          "pediu-mais"
+        ]
       }
     ],
     "suggestions": [
@@ -1050,13 +1228,17 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 16:36",
-        "text": "Pretendo trabalhar com idosos e na recuperação de saude"
+        "text": "Pretendo trabalhar com idosos e na recuperação de saude",
+        "tags": [
+          "atende-idosos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 20:37",
-        "text": "Bem interessante, acredito q este conhecimento é fundamental para os profissionais de Ed fisica!"
+        "text": "Bem interessante, acredito q este conhecimento é fundamental para os profissionais de Ed fisica!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1096,7 +1278,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 17:59",
-        "text": "Ótimo conteúdo."
+        "text": "Ótimo conteúdo.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1136,7 +1319,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:08",
-        "text": "Conhecimento é sempre bom, para trabalharmos com segurança."
+        "text": "Conhecimento é sempre bom, para trabalharmos com segurança.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1176,7 +1360,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 11:21",
-        "text": "Vamos lá!"
+        "text": "Vamos lá!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1216,7 +1401,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 02:53",
-        "text": "Muito bom"
+        "text": "Muito bom",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1256,31 +1442,40 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 04:12",
-        "text": "Ser útil, com os conhecimentos adquiridos, na orientação áquelas pessoas que decidiram incluir os exercícios físicos em seu modo de vida."
+        "text": "Ser útil, com os conhecimentos adquiridos, na orientação áquelas pessoas que decidiram incluir os exercícios físicos em seu modo de vida.",
+        "tags": []
       },
       {
         "nota": 2,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "21/05/2026 22:33",
-        "text": "Não me sentiria confiante."
+        "text": "Não me sentiria confiante.",
+        "tags": [
+          "inseguro"
+        ]
       },
       {
         "nota": 3,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 21:23",
-        "text": "Em uma prescrição de exercícios físicos para uma pessoa hipertensa eu daria preferência, por precaução, a exercícios aeróbicos com pouco volume de carga e intensidade."
+        "text": "Em uma prescrição de exercícios físicos para uma pessoa hipertensa eu daria preferência, por precaução, a exercícios aeróbicos com pouco volume de carga e intensidade.",
+        "tags": []
       },
       {
         "nota": 3,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 20:36",
-        "text": "Gostaria de trabalhar com grupo de hipertenso."
+        "text": "Gostaria de trabalhar com grupo de hipertenso.",
+        "tags": [
+          "atende-hipertensos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:40",
-        "text": "Gostei da objetividade das etapas apresentadas, com uma linguagem fácil e ideias claras."
+        "text": "Gostei da objetividade das etapas apresentadas, com uma linguagem fácil e ideias claras.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1320,7 +1515,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:31",
-        "text": "Tenho certeza que será uma manhã de muito aprendizado e esclarecimentos, estou ansiosa para nosso workshop!!!"
+        "text": "Tenho certeza que será uma manhã de muito aprendizado e esclarecimentos, estou ansiosa para nosso workshop!!!",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -1360,7 +1558,11 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:10",
-        "text": "Sim, com certeza. Estamos já com esta situação na família. Infelizmente um deles não conseguiu melhoras na saúde para iniciar um programa de treino direcionado a paciente oncológico."
+        "text": "Sim, com certeza. Estamos já com esta situação na família. Infelizmente um deles não conseguiu melhoras na saúde para iniciar um programa de treino direcionado a paciente oncológico.",
+        "tags": [
+          "atende-oncologicos",
+          "iniciante"
+        ]
       }
     ],
     "suggestions": [
@@ -1400,7 +1602,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:32",
-        "text": "é de suma importância o conhecimento teorico e pratico para uma prescricao e aplicacao correta dos exercícios e atividades no atendimento aos grupos especiais"
+        "text": "é de suma importância o conhecimento teorico e pratico para uma prescricao e aplicacao correta dos exercícios e atividades no atendimento aos grupos especiais",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1440,19 +1643,26 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 23:33",
-        "text": "Ainda estou aprendendo a lidar com este grupo."
+        "text": "Ainda estou aprendendo a lidar com este grupo.",
+        "tags": [
+          "iniciante"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 23:29",
-        "text": "Os alunos com obesidade."
+        "text": "Os alunos com obesidade.",
+        "tags": [
+          "obesidade"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 23:23",
-        "text": "Aprendizado nunca é demais!"
+        "text": "Aprendizado nunca é demais!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1492,7 +1702,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 20:08",
-        "text": "Rápido, direto e objetivo."
+        "text": "Rápido, direto e objetivo.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1532,31 +1743,40 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 19:26",
-        "text": "Melhorar a vida ativa de cada pessoa, através da atividade física, como um profissional da área."
+        "text": "Melhorar a vida ativa de cada pessoa, através da atividade física, como um profissional da área.",
+        "tags": []
       },
       {
         "nota": 3,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 17:54",
-        "text": "Não vejo a hora de adquirir mais informações no workshop, até aqui, ja gostei muito."
+        "text": "Não vejo a hora de adquirir mais informações no workshop, até aqui, ja gostei muito.",
+        "tags": [
+          "pediu-mais"
+        ]
       },
       {
         "nota": 4,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 17:10",
-        "text": "Me sinto com um pouco mais de segurança e confiante, em saber desses conhecimentos ."
+        "text": "Me sinto com um pouco mais de segurança e confiante, em saber desses conhecimentos .",
+        "tags": []
       },
       {
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 20:28",
-        "text": "Eu trabalho com alunos de 50 a 93 anos, e cada um tem um comportamento, e preciso muita atenção."
+        "text": "Eu trabalho com alunos de 50 a 93 anos, e cada um tem um comportamento, e preciso muita atenção.",
+        "tags": [
+          "atende-idosos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:45",
-        "text": "Movimento é vida, ja trabalho com o grupos específicos, e já percebi que quanto mais eles se mexem, mais tem vida."
+        "text": "Movimento é vida, ja trabalho com o grupos específicos, e já percebi que quanto mais eles se mexem, mais tem vida.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1596,25 +1816,31 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 21:37",
-        "text": "Reciclagem do conhecimento"
+        "text": "Reciclagem do conhecimento",
+        "tags": [
+          "atualizacao"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 20:55",
-        "text": "Conhecimento"
+        "text": "Conhecimento",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 20:35",
-        "text": "Retenção de conhecimento"
+        "text": "Retenção de conhecimento",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:09",
-        "text": "Engajado"
+        "text": "Engajado",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1654,31 +1880,40 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "21/05/2026 20:19",
-        "text": "Bem estar integral dos indivíduos por meio da prática orientada"
+        "text": "Bem estar integral dos indivíduos por meio da prática orientada",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "21/05/2026 20:14",
-        "text": "isso mostra que uma boa avaliacao do aluno e execial na prescricao dos exercicios"
+        "text": "isso mostra que uma boa avaliacao do aluno e execial na prescricao dos exercicios",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 20:07",
-        "text": "mim sinto capaz da prescre"
+        "text": "mim sinto capaz da prescre",
+        "tags": [
+          "preparado"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 19:49",
-        "text": "idosos"
+        "text": "idosos",
+        "tags": [
+          "atende-idosos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:37",
-        "text": "o conhecimento e a base de tudo"
+        "text": "o conhecimento e a base de tudo",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1718,19 +1953,25 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 3,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 19:24",
-        "text": "Tomo alguns cuidados, como não prescrever atividade de alta intensidade"
+        "text": "Tomo alguns cuidados, como não prescrever atividade de alta intensidade",
+        "tags": []
       },
       {
         "nota": 4,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 15:37",
-        "text": "Preciso aprender a trabalhar com diabéticos"
+        "text": "Preciso aprender a trabalhar com diabéticos",
+        "tags": [
+          "duvida",
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:31",
-        "text": "Se este estufo for realmente estes temas é bem abordados, esteral no fim deste com uma bagagem imensa para ser um profissional melhor"
+        "text": "Se este estufo for realmente estes temas é bem abordados, esteral no fim deste com uma bagagem imensa para ser um profissional melhor",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1770,13 +2011,24 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:17",
-        "text": "Os meus alunos que tem pressão alta, procuro trabalhar com exercicios de baixa intensidade controlando os batimentos cardíacos. Sempre oriento o usar os relógios que marca os batimentos. Controlo a respiração durante os exercicios, usar cargas mais leves e nos exercicios de solo levantar lentamente p não sentir tonturas. Mas com esse curso terei mais conhecimento para prescrever os exercicios com mais segurança."
+        "text": "Os meus alunos que tem pressão alta, procuro trabalhar com exercicios de baixa intensidade controlando os batimentos cardíacos. Sempre oriento o usar os relógios que marca os batimentos. Controlo a respiração durante os exercicios, usar cargas mais leves e nos exercicios de solo levantar lentamente p não sentir tonturas. Mas com esse curso terei mais conhecimento para prescrever os exercicios com mais segurança.",
+        "tags": [
+          "atende-hipertensos",
+          "atende-cardiacos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 20:39",
-        "text": "Eu tenho alguns alunos com algum tipo de comorbidade. Não tenho nenhum com problema cardíaco mas pressão alta sim. Procuro sempre explicar p meus alunos que o exercício físico vai além da estética e procuro adaptar os exercícios de acordo com a restrição que meu aluno tem. Procuro me atualizar mas sei que preciso aprender muito ainda."
+        "text": "Eu tenho alguns alunos com algum tipo de comorbidade. Não tenho nenhum com problema cardíaco mas pressão alta sim. Procuro sempre explicar p meus alunos que o exercício físico vai além da estética e procuro adaptar os exercícios de acordo com a restrição que meu aluno tem. Procuro me atualizar mas sei que preciso aprender muito ainda.",
+        "tags": [
+          "duvida",
+          "atualizacao",
+          "atende-hipertensos",
+          "atende-cardiacos",
+          "comorbidades"
+        ]
       }
     ],
     "suggestions": [
@@ -1816,7 +2068,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 01:11",
-        "text": "-"
+        "text": "-",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1856,7 +2109,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 20:59",
-        "text": "Inicio de jornada top"
+        "text": "Inicio de jornada top",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1896,7 +2150,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 20:27",
-        "text": "Otima ideia de material didático , deixa o conteúdo leve e atraente da curiosidade de ler mais e saber mais sobre ! Parabéns"
+        "text": "Otima ideia de material didático , deixa o conteúdo leve e atraente da curiosidade de ler mais e saber mais sobre ! Parabéns",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1936,13 +2191,18 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 14:45",
-        "text": "Sempre procuro trabalhar em conjunto com os médicos que atendem os alunos independentemente de qualquer ação."
+        "text": "Sempre procuro trabalhar em conjunto com os médicos que atendem os alunos independentemente de qualquer ação.",
+        "tags": []
       },
       {
         "nota": 1,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 13:13",
-        "text": "Estou tentando reingressar no mercado de trabalho, por isso atualmente não aplico os conceitos na prática. No entanto em tempos anteriores já aplicava a fisiologia do exercício para com os alunos."
+        "text": "Estou tentando reingressar no mercado de trabalho, por isso atualmente não aplico os conceitos na prática. No entanto em tempos anteriores já aplicava a fisiologia do exercício para com os alunos.",
+        "tags": [
+          "mercado",
+          "iniciante"
+        ]
       }
     ],
     "suggestions": [
@@ -1982,7 +2242,11 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 17:47",
-        "text": "É muito importante se qualificar para melhor atender o público dos idosos levando em conta o bem-estar, comorbidades e limitações."
+        "text": "É muito importante se qualificar para melhor atender o público dos idosos levando em conta o bem-estar, comorbidades e limitações.",
+        "tags": [
+          "atende-idosos",
+          "comorbidades"
+        ]
       }
     ],
     "suggestions": [
@@ -2022,7 +2286,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 16:45",
-        "text": "Gostaria de agradecer a oportunidade deste curso, que ira agregar mto no meu profissional"
+        "text": "Gostaria de agradecer a oportunidade deste curso, que ira agregar mto no meu profissional",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2062,7 +2327,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 14:07",
-        "text": "Foi bem interessante"
+        "text": "Foi bem interessante",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2102,13 +2368,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 13:27",
-        "text": "Excelente!"
+        "text": "Excelente!",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 13:15",
-        "text": "Excelente!"
+        "text": "Excelente!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2148,7 +2416,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "21/05/2026 17:13",
-        "text": "Espero aprender bastante com o passar do estudo"
+        "text": "Espero aprender bastante com o passar do estudo",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2188,25 +2457,38 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 00:37",
-        "text": "Quero aprender mais"
+        "text": "Quero aprender mais",
+        "tags": [
+          "pediu-mais"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 00:09",
-        "text": "Tenho que me aprofundar mais em compreender os efeitos da PA"
+        "text": "Tenho que me aprofundar mais em compreender os efeitos da PA",
+        "tags": [
+          "duvida"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 23:49",
-        "text": "Alunos hipertensos porque há uma falta de profissionais para prescreverem exercicios para esse grupo deixando eles de lado."
+        "text": "Alunos hipertensos porque há uma falta de profissionais para prescreverem exercicios para esse grupo deixando eles de lado.",
+        "tags": [
+          "mercado",
+          "atende-hipertensos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 23:18",
-        "text": "Estou empolgado para conhecer um pouco mais sobre grupos especiais"
+        "text": "Estou empolgado para conhecer um pouco mais sobre grupos especiais",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -2246,13 +2528,17 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 17:46",
-        "text": "Boas explicações"
+        "text": "Boas explicações",
+        "tags": []
       },
       {
         "nota": 4,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 15:57",
-        "text": "Bacana o começo mas muito só introdutório então não tem muito o que falar nem elogiar kkkk"
+        "text": "Bacana o começo mas muito só introdutório então não tem muito o que falar nem elogiar kkkk",
+        "tags": [
+          "critica-formato"
+        ]
       }
     ],
     "suggestions": [
@@ -2292,13 +2578,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 19:39",
-        "text": "Mto bom."
+        "text": "Mto bom.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:07",
-        "text": "Até agora estou gostando."
+        "text": "Até agora estou gostando.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2338,7 +2626,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 00:04",
-        "text": "Realizei todas as atividades propostas da primeira fase e pretendo dar continuidade, pois me capacitar profissionalmente"
+        "text": "Realizei todas as atividades propostas da primeira fase e pretendo dar continuidade, pois me capacitar profissionalmente",
+        "tags": [
+          "iniciante"
+        ]
       }
     ],
     "suggestions": [
@@ -2378,7 +2669,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 12:39",
-        "text": "Ansiosa para o workshop..."
+        "text": "Ansiosa para o workshop...",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -2418,13 +2712,18 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 18:49",
-        "text": "Trabalho com musculação. Várias patologias. Inclusive hipertensos."
+        "text": "Trabalho com musculação. Várias patologias. Inclusive hipertensos.",
+        "tags": [
+          "atende-hipertensos",
+          "comorbidades"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:54",
-        "text": "Conteúdo bem direcionado."
+        "text": "Conteúdo bem direcionado.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2464,7 +2763,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:35",
-        "text": "Estou ansiosa e disposta a aprender"
+        "text": "Estou ansiosa e disposta a aprender",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -2504,7 +2806,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:25",
-        "text": "ótimo!!!"
+        "text": "ótimo!!!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2544,7 +2847,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 18:04",
-        "text": "Já estou adorando essa jornada"
+        "text": "Já estou adorando essa jornada",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2584,7 +2888,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:57",
-        "text": "Ansiosa pelo curso, vai ser muito bom"
+        "text": "Ansiosa pelo curso, vai ser muito bom",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -2624,7 +2931,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 00:32",
-        "text": "Bora pra cima"
+        "text": "Bora pra cima",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2664,7 +2972,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 22:01",
-        "text": "Sedentários"
+        "text": "Sedentários",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2704,13 +3013,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 19:40",
-        "text": "Com um pouco de todos os tipos, pois conhecimento só se aprende com todas as situações, sejas boas ou ruins!!"
+        "text": "Com um pouco de todos os tipos, pois conhecimento só se aprende com todas as situações, sejas boas ou ruins!!",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 19:21",
-        "text": "Muito bom esse workshop, tenho certeza que será de muito aprendizado!!"
+        "text": "Muito bom esse workshop, tenho certeza que será de muito aprendizado!!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2750,7 +3061,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:12",
-        "text": "Percebi que tem muitos pontos que realmente eu preciso me aprofundar. Conteúdo gerou ainda mais curiosidade e anseio para o treinamento. Muito bom mesmo"
+        "text": "Percebi que tem muitos pontos que realmente eu preciso me aprofundar. Conteúdo gerou ainda mais curiosidade e anseio para o treinamento. Muito bom mesmo",
+        "tags": [
+          "duvida"
+        ]
       }
     ],
     "suggestions": [
@@ -2790,7 +3104,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 11:31",
-        "text": "Muito bom"
+        "text": "Muito bom",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2830,7 +3145,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:04",
-        "text": "Conteúdo muito importante"
+        "text": "Conteúdo muito importante",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2870,13 +3186,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 17:23",
-        "text": "✅✅✅"
+        "text": "✅✅✅",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 12:57",
-        "text": "✅✅✅"
+        "text": "✅✅✅",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2916,7 +3234,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:10",
-        "text": "Muito positivo por enquanto."
+        "text": "Muito positivo por enquanto.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2956,7 +3275,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:07",
-        "text": "estou adorando..."
+        "text": "estou adorando...",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -2996,13 +3316,15 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 00:00",
-        "text": "Conteúdo bem prático."
+        "text": "Conteúdo bem prático.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 23:12",
-        "text": "Fácil entendimento e gostando."
+        "text": "Fácil entendimento e gostando.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3042,7 +3364,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:31",
-        "text": "Tudo muito interessante"
+        "text": "Tudo muito interessante",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3082,7 +3405,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:22",
-        "text": "Aquele que acha que sabe tudo é aquele que não sabe nada!"
+        "text": "Aquele que acha que sabe tudo é aquele que não sabe nada!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3122,7 +3446,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:26",
-        "text": "Esse primeiro passo ja foi de grande valia, pois ja mostrou po tos importantes que um profissional da area de ve seguir para ter sucesso."
+        "text": "Esse primeiro passo ja foi de grande valia, pois ja mostrou po tos importantes que um profissional da area de ve seguir para ter sucesso.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3162,7 +3487,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 22:28",
-        "text": "ótimo!"
+        "text": "ótimo!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3202,7 +3528,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:36",
-        "text": "★★★★★"
+        "text": "★★★★★",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3242,7 +3569,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 17:12",
-        "text": "Conteúdo bem organizado."
+        "text": "Conteúdo bem organizado.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3282,19 +3610,22 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 21:20",
-        "text": "Ótimo"
+        "text": "Ótimo",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 21:13",
-        "text": "Ótimo"
+        "text": "Ótimo",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:05",
-        "text": "Ótima organização de material"
+        "text": "Ótima organização de material",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3334,7 +3665,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:45",
-        "text": "Muito dinâmico e prazeroso"
+        "text": "Muito dinâmico e prazeroso",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3374,25 +3706,35 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 16:30",
-        "text": "Curar aquilo que só o movimento consegue"
+        "text": "Curar aquilo que só o movimento consegue",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 16:18",
-        "text": "Ja me sinto preparado"
+        "text": "Ja me sinto preparado",
+        "tags": [
+          "preparado"
+        ]
       },
       {
         "nota": 3,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 10:12",
-        "text": "Por enquanto só vi explicações fisiológicas e não como aplicar atividades a esse público"
+        "text": "Por enquanto só vi explicações fisiológicas e não como aplicar atividades a esse público",
+        "tags": [
+          "critica-formato"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 22:23",
-        "text": "Com o pessoal de mais idade 40+"
+        "text": "Com o pessoal de mais idade 40+",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
@@ -3432,7 +3774,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 03:03",
-        "text": "Gostei bastante, foi bem específico e direto"
+        "text": "Gostei bastante, foi bem específico e direto",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3472,7 +3815,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 00:03",
-        "text": "Ótimo conteúdo"
+        "text": "Ótimo conteúdo",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3512,7 +3856,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:10",
-        "text": "Estou lisonjeada com a oportunidade oferecida para me aprofundar num tema tão importante. Desde a minha formação, trabalho com crianças, mas quero e sei que posso contribuir de forma favorável nessa área."
+        "text": "Estou lisonjeada com a oportunidade oferecida para me aprofundar num tema tão importante. Desde a minha formação, trabalho com crianças, mas quero e sei que posso contribuir de forma favorável nessa área.",
+        "tags": [
+          "duvida"
+        ]
       }
     ],
     "suggestions": [
@@ -3552,7 +3899,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 13:34",
-        "text": "Estou gostando muito do conteúdo"
+        "text": "Estou gostando muito do conteúdo",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3592,7 +3940,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:31",
-        "text": "Até aqui achei bem fácil de entender ."
+        "text": "Até aqui achei bem fácil de entender .",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3632,7 +3981,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 16:31",
-        "text": "Muito informativo , excelente didática de aprendizado, visual muito bom de informações."
+        "text": "Muito informativo , excelente didática de aprendizado, visual muito bom de informações.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3672,19 +4022,24 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 3,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 21:08",
-        "text": "A"
+        "text": "A",
+        "tags": []
       },
       {
         "nota": 3,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 21:05",
-        "text": "Quero trabalhar com idosos."
+        "text": "Quero trabalhar com idosos.",
+        "tags": [
+          "atende-idosos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 21:02",
-        "text": "Gostei muito e sei que posso evoluir ainda mais e com a ajuda do curso irei mim especializar ainda mais."
+        "text": "Gostei muito e sei que posso evoluir ainda mais e com a ajuda do curso irei mim especializar ainda mais.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3724,13 +4079,18 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 17:23",
-        "text": "Hipertensos e diabéticos."
+        "text": "Hipertensos e diabéticos.",
+        "tags": [
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 16:42",
-        "text": "vamos nessa!"
+        "text": "vamos nessa!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3770,7 +4130,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:24",
-        "text": "Muito importante o tema e a iniciativa da abordagem. Estou empolgada para o evento e para adquirir mais conhecimento."
+        "text": "Muito importante o tema e a iniciativa da abordagem. Estou empolgada para o evento e para adquirir mais conhecimento.",
+        "tags": [
+          "ansiedade"
+        ]
       }
     ],
     "suggestions": [
@@ -3810,13 +4173,17 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 20:11",
-        "text": "Conteúdo de relembrar. Muit importante."
+        "text": "Conteúdo de relembrar. Muit importante.",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 19:52",
-        "text": "Idosos"
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
@@ -3856,31 +4223,42 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 02:22",
-        "text": "Levar saúde a todos"
+        "text": "Levar saúde a todos",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 02:14",
-        "text": "Em partes sim, pois depende do objetivo do aluno, do que terei de trabalhar com ele, do nível de diabetes, do paciente em si e como ele trata a doença... há diversos fatores influenciadores na minha prescrição"
+        "text": "Em partes sim, pois depende do objetivo do aluno, do que terei de trabalhar com ele, do nível de diabetes, do paciente em si e como ele trata a doença... há diversos fatores influenciadores na minha prescrição",
+        "tags": [
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 01:08",
-        "text": "Me sinto bem e confortável pois tive uma excelente formação"
+        "text": "Me sinto bem e confortável pois tive uma excelente formação",
+        "tags": [
+          "preparado"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 00:49",
-        "text": "Aplico como forma de avaliação do meu trabalho com exercícios como a FC de repouso diminui, então avalio o pré e pós exercício e demonstro isso, indicando que um trabalho bem feito trás diversos beneficios visíveis e \"invisíveis\""
+        "text": "Aplico como forma de avaliação do meu trabalho com exercícios como a FC de repouso diminui, então avalio o pré e pós exercício e demonstro isso, indicando que um trabalho bem feito trás diversos beneficios visíveis e \"invisíveis\"",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 00:08",
-        "text": "Só recebi orientações, achei que teria mini video aulas baseadas nos tópicos citados"
+        "text": "Só recebi orientações, achei que teria mini video aulas baseadas nos tópicos citados",
+        "tags": [
+          "critica-formato"
+        ]
       }
     ],
     "suggestions": [
@@ -3920,7 +4298,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 17:23",
-        "text": "Nota dez!"
+        "text": "Nota dez!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3960,7 +4339,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 20:08",
-        "text": "Gostei muito desta degustação!!!"
+        "text": "Gostei muito desta degustação!!!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4000,7 +4380,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:45",
-        "text": "."
+        "text": ".",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4040,7 +4421,11 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 18:49",
-        "text": "Este curso é muito importante, seja para atualizar ou para aprender. Ainda tenho dúvidas quando o assunto é \"Grupos Especiais\", pois é profundo, extenso e tenho consciência que não sei tudo. Por isso, estou aqui. Quero atualizar e aprender."
+        "text": "Este curso é muito importante, seja para atualizar ou para aprender. Ainda tenho dúvidas quando o assunto é \"Grupos Especiais\", pois é profundo, extenso e tenho consciência que não sei tudo. Por isso, estou aqui. Quero atualizar e aprender.",
+        "tags": [
+          "duvida",
+          "atualizacao"
+        ]
       }
     ],
     "suggestions": [
@@ -4080,7 +4465,10 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 21:20",
-        "text": "Atualização sempre é importante."
+        "text": "Atualização sempre é importante.",
+        "tags": [
+          "atualizacao"
+        ]
       }
     ],
     "suggestions": [
@@ -4120,7 +4508,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 14:44",
-        "text": "Muito bem desenvolvido."
+        "text": "Muito bem desenvolvido.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4160,7 +4549,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 20:31",
-        "text": "Excelente"
+        "text": "Excelente",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4200,31 +4590,50 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 4,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "22/05/2026 17:33",
-        "text": "Eu gostaria de realizar a especialização em grupos especiais, pois esse é meu nicho, sempre gostei de trabalhar com pessoas mais velhas, pois elas procuram a atividade por entender a necessidade e os benefícios, mas morando no interior de São Paulo a logística acaba ficando difícil se a especialização for só na capital"
+        "text": "Eu gostaria de realizar a especialização em grupos especiais, pois esse é meu nicho, sempre gostei de trabalhar com pessoas mais velhas, pois elas procuram a atividade por entender a necessidade e os benefícios, mas morando no interior de São Paulo a logística acaba ficando difícil se a especialização for só na capital",
+        "tags": [
+          "logistica",
+          "atende-idosos"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "22/05/2026 17:25",
-        "text": "Primeiro preciso saber do histórico glicemico desse aluno, se costuma alterar com frequência e em qualperíodo isso acontece"
+        "text": "Primeiro preciso saber do histórico glicemico desse aluno, se costuma alterar com frequência e em qualperíodo isso acontece",
+        "tags": [
+          "duvida",
+          "atende-diabeticos"
+        ]
       },
       {
         "nota": 4,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 10:49",
-        "text": "Primeiramente eu estudo o caso do aluno, para sim montar seu treino respeitando sua individualidade e limitações"
+        "text": "Primeiramente eu estudo o caso do aluno, para sim montar seu treino respeitando sua individualidade e limitações",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 10:32",
-        "text": "Oncológicos em remissão, cardiacos, diabéticos, o meu público alvo é acima dos 60 anos e com comorbidades."
+        "text": "Oncológicos em remissão, cardiacos, diabéticos, o meu público alvo é acima dos 60 anos e com comorbidades.",
+        "tags": [
+          "atende-idosos",
+          "atende-diabeticos",
+          "atende-cardiacos",
+          "atende-oncologicos",
+          "comorbidades"
+        ]
       },
       {
         "nota": 3,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:36",
-        "text": "Aguardando a jornada , acho que a nota agora é muito cedo"
+        "text": "Aguardando a jornada , acho que a nota agora é muito cedo",
+        "tags": [
+          "critica-formato"
+        ]
       }
     ],
     "suggestions": [
@@ -4264,7 +4673,8 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 19:43",
-        "text": "Conhecimento é importante."
+        "text": "Conhecimento é importante.",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4304,7 +4714,12 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "22/05/2026 12:34",
-        "text": "Idosos, oncológicos, cardíacos"
+        "text": "Idosos, oncológicos, cardíacos",
+        "tags": [
+          "atende-idosos",
+          "atende-cardiacos",
+          "atende-oncologicos"
+        ]
       }
     ],
     "suggestions": [
@@ -4344,31 +4759,36 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Chegando ao final dessa nossa primeira jornada.",
         "ts": "21/05/2026 22:37",
-        "text": "Conteúdo muito bom"
+        "text": "Conteúdo muito bom",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "21/05/2026 22:32",
-        "text": "Bem explicado"
+        "text": "Bem explicado",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "21/05/2026 20:52",
-        "text": "Conteúdo excelente"
+        "text": "Conteúdo excelente",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 20:34",
-        "text": "Conteúdo simples mas que explica muito bem o que se deve fazer"
+        "text": "Conteúdo simples mas que explica muito bem o que se deve fazer",
+        "tags": []
       },
       {
         "nota": 5,
         "prompt": "Vamos nessa?",
         "ts": "21/05/2026 18:59",
-        "text": "Conteúdo simples porém informativo"
+        "text": "Conteúdo simples porém informativo",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -4408,13 +4828,19 @@ window.ADAPTA_PARTICIPANTS = [
         "nota": 5,
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "22/05/2026 21:31",
-        "text": "Me sinto bem mais seguro com todo esse conteúdo"
+        "text": "Me sinto bem mais seguro com todo esse conteúdo",
+        "tags": [
+          "preparado"
+        ]
       },
       {
         "nota": 5,
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "21/05/2026 18:36",
-        "text": "Estou querendo começar a trabalhar com grupos especiais"
+        "text": "Estou querendo começar a trabalhar com grupos especiais",
+        "tags": [
+          "iniciante"
+        ]
       }
     ],
     "suggestions": [
