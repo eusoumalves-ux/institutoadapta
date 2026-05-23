@@ -200,6 +200,171 @@ ENTRIES = [
 ]
 
 
+def first_name(name):
+    parts = name.strip().split()
+    if not parts:
+        return name
+    n = parts[0]
+    # Capitalize properly even if input is all caps
+    return n[0].upper() + n[1:].lower() if len(n) > 1 else n.upper()
+
+
+def detect_archetype(comments):
+    """Detecta o arquetipo do lead pelos comentarios."""
+    text = ' '.join(c['text'] for c in comments).lower()
+
+    if any(w in text for w in ['medo', 'insegura', 'inseguro', 'não me sent', 'nao me sent', 'não sei', 'não me sinto', 'dificuldade', 'tenho dúvida', 'preciso aprender']):
+        return 'medo'
+    if any(w in text for w in ['referência', 'referencia', 'me tornar', 'ganhar dinheiro', 'destaque', 'reabilitação também é muito procurada', 'mercado']) and 'me sinto' not in text.split('mercado')[0] if 'mercado' in text else False:
+        return 'referencia'
+    # Reabilitar testes
+    if any(w in text for w in ['me tornar', 'ganhar dinheiro', 'referência como profissional', 'falta de profissionais', 'muito procurada no mercado']):
+        return 'referencia'
+    if any(w in text for w in ['querendo começar', 'querendo comecar', 'começar a trabalhar', 'ainda estou aprendendo', 'primeira fase', 'iniciar', 'reingressar', 'estou aprendendo']):
+        return 'iniciante'
+    if any(w in text for w in ['só vi', 'so vi', 'esperava', 'introdutório', 'introdutorio', 'só recebi', 'so recebi', 'nota agora é muito cedo', 'não tem muito o que falar', 'achei que teria']):
+        return 'cetico'
+    if any(w in text for w in ['trabalho com', 'tenho alunos', 'meus alunos', 'atendo', 'já trabalho', 'ja trabalho']):
+        return 'experiente'
+    if len(text.strip()) < 25 or text.strip() in {'-', '.', 'tea', 'a', 'idosos', 'diabéticos', 'diabético', 'hipertensos', 'sedentários', 'reabilitação', 'bom', 'top', 'vamos lá', 'engajado', 'ótimo', 'excelente!', 'mto bom.', 'conhecimento', 'nota dez!', 'ótimo!', 'ótimo!!!', '✅✅✅', '★★★★★'}:
+        return 'basico'
+    return 'engajado'
+
+
+def best_quote(comments):
+    """Pega a frase mais 'citavel' do participante."""
+    valid = [c['text'] for c in comments if 25 < len(c['text']) < 220 and c['text'] not in ['-', '.', '✅✅✅']]
+    if not valid:
+        # fallback: any comment >= 10 chars
+        valid = [c['text'] for c in comments if len(c['text']) >= 10]
+    if not valid:
+        return None
+    # Prefer comments with emotional words
+    emotional = [t for t in valid if any(w in t.lower() for w in ['medo', 'insegura', 'inseguro', 'me sinto', 'quero', 'preciso', 'gostei', 'ansiosa', 'ansioso', 'referência', 'segurança', 'aprender'])]
+    if emotional:
+        return max(emotional, key=len)
+    return max(valid, key=len)
+
+
+def make_suggestions(p):
+    """Gera lista de sugestoes de abordagem para o comercial usar com este participante."""
+    archetype = detect_archetype(p['comments'])
+    fn = first_name(p['name'])
+    quote = best_quote(p['comments']) or ''
+    quote_short = quote[:140] + ('...' if len(quote) > 140 else '')
+
+    # Helpers
+    def with_quote(text, fallback_text):
+        return text if quote_short else fallback_text
+
+    base = []
+
+    if archetype == 'medo':
+        base = [
+            ('Identidade', 'identidade',
+             with_quote(
+                 f"{fn}, lendo seus comentários ficou claro: você não tem dúvida sobre o que estudar — tem medo de errar na prática. Quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar. Posso te mostrar como?",
+                 f"{fn}, quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar. Posso te mostrar como?")),
+            ('Progresso visível', 'progresso',
+             f"{fn}, te dou um diagnóstico rápido: você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap. Quer ver o passo a passo?"),
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda como você prescreve — vale o curso inteiro. Posso te mandar?"),
+            ('Status social', 'status',
+             f"{fn}, dá pra ver pelos comentários da jornada que tem muito profissional na MESMA insegurança que a sua. A diferença é que os que entram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou ficar onde tá?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, vou ser direto: a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só o material gravado — perde justamente o ajuste fino de caso real que tira a insegurança. Posso garantir tua vaga?"),
+        ]
+    elif archetype == 'referencia':
+        base = [
+            ('Identidade', 'identidade',
+             with_quote(
+                 f"{fn}, ler '{quote_short}' deixa claro: você não tá buscando só aprender — quer se posicionar. Esse curso é a ferramenta de quem decide ocupar esse espaço no mercado. Posso te chamar pra detalhar?",
+                 f"{fn}, dá pra ver pelos seus comentários que você não tá buscando só aprender — quer se posicionar. Esse curso é a ferramenta de quem decide ocupar esse espaço no mercado. Posso te chamar?")),
+            ('Status social', 'status',
+             f"{fn}, dos profissionais que terminaram essa jornada, a maioria que tem teu perfil já fechou o curso. O grupo de alunos é justamente quem quer se destacar como referência em grupos especiais. Quer que eu te mostre quem tá na turma?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, o nicho de grupos especiais tem mais demanda do que oferta qualificada — você já notou isso. A janela pra ocupar esse espaço com autoridade é AGORA, antes do mercado se inundar. Posso te garantir a vaga?"),
+            ('Progresso visível', 'progresso',
+             f"{fn}, posicionamento de referência é resultado de método, não de vontade. O curso te dá os 4 pilares: avaliação clínica, prescrição segura, comunicação com médico e comunicação com aluno. Em 8 semanas você tem o pacote completo. Quer ver o roteiro?"),
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, uma observação rápida: % dos personals que faturam acima da média no Brasil atendem grupos especiais como nicho principal. Quer ver o dado e o porquê?"),
+        ]
+    elif archetype == 'iniciante':
+        base = [
+            ('Identidade', 'identidade',
+             f"{fn}, quem decide começar pelo nicho de grupos especiais não é amador — é estratégico. Você acertou no segmento que mais ensina rápido e que tem mais demanda real. Posso te mostrar como entrar com pé direito?"),
+            ('Progresso visível', 'progresso',
+             f"{fn}, o curso é desenhado em fases: do zero (fisiologia aplicada, sem ladrilhar conceito) até protocolo prático com casos reais. Você termina em 8 semanas mesmo começando agora. Quer ver a estrutura módulo por módulo?"),
+            ('Pertencimento', 'pertencimento',
+             f"{fn}, todo profissional que hoje é referência em grupos especiais começou exatamente onde você tá. A diferença é que eles tiveram um guia certo nos primeiros meses. Quer que esse seja o teu ponto de partida?"),
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, antes de te falar do curso: você sabia que a primeira sessão com aluno especial NUNCA é avaliação física? Tem um protocolo específico de entrevista que decide 80% do resultado. Quer te mandar um resumo?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, quem começa errado no nicho perde o primeiro aluno e desiste do segmento. Quem começa com protocolo testado tem indicação no primeiro mês. Posso te garantir a vaga na turma com mentoria?"),
+        ]
+    elif archetype == 'cetico':
+        base = [
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, sua observação é válida — e é exatamente porque a maioria espera 'aula gravada e pronto' que o método aqui é diferente. Tem um diferencial específico do curso que NÃO tá na jornada preparatória e muda o jogo. Quer ver qual é?"),
+            ('Ganho racional', 'ganho',
+             f"{fn}, entendo o ponto. A jornada preparatória é só o gancho — o curso de fato tem 8 módulos com aulas estruturadas, mentoria semanal e estudo de caso. Posso te mandar a grade completa pra você comparar com o que esperava?"),
+            ('Identidade', 'identidade',
+             f"{fn}, profissional crítico é o tipo que mais ganha com esse curso. Você não vai engolir conteúdo solto — vai cobrar profundidade. Bom pra você, bom pra gente. Posso te chamar pra detalhar?"),
+            ('Progresso visível', 'progresso',
+             f"{fn}, te dou um plano direto: assiste a aula 1 completa (45min, protocolo de avaliação inicial). Se não justificar o investimento, a gente devolve. Quer que eu te libere o acesso?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, a turma com mentoria ao vivo fecha em breve. É o componente que faz diferença pra perfil exigente como o seu — sem ela é só conteúdo gravado. Posso garantir tua vaga?"),
+        ]
+    elif archetype == 'experiente':
+        base = [
+            ('Identidade', 'identidade',
+             with_quote(
+                 f"{fn}, '{quote_short}' já mostra que você é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?",
+                 f"{fn}, dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não depender mais de pesquisar a cada caso. Posso te mostrar?")),
+            ('Progresso (Maestria)', 'progresso',
+             f"{fn}, você já cobre a operação básica. O que esse curso faz é refinar: prescrição com bioestatística do aluno (FC, PA, glicemia), comunicação com equipe médica e protocolo para casos limítrofes. É upgrade técnico, não básico. Quer ver?"),
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, pergunta direta: quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo em 20min. Quer ver o passo a passo?"),
+            ('Status social', 'status',
+             f"{fn}, o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"),
+        ]
+    elif archetype == 'engajado':
+        base = [
+            ('Identidade', 'identidade',
+             with_quote(
+                 f"{fn}, dá pra ver pelas suas respostas que esse tema importa pra você de verdade — e o tom de '{quote_short}' mostra um profissional que pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?",
+                 f"{fn}, dá pra ver pelas suas respostas que esse tema importa pra você de verdade. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?")),
+            ('Progresso (Maestria)', 'progresso',
+             f"{fn}, você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que você possa ensinar a outros. É isso que o curso entrega. Quer ver?"),
+            ('Status social', 'status',
+             f"{fn}, gente que se engaja no preparatório como você é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"),
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse. Posso te mandar quais são?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso. Posso garantir tua vaga?"),
+        ]
+    else:  # basico
+        base = [
+            ('Curiosidade', 'curiosidade',
+             f"{fn}, te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"),
+            ('Identidade', 'identidade',
+             f"{fn}, quem termina a jornada inteira e dá 5 estrelas não fez por preencher — fez porque achou que valia. Bora conversar sobre o próximo passo?"),
+            ('Progresso visível', 'progresso',
+             f"{fn}, te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"),
+            ('Ganho racional', 'ganho',
+             f"{fn}, 8 módulos. 8 semanas. Mentoria semanal ao vivo. Acesso vitalício ao material. Investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"),
+            ('Perda iminente', 'perda',
+             f"{fn}, a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"),
+        ]
+
+    return [
+        {'trigger': label, 'icon_key': key, 'text': text}
+        for label, key, text in base
+    ]
+
+
 def main():
     # Dedupe por email: agrupa comments
     by_email = OrderedDict()
@@ -221,6 +386,11 @@ def main():
             'ts': ts,
             'text': text,
         })
+
+    # Gera sugestoes para cada participante
+    for p in by_email.values():
+        p['suggestions'] = make_suggestions(p)
+        p['archetype'] = detect_archetype(p['comments'])
 
     # Ordena participantes por nome
     parts = list(by_email.values())

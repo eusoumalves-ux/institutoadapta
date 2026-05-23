@@ -1327,6 +1327,119 @@
     font-size: 14px;
   }
 
+  /* Sugestoes de abordagem */
+  .suggestions-block {
+    margin-top: 18px;
+    background: linear-gradient(180deg, var(--ink) 0%, #0a0d10 100%);
+    color: var(--paper);
+    padding: 22px 24px 18px;
+    border-radius: 0;
+    position: relative;
+  }
+  .suggestions-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 60px; height: 3px;
+    background: var(--green);
+  }
+  .suggestions-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(250, 251, 252, 0.10);
+  }
+  .suggestions-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--green);
+    font-weight: 700;
+  }
+  .suggestions-arch {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(250, 251, 252, 0.55);
+    font-weight: 500;
+  }
+  .suggestions-arch strong { color: var(--paper); font-weight: 700; }
+  .suggestions-list { display: grid; gap: 10px; }
+  .suggestion {
+    background: rgba(250, 251, 252, 0.04);
+    border: 1px solid rgba(250, 251, 252, 0.08);
+    padding: 14px 16px 14px 16px;
+    display: grid;
+    gap: 10px;
+  }
+  .suggestion:hover { background: rgba(250, 251, 252, 0.06); }
+  .suggestion-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .suggestion-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--green);
+    font-weight: 700;
+  }
+  .suggestion-trigger-num {
+    background: rgba(0, 210, 127, 0.15);
+    padding: 2px 7px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--green);
+  }
+  .suggestion-copy {
+    background: transparent;
+    border: 1px solid rgba(250, 251, 252, 0.18);
+    color: var(--paper);
+    padding: 5px 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.16s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .suggestion-copy:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  .suggestion-copy.copied { background: var(--green); color: var(--ink); border-color: var(--green); }
+  .suggestion-copy svg { opacity: 0.8; }
+  .suggestion-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(250, 251, 252, 0.92);
+    font-weight: 400;
+  }
+  .suggestions-hint {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(250, 251, 252, 0.08);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    color: rgba(250, 251, 252, 0.55);
+    font-style: italic;
+    line-height: 1.45;
+  }
+
   /* ============ TOC SIDEBAR ============ */
   .toc-handle {
     position: fixed;
@@ -2429,6 +2542,16 @@
 
       searchMeta.innerHTML = '<strong>' + matches.length + '</strong> ' + (matches.length === 1 ? 'encontrado' : 'encontrados') + ' para "' + escapeHtml(q) + '"';
 
+      const archLabels = {
+        medo: 'Inseguro / com medo',
+        referencia: 'Quer ser referência',
+        iniciante: 'Iniciante no nicho',
+        cetico: 'Cético / exigente',
+        experiente: 'Profissional experiente',
+        engajado: 'Altamente engajado',
+        basico: 'Engajamento básico',
+      };
+
       const html = matches.slice(0, 30).map(p => {
         const commentsHtml = (p.comments || []).map(c => `
           <div class="comment-item">
@@ -2441,6 +2564,35 @@
           </div>
         `).join('');
         const count = (p.comments || []).length;
+
+        const suggestionsHtml = (p.suggestions || []).map((s, i) => `
+          <div class="suggestion">
+            <div class="suggestion-head">
+              <span class="suggestion-trigger">
+                <span class="suggestion-trigger-num">${String(i + 1).padStart(2, '0')}</span>
+                ${escapeHtml(s.trigger)}
+              </span>
+              <button type="button" class="suggestion-copy" data-suggestion-text="${escapeHtml(s.text)}">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="1"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copiar
+              </button>
+            </div>
+            <div class="suggestion-text">${escapeHtml(s.text)}</div>
+          </div>
+        `).join('');
+
+        const archLabel = archLabels[p.archetype] || 'Sem classificação';
+        const suggestionsBlock = (p.suggestions && p.suggestions.length) ? `
+          <div class="suggestions-block">
+            <div class="suggestions-head">
+              <span class="suggestions-title">Sugestões de abordagem · pra usar no WhatsApp/call</span>
+              <span class="suggestions-arch">Arquétipo: <strong>${escapeHtml(archLabel)}</strong></span>
+            </div>
+            <div class="suggestions-list">${suggestionsHtml}</div>
+            <div class="suggestions-hint">Cada mensagem aplica um dos 7 gatilhos psicológicos (identidade, perda iminente, status social, progresso, curiosidade, ganho racional, autonomia). Clique em <strong style="color: var(--green);">Copiar</strong> e cole na conversa.</div>
+          </div>
+        ` : '';
+
         return `
           <div class="participant-card">
             <div class="participant-head">
@@ -2451,6 +2603,7 @@
               <span class="participant-count">${count} ${count === 1 ? 'interação' : 'interações'}</span>
             </div>
             <div class="participant-comments">${commentsHtml}</div>
+            ${suggestionsBlock}
           </div>
         `;
       }).join('');
@@ -2480,22 +2633,17 @@
     }
     renderSearch('');
 
-    // Copy-to-clipboard for phrase cards
-    document.addEventListener('click', (ev) => {
-      const btn = ev.target.closest('.phrase-copy');
-      if (!btn) return;
-      const card = btn.closest('.phrase-card');
-      const text = card && card.querySelector('.phrase-text');
-      if (!text) return;
-      const payload = text.textContent.trim();
+    // Copy-to-clipboard helper
+    function copyToClipboard(payload, btn) {
       const done = () => {
-        const original = btn.textContent;
+        const original = btn.textContent.trim();
+        btn.dataset.originalText = btn.dataset.originalText || original;
         btn.textContent = 'Copiado ✓';
         btn.classList.add('copied');
         setTimeout(() => {
-          btn.textContent = original;
+          btn.textContent = btn.dataset.originalText;
           btn.classList.remove('copied');
-        }, 1600);
+        }, 1800);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(payload).then(done).catch(() => {
@@ -2515,6 +2663,22 @@
         try { document.execCommand('copy'); } catch (e) {}
         document.body.removeChild(ta);
         done();
+      }
+    }
+
+    // Click handler para copy buttons (phrase cards + suggestion cards)
+    document.addEventListener('click', (ev) => {
+      const phraseBtn = ev.target.closest('.phrase-copy');
+      if (phraseBtn) {
+        const card = phraseBtn.closest('.phrase-card');
+        const text = card && card.querySelector('.phrase-text');
+        if (text) copyToClipboard(text.textContent.trim(), phraseBtn);
+        return;
+      }
+      const suggBtn = ev.target.closest('.suggestion-copy');
+      if (suggBtn) {
+        const payload = suggBtn.getAttribute('data-suggestion-text') || '';
+        if (payload) copyToClipboard(payload, suggBtn);
       }
     });
   })();
