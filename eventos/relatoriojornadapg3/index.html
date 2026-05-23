@@ -102,7 +102,7 @@
     border-radius: 50%;
     display: inline-block;
   }
-  .brand-logout {
+  .brand-logout, .brand-export {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 10px;
     font-weight: 600;
@@ -118,9 +118,70 @@
     gap: 7px;
     transition: all 0.18s ease;
   }
-  .brand-logout svg { opacity: 0.65; transition: opacity 0.18s ease; }
-  .brand-logout:hover { color: var(--paper); background: var(--ink); border-color: var(--ink); }
-  .brand-logout:hover svg { opacity: 1; }
+  .brand-logout svg, .brand-export svg { opacity: 0.65; transition: opacity 0.18s ease; }
+  .brand-logout:hover, .brand-export:hover { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+  .brand-logout:hover svg, .brand-export:hover svg { opacity: 1; }
+
+  .export-wrap { position: relative; }
+  .export-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 220px;
+    background: white;
+    border: 1px solid var(--rule);
+    box-shadow: 0 12px 32px -10px rgba(17, 21, 24, 0.18);
+    z-index: 70;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+  }
+  .export-wrap.open .export-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .export-menu button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dotted var(--rule);
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.14s ease;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .export-menu button:last-child { border-bottom: none; }
+  .export-menu button:hover { background: var(--blue-soft); color: var(--blue); }
+  .export-menu button svg { color: var(--ink-mute); flex-shrink: 0; }
+  .export-menu button:hover svg { color: var(--blue); }
+  .export-menu .export-label-sub {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-top: 2px;
+  }
+  .export-menu button:hover .export-label-sub { color: var(--blue); opacity: 0.7; }
+  .export-menu .export-text { display: flex; flex-direction: column; gap: 0; }
+
+  @media print {
+    .toc-handle, .toc-drawer, .toc-overlay, .brand-logout, .export-wrap, .search-section { display: none !important; }
+    body:not(.auth-locked) .report-main { margin-left: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+    .farewell-section { page-break-before: always; }
+  }
 
   /* ============ HERO ============ */
   .hero {
@@ -1814,6 +1875,26 @@
   <img src="images/brand/logo-color.png" alt="Instituto Adapta" class="brand-logo">
   <div class="brand-right">
     <span class="brand-tag">Relatório interno · Inteligência comercial</span>
+    <div class="export-wrap" id="export-wrap">
+      <button type="button" id="export-btn" class="brand-export" aria-label="Exportar relatório" aria-haspopup="true" aria-expanded="false">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Exportar
+      </button>
+      <div class="export-menu" id="export-menu" role="menu" aria-label="Opções de exportação">
+        <button type="button" data-export="pdf" role="menuitem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="13" x2="12" y2="19"/><polyline points="9 16 12 19 15 16"/></svg>
+          <span class="export-text">PDF do relatório<span class="export-label-sub">via diálogo de impressão</span></span>
+        </button>
+        <button type="button" data-export="csv" role="menuitem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+          <span class="export-text">CSV de participantes<span class="export-label-sub">para abrir no Excel</span></span>
+        </button>
+        <button type="button" data-export="doc" role="menuitem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          <span class="export-text">DOC editável (Word)<span class="export-label-sub">conteúdo textual completo</span></span>
+        </button>
+      </div>
+    </div>
     <button type="button" id="logout-btn" class="brand-logout" aria-label="Sair do relatório">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
       Sair
@@ -2560,6 +2641,149 @@
       logout.addEventListener('click', () => {
         try { sessionStorage.removeItem(KEY); } catch (e) {}
         location.reload();
+      });
+    }
+
+    // Exportar (PDF / CSV / DOC)
+    const exportWrap = document.getElementById('export-wrap');
+    const exportBtn = document.getElementById('export-btn');
+    const exportMenu = document.getElementById('export-menu');
+
+    function closeExport() {
+      if (!exportWrap) return;
+      exportWrap.classList.remove('open');
+      exportBtn && exportBtn.setAttribute('aria-expanded', 'false');
+    }
+    if (exportBtn) {
+      exportBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const isOpen = exportWrap.classList.toggle('open');
+        exportBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+    document.addEventListener('click', (ev) => {
+      if (exportWrap && exportWrap.classList.contains('open') && !exportWrap.contains(ev.target)) {
+        closeExport();
+      }
+    });
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && exportWrap && exportWrap.classList.contains('open')) closeExport();
+    });
+
+    function exportPDF() {
+      // Fecha o drawer do sumario para nao competir com o layout impresso
+      document.body.classList.remove('toc-open');
+      closeExport();
+      setTimeout(() => window.print(), 60);
+    }
+
+    function csvEscape(s) {
+      const str = (s == null ? '' : String(s));
+      if (/[",\n;]/.test(str)) return '"' + str.replace(/"/g, '""') + '"';
+      return str;
+    }
+
+    function triggerDownload(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 200);
+    }
+
+    function exportCSV() {
+      const archLabels = {
+        medo: 'Inseguro / com medo',
+        referencia: 'Quer ser referência',
+        iniciante: 'Iniciante no nicho',
+        cetico: 'Cético / exigente',
+        experiente: 'Profissional experiente',
+        engajado: 'Altamente engajado',
+        basico: 'Engajamento básico',
+      };
+      const parts = window.ADAPTA_PARTICIPANTS || [];
+      const rows = [['Nome', 'Email', 'Arquetipo', 'Total interacoes', 'Nota', 'Prompt', 'Timestamp', 'Comentario']];
+      parts.forEach(p => {
+        const arch = archLabels[p.archetype] || p.archetype || '';
+        const totalI = (p.comments || []).length;
+        (p.comments || []).forEach(c => {
+          rows.push([
+            p.name,
+            p.email,
+            arch,
+            totalI,
+            c.nota,
+            c.prompt,
+            c.ts,
+            c.text,
+          ]);
+        });
+      });
+      const csv = rows.map(r => r.map(csvEscape).join(',')).join('\n');
+      // BOM para UTF-8 no Excel
+      const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8;' });
+      const today = new Date().toISOString().slice(0, 10);
+      triggerDownload(blob, `participantes-jornada-pg3-${today}.csv`);
+      closeExport();
+    }
+
+    function exportDOC() {
+      const main = document.querySelector('.report-main');
+      if (!main) return;
+      // Clona conteudo e remove botoes interativos / search section
+      const clone = main.cloneNode(true);
+      ['.search-section', '.brand-logout', '.export-wrap', '.toc-handle', '.suggestion-copy', '.phrase-copy', '.search-clear'].forEach(sel => {
+        clone.querySelectorAll(sel).forEach(el => el.remove());
+      });
+      const title = document.title.replace(/\s+/g, ' ').trim();
+      const styleBlock = `
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; color: #111518; line-height: 1.5; }
+        h1, h2, h3 { color: #111518; font-family: 'Calibri', sans-serif; }
+        h1 { font-size: 22pt; margin: 18pt 0 12pt; }
+        h2 { font-size: 16pt; margin: 16pt 0 8pt; color: #116BF8; }
+        em { color: #116BF8; font-style: italic; }
+        strong { font-weight: bold; }
+        .cluster, .app-card, .signal-card, .phrase-card, .participant-card, .insight, .bigram-item, .rank-item, .meta-cell {
+          margin: 12pt 0; padding: 10pt; border: 1pt solid #DDE3EC;
+        }
+        .insights-section { background: #111518; color: #FAFBFC; padding: 18pt; }
+        .insights-section h2, .insights-section em { color: #00D27F; }
+        .farewell-section { background: #111518; color: #FAFBFC; padding: 24pt; text-align: center; page-break-before: always; }
+        svg { display: none; }
+      `;
+      const html = `<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>${title}</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument>
+</xml>
+<![endif]-->
+<style>${styleBlock}</style>
+</head>
+<body>
+${clone.innerHTML}
+</body>
+</html>`;
+      const blob = new Blob(['﻿' + html], { type: 'application/msword;charset=utf-8' });
+      const today = new Date().toISOString().slice(0, 10);
+      triggerDownload(blob, `relatorio-jornada-pg3-${today}.doc`);
+      closeExport();
+    }
+
+    if (exportMenu) {
+      exportMenu.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('button[data-export]');
+        if (!btn) return;
+        const kind = btn.getAttribute('data-export');
+        if (kind === 'pdf') exportPDF();
+        else if (kind === 'csv') exportCSV();
+        else if (kind === 'doc') exportDOC();
       });
     }
 
