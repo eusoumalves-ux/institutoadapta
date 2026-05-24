@@ -5,7 +5,7 @@
  *   { name, email, archetype, comments: [ { nota, prompt, ts, text, tags } ], suggestions: [...] }
  *
  * Gerado por build-participantes.py a partir dos lotes de prints.
- * Total: 483 comentarios de 206 participantes unicos.
+ * Total: 656 comentarios de 252 participantes unicos.
  */
 window.ADAPTA_TAGS = {
   "medo": {
@@ -98,7 +98,7 @@ window.ADAPTA_TAGS = {
   }
 };
 
-window.ADAPTA_TAG_COUNTS = {"medo": 1, "inseguro": 11, "duvida": 14, "critica-formato": 4, "logistica": 1, "ganhar-dinheiro": 1, "ser-referencia": 2, "mercado": 5, "pediu-mais": 7, "atualizacao": 5, "atende-idosos": 24, "atende-hipertensos": 19, "atende-diabeticos": 20, "atende-cardiacos": 8, "atende-oncologicos": 3, "comorbidades": 4, "reabilitacao": 3, "obesidade": 2, "cliente-atual": 1, "preparado": 6, "iniciante": 6, "ansiedade": 21};
+window.ADAPTA_TAG_COUNTS = {"medo": 1, "inseguro": 17, "duvida": 17, "critica-formato": 4, "logistica": 1, "ganhar-dinheiro": 1, "ser-referencia": 3, "mercado": 5, "pediu-mais": 8, "atualizacao": 6, "atende-idosos": 37, "atende-hipertensos": 27, "atende-diabeticos": 32, "atende-cardiacos": 11, "atende-oncologicos": 3, "comorbidades": 5, "reabilitacao": 3, "obesidade": 2, "cliente-atual": 1, "preparado": 7, "iniciante": 6, "ansiedade": 22};
 
 window.ADAPTA_PARTICIPANTS = [
   {
@@ -585,6 +585,54 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "basico"
   },
   {
+    "name": "Alfredo Tadeu Salvo",
+    "email": "atsalvo@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:37",
+        "text": "Todos",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:15",
+        "text": "É um ensino maravilhoso, gratidão",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Alfredo, olha esse trecho do que você comentou na jornada: \"É um ensino maravilhoso, gratidão\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Alfredo, achei muito legal você ter comentado na jornada preparatória \"É um ensino maravilhoso, gratidão\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Alfredo, parei pra reler o que você escreveu lá no preparatório — \"É um ensino maravilhoso, gratidão\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Alfredo, fiquei pensando no seu comentário \"É um ensino maravilhoso, gratidão\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Alfredo, quando você escreveu \"É um ensino maravilhoso, gratidão\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Aline",
     "email": "Aline.al.alcantara@gmail.com",
     "comments": [
@@ -594,36 +642,68 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "22/05/2026 21:27",
         "text": "Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 09:07",
+        "text": "Melhorar a vida das pessoas",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 07:07",
+        "text": "Excelente",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 06:50",
+        "text": "Ainda insegura",
+        "tags": [
+          "inseguro"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 03:04",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Aline, teu comentário \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Aline, teu comentário \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" na jornada diz muito sobre teu momento. Então: quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar caso a caso. Posso te mostrar como?"
       },
       {
-        "trigger": "Progresso (Maestria)",
+        "trigger": "Progresso visível",
         "icon_key": "progresso",
-        "text": "Aline, olha esse trecho do que você comentou na jornada: \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
-      },
-      {
-        "trigger": "Status social",
-        "icon_key": "status",
-        "text": "Aline, achei muito legal você ter comentado na jornada preparatória \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Aline, olha esse trecho do que você comentou na jornada: \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\". Isso me leva direto a isso aqui: te dou um diagnóstico rápido — você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap em 3 semanas. Quer ver o passo a passo?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Aline, parei pra reler o que você escreveu lá no preparatório — \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Aline, achei muito legal você ter comentado na jornada preparatória \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\", então: uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda completamente como você prescreve — vale o curso inteiro. Posso te mandar?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Aline, parei pra reler o que você escreveu lá no preparatório — \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" — e fui te chamar na hora. Então: tem muito profissional na jornada com a MESMA insegurança que a sua — só que os que entraram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou continuar evitando o aluno especial?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Aline, fiquei pensando no seu comentário \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Aline, fiquei pensando no seu comentário \"Nao tinha pensado na importância de saber tambem Farmacologia basica, mas realmente é fundamental\" da jornada. Então: vou ser direto — a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só material gravado e perde justamente o ajuste fino de caso real, que é o que tira a insegurança. Posso garantir tua vaga?"
       }
     ],
-    "archetype": "engajado"
+    "archetype": "medo"
   },
   {
     "name": "Allex Bruno",
@@ -881,33 +961,42 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "22/05/2026 15:33",
         "text": "Gostei",
         "tags": []
+      },
+      {
+        "nota": 3,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:48",
+        "text": "Cardiopata",
+        "tags": [
+          "atende-cardiacos"
+        ]
       }
     ],
     "suggestions": [
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Ana, andei olhando teu envolvimento na jornada e quis te chamar. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+        "text": "Ana, achei muito legal você ter comentado na jornada preparatória \"Cardiopata\", então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
       },
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Ana, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+        "text": "Ana, parei pra reler o que você escreveu lá no preparatório — \"Cardiopata\" — e fui te chamar na hora. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
       },
       {
         "trigger": "Progresso visível",
         "icon_key": "progresso",
-        "text": "Ana, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+        "text": "Ana, fiquei pensando no seu comentário \"Cardiopata\" da jornada. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
       },
       {
         "trigger": "Ganho racional",
         "icon_key": "ganho",
-        "text": "Ana, suas respostas no preparatório me chamaram atenção. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+        "text": "Ana, quando você escreveu \"Cardiopata\" no preparatório, vi um ponto que vale a pena conversar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Ana, andei olhando teu envolvimento na jornada e quis te chamar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+        "text": "Ana, ler o teu \"Cardiopata\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
       }
     ],
     "archetype": "basico"
@@ -990,6 +1079,47 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Ana, achei muito legal você ter comentado na jornada preparatória \"Adorei como fazem a preparação para o evento\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Ana Karolina de Almeida",
+    "email": "anakarolinaapg18@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:15",
+        "text": "Adorei! Muito bem explicativo e educativo.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Ana, fiquei pensando no seu comentário \"Adorei! Muito bem explicativo e educativo\" da jornada. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Ana, quando você escreveu \"Adorei! Muito bem explicativo e educativo\" no preparatório, vi um ponto que vale a pena conversar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Ana, ler o teu \"Adorei! Muito bem explicativo e educativo\" lá no preparatório me fez parar tudo pra te procurar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Ana, teu comentário \"Adorei! Muito bem explicativo e educativo\" na jornada diz muito sobre teu momento. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Ana, olha esse trecho do que você comentou na jornada: \"Adorei! Muito bem explicativo e educativo\". Isso me leva direto a isso aqui: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -1129,6 +1259,47 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Anderson, fiquei pensando no seu comentário \"Conteúdo excelente\" da jornada. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
+    "name": "Anderson Angelo Gomes Da Silva",
+    "email": "andersonangelo24361@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 08:56",
+        "text": "Ótimo conteúdo",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Anderson, achei muito legal você ter comentado na jornada preparatória \"Ótimo conteúdo\", então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Anderson, parei pra reler o que você escreveu lá no preparatório — \"Ótimo conteúdo\" — e fui te chamar na hora. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Anderson, fiquei pensando no seu comentário \"Ótimo conteúdo\" da jornada. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Anderson, quando você escreveu \"Ótimo conteúdo\" no preparatório, vi um ponto que vale a pena conversar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Anderson, ler o teu \"Ótimo conteúdo\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
       }
     ],
     "archetype": "basico"
@@ -1395,6 +1566,15 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 12:43",
         "text": "É muito importante entender o funcionamento do organismo do seu aluno para ler essa segurança na prescrição do exercício.",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:32",
+        "text": "Idosos, doenças crônicas, doenças músculos-esqueléticas, Alzheimer e outras patologias.",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
@@ -1670,6 +1850,95 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "iniciante"
   },
   {
+    "name": "Arivane Batista do Nascimento",
+    "email": "Arivanebatista@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 03:06",
+        "text": "Ajudar e mudar vidas",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 02:56",
+        "text": "Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Arivane, teu comentário \"Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Arivane, olha esse trecho do que você comentou na jornada: \"Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Arivane, achei muito legal você ter comentado na jornada preparatória \"Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Arivane, parei pra reler o que você escreveu lá no preparatório — \"Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Arivane, fiquei pensando no seu comentário \"Sim, uma prescrição bem estruturada e eficaz, prezando e valorizando sempre a qualidade de vida\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Armando Lima e Silva Corujeira Junior",
+    "email": "corujeira@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:29",
+        "text": "Excelente.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Armando, ler o teu \"Excelente\" lá no preparatório me fez parar tudo pra te procurar. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Armando, teu comentário \"Excelente\" na jornada diz muito sobre teu momento. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Armando, olha esse trecho do que você comentou na jornada: \"Excelente\". Isso me leva direto a isso aqui: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Armando, achei muito legal você ter comentado na jornada preparatória \"Excelente\", então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Armando, parei pra reler o que você escreveu lá no preparatório — \"Excelente\" — e fui te chamar na hora. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
     "name": "Augusto Cid Perez Verndi",
     "email": "augustocpv@gmail.com",
     "comments": [
@@ -1709,6 +1978,47 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "basico"
+  },
+  {
+    "name": "Beatriz Postal Costa",
+    "email": "Beatriz.postal88@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:29",
+        "text": "Conhecimento nunca é demais!!!",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Beatriz, quando você escreveu \"Conhecimento nunca é demais!!!\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Beatriz, ler o teu \"Conhecimento nunca é demais!!!\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Beatriz, teu comentário \"Conhecimento nunca é demais!!!\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Beatriz, olha esse trecho do que você comentou na jornada: \"Conhecimento nunca é demais!!!\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Beatriz, achei muito legal você ter comentado na jornada preparatória \"Conhecimento nunca é demais!!!\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
   },
   {
     "name": "Bruna Delella",
@@ -1887,6 +2197,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Carla Mabila de Oliveira",
+    "email": "mabilaolveira12@gmail.com",
+    "comments": [
+      {
+        "nota": 3,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:10",
+        "text": "Vamos lá! Conhecimento é sempre bem vindo!",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Carla, quando você escreveu \"Vamos lá! Conhecimento é sempre bem vindo!\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Carla, ler o teu \"Vamos lá! Conhecimento é sempre bem vindo!\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Carla, teu comentário \"Vamos lá! Conhecimento é sempre bem vindo!\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Carla, olha esse trecho do que você comentou na jornada: \"Vamos lá! Conhecimento é sempre bem vindo!\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Carla, achei muito legal você ter comentado na jornada preparatória \"Vamos lá! Conhecimento é sempre bem vindo!\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Carla Naiara voltolini sales",
     "email": "ro89ca95@gmail.com",
     "comments": [
@@ -1896,36 +2247,68 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 11:44",
         "text": "Meu maior objetivo é ver a melhor constante em meus alunos, ver eles conseguindo ou voltando a fazer coisas simples na vida como poder caminhar, sentar ou levantar sem sentir dor poder voltar a fazer coisas simples que não era mais possíveis",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:33",
+        "text": "Ainda não me sinto capaz de prescrever o treino pela manhã para um diabético por vários fatores .",
+        "tags": [
+          "inseguro",
+          "atende-diabeticos",
+          "preparado"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:21",
+        "text": "Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:13",
+        "text": "Com os dois tipos de grupos especiais",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:03",
+        "text": "Ótima explicação",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Carla, parei pra reler o que você escreveu lá no preparatório — \"Meu maior objetivo é ver a melhor constante em meus alunos\" — e fui te chamar na hora. Então: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+        "text": "Carla, parei pra reler o que você escreveu lá no preparatório — \"Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno\" — e fui te chamar na hora. Então: quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar caso a caso. Posso te mostrar como?"
       },
       {
-        "trigger": "Progresso (Maestria)",
+        "trigger": "Progresso visível",
         "icon_key": "progresso",
-        "text": "Carla, fiquei pensando no seu comentário \"Meu maior objetivo é ver a melhor constante em meus alunos\" da jornada. Então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+        "text": "Carla, fiquei pensando no seu comentário \"Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno\" da jornada. Então: te dou um diagnóstico rápido — você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap em 3 semanas. Quer ver o passo a passo?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Carla, quando você escreveu \"Meu maior objetivo é ver a melhor constante em meus alunos\" no preparatório, vi um ponto que vale a pena conversar. Então: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+        "text": "Carla, quando você escreveu \"Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno\" no preparatório, vi um ponto que vale a pena conversar. Então: uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda completamente como você prescreve — vale o curso inteiro. Posso te mandar?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Carla, ler o teu \"Meu maior objetivo é ver a melhor constante em meus alunos\" lá no preparatório me fez parar tudo pra te procurar. Então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+        "text": "Carla, ler o teu \"Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno\" lá no preparatório me fez parar tudo pra te procurar. Então: tem muito profissional na jornada com a MESMA insegurança que a sua — só que os que entraram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou continuar evitando o aluno especial?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Carla, teu comentário \"Meu maior objetivo é ver a melhor constante em meus alunos\" na jornada diz muito sobre teu momento. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+        "text": "Carla, teu comentário \"Após entender melhor o assunto me sinto capacitada pois somos responsáveis direitos na melhora do aluno\" na jornada diz muito sobre teu momento. Então: vou ser direto — a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só material gravado e perde justamente o ajuste fino de caso real, que é o que tira a insegurança. Posso garantir tua vaga?"
       }
     ],
-    "archetype": "experiente"
+    "archetype": "medo"
   },
   {
     "name": "Carlos Júnior de Abreu Braga",
@@ -1962,6 +2345,13 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "atende-hipertensos"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:37",
+        "text": "Muito bom",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -1989,6 +2379,54 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Carlos, achei muito legal você ter comentado na jornada preparatória \"Contribuir para a qualidade de vida da população\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Carlos Matsuo",
+    "email": "fisiologista.carlosjr@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:58",
+        "text": "Servir as pessoas.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:47",
+        "text": "Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno. Cabe ao profissional desenvolver o processo do seu protocolo de atendimento e fazer as observações e perguntas corretas ao aluno antes do treino.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Carlos, quando você escreveu \"Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Carlos, ler o teu \"Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Carlos, teu comentário \"Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Carlos, olha esse trecho do que você comentou na jornada: \"Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Carlos, achei muito legal você ter comentado na jornada preparatória \"Sim, pois claramente foi explicado o processo. Se seguir essa sequência de informações não há problemas sérios com o aluno\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -2062,6 +2500,22 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "23/05/2026 13:20",
         "text": "Muito bem organizado e didático",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:30",
+        "text": "Pronto para evoluir no meu conhecimento sobre esse público que só vai crescer e crescer.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:24",
+        "text": "Muito interessante conhecer profundamente minha doença, diabetes tipo 1",
+        "tags": [
+          "atende-diabeticos"
+        ]
       }
     ],
     "suggestions": [
@@ -2116,6 +2570,20 @@ window.ADAPTA_PARTICIPANTS = [
         "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
         "ts": "24/05/2026 11:46",
         "text": "Estou gostando muito.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:39",
+        "text": "Ótimo.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:32",
+        "text": "Muito bom .",
         "tags": []
       }
     ],
@@ -2220,6 +2688,47 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "engajado"
+  },
+  {
+    "name": "Cicero Galdino Nascimento da Silva",
+    "email": "cicerogaldino09@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:01",
+        "text": "muito boom o conteudo",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Cicero, parei pra reler o que você escreveu lá no preparatório — \"muito boom o conteudo\" — e fui te chamar na hora. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Cicero, fiquei pensando no seu comentário \"muito boom o conteudo\" da jornada. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Cicero, quando você escreveu \"muito boom o conteudo\" no preparatório, vi um ponto que vale a pena conversar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Cicero, ler o teu \"muito boom o conteudo\" lá no preparatório me fez parar tudo pra te procurar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Cicero, teu comentário \"muito boom o conteudo\" na jornada diz muito sobre teu momento. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
   },
   {
     "name": "Claudemir Aparecido Rodrigues",
@@ -2391,6 +2900,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Daniel",
+    "email": "thedanis013@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:08",
+        "text": "Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Daniel, ler o teu \"Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física\" lá no preparatório me fez parar tudo pra te procurar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Daniel, teu comentário \"Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física\" na jornada diz muito sobre teu momento. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Daniel, olha esse trecho do que você comentou na jornada: \"Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física\". Isso me leva direto a isso aqui: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Daniel, achei muito legal você ter comentado na jornada preparatória \"Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física\", então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Daniel, parei pra reler o que você escreveu lá no preparatório — \"Todo conhecimento é válido, para compreender melhor sobre a amplitude da área da saúde e educação física\" — e fui te chamar na hora. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Daniel Almeida Ribeiro",
     "email": "drdanielribeiro23@gmail.com",
     "comments": [
@@ -2539,33 +3089,47 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "23/05/2026 00:58",
         "text": "Conhecimento pré aula 👏🏼👏🏼👏🏼",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:54",
+        "text": "Conhecimento é tudo",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:45",
+        "text": "Essencial os aprendizados de hoje, pode salvar vidas.",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Daniela, ler o teu \"Um ótimo início para ter motivação para o workshop\" lá no preparatório me fez parar tudo pra te procurar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Daniela, ler o teu \"Essencial os aprendizados de hoje, pode salvar vidas\" lá no preparatório me fez parar tudo pra te procurar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Daniela, teu comentário \"Um ótimo início para ter motivação para o workshop\" na jornada diz muito sobre teu momento. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Daniela, teu comentário \"Essencial os aprendizados de hoje, pode salvar vidas\" na jornada diz muito sobre teu momento. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Daniela, olha esse trecho do que você comentou na jornada: \"Um ótimo início para ter motivação para o workshop\". Isso me leva direto a isso aqui: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Daniela, olha esse trecho do que você comentou na jornada: \"Essencial os aprendizados de hoje, pode salvar vidas\". Isso me leva direto a isso aqui: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Daniela, achei muito legal você ter comentado na jornada preparatória \"Um ótimo início para ter motivação para o workshop\", então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Daniela, achei muito legal você ter comentado na jornada preparatória \"Essencial os aprendizados de hoje, pode salvar vidas\", então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Daniela, parei pra reler o que você escreveu lá no preparatório — \"Um ótimo início para ter motivação para o workshop\" — e fui te chamar na hora. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Daniela, parei pra reler o que você escreveu lá no preparatório — \"Essencial os aprendizados de hoje, pode salvar vidas\" — e fui te chamar na hora. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -3053,36 +3617,70 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 11:43",
         "text": "Fazer a diferença na vida das pessoas",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:38",
+        "text": "Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade",
+        "tags": [
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:33",
+        "text": "É muito importante controlar a pressão arterial",
+        "tags": [
+          "atende-hipertensos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:26",
+        "text": "Eu atendo idosos, e atualmente uma gestante",
+        "tags": [
+          "atende-idosos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:17",
+        "text": "Muito obrigado, e ótimo conteúdo",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Eduardo, fiquei pensando no seu comentário \"Fazer a diferença na vida das pessoas\" da jornada. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Eduardo, fiquei pensando no seu comentário \"Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade\" da jornada. Então: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Eduardo, quando você escreveu \"Fazer a diferença na vida das pessoas\" no preparatório, vi um ponto que vale a pena conversar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
-      },
-      {
-        "trigger": "Status social",
-        "icon_key": "status",
-        "text": "Eduardo, ler o teu \"Fazer a diferença na vida das pessoas\" lá no preparatório me fez parar tudo pra te procurar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Eduardo, quando você escreveu \"Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade\" no preparatório, vi um ponto que vale a pena conversar. Então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Eduardo, teu comentário \"Fazer a diferença na vida das pessoas\" na jornada diz muito sobre teu momento. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Eduardo, ler o teu \"Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade\" lá no preparatório me fez parar tudo pra te procurar. Então: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Eduardo, teu comentário \"Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade\" na jornada diz muito sobre teu momento. Então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Eduardo, olha esse trecho do que você comentou na jornada: \"Fazer a diferença na vida das pessoas\". Isso me leva direto a isso aqui: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Eduardo, olha esse trecho do que você comentou na jornada: \"Durante minha graduação eu me aprofundei em diabetes, realizei estagio e trabalhos na associação dos diabéticos da minha cidade\". Isso me leva direto a isso aqui: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
       }
     ],
-    "archetype": "engajado"
+    "archetype": "experiente"
   },
   {
     "name": "Edvane de Sousa Lima",
@@ -3320,6 +3918,70 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "basico"
   },
   {
+    "name": "Emilio",
+    "email": "ignatievo@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:02",
+        "text": "Sinto-me mais seguro.",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:55",
+        "text": "Mais confiante.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:49",
+        "text": "cardiopatas e pessoas com doenças crônicas",
+        "tags": [
+          "atende-cardiacos"
+        ]
+      },
+      {
+        "nota": 3,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:41",
+        "text": "Interessado em seguir aprendendo.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Emilio, achei muito legal você ter comentado na jornada preparatória \"cardiopatas e pessoas com doenças crônicas\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Emilio, parei pra reler o que você escreveu lá no preparatório — \"cardiopatas e pessoas com doenças crônicas\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Emilio, fiquei pensando no seu comentário \"cardiopatas e pessoas com doenças crônicas\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Emilio, quando você escreveu \"cardiopatas e pessoas com doenças crônicas\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Emilio, ler o teu \"cardiopatas e pessoas com doenças crônicas\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Emilly de Lima Cordeiro",
     "email": "emillyc125@gmail.com",
     "comments": [
@@ -3356,6 +4018,13 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "atende-hipertensos"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:39",
+        "text": "Super didático e explicativo!",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -3481,6 +4150,115 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Erinaldo, teu comentário \"é de suma importância o conhecimento teorico e pratico para uma prescricao e aplicacao correta dos exercícios e atividades no\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Everton Capitanio",
+    "email": "evertoncapitanio@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 03:23",
+        "text": "Manter-me sempre atualizado!",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 03:15",
+        "text": "Aguardando o conteúdo do workshop para deixar mais claro as situações do dia a dia dos treinos.",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 03:05",
+        "text": "Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão.",
+        "tags": [
+          "duvida"
+        ]
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 02:55",
+        "text": "Trabalho, especificamente, com o público acima de 60 anos que, geralmente, apresentam alteração cardiacas.",
+        "tags": [
+          "atende-idosos"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Everton, quando você escreveu \"Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Everton, ler o teu \"Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Everton, teu comentário \"Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Everton, olha esse trecho do que você comentou na jornada: \"Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Everton, achei muito legal você ter comentado na jornada preparatória \"Por se tratar de uma situação individual, diversos cenários são possíveis e algumas dúvidas surgem na tomada de decisão\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "F",
+    "email": "fatimacestari2017@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:49",
+        "text": "Atualizar- se frequentemente.",
+        "tags": [
+          "atualizacao"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "F, olha esse trecho do que você comentou na jornada: \"Atualizar- se frequentemente\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "F, achei muito legal você ter comentado na jornada preparatória \"Atualizar- se frequentemente\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "F, parei pra reler o que você escreveu lá no preparatório — \"Atualizar- se frequentemente\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "F, fiquei pensando no seu comentário \"Atualizar- se frequentemente\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "F, quando você escreveu \"Atualizar- se frequentemente\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -3657,6 +4435,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Fabio Tanabe",
+    "email": "fabio.kazu@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:58",
+        "text": "Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Fabio, olha esse trecho do que você comentou na jornada: \"Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Fabio, achei muito legal você ter comentado na jornada preparatória \"Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Fabio, parei pra reler o que você escreveu lá no preparatório — \"Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Fabio, fiquei pensando no seu comentário \"Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Fabio, quando você escreveu \"Precisamos muito conhecimento e segurança para trabalhar com este grupo de pessoas\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Fabrício Lazarini da Silva",
     "email": "fabriciolazarini@yahoo.com.br",
     "comments": [
@@ -3666,33 +4485,42 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "22/05/2026 20:08",
         "text": "Rápido, direto e objetivo.",
         "tags": []
+      },
+      {
+        "nota": 1,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 09:06",
+        "text": "Gostaria de atuar com hipertensão",
+        "tags": [
+          "atende-hipertensos"
+        ]
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Fabrício, olha esse trecho do que você comentou na jornada: \"Rápido, direto e objetivo\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Fabrício, olha esse trecho do que você comentou na jornada: \"Gostaria de atuar com hipertensão\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Fabrício, achei muito legal você ter comentado na jornada preparatória \"Rápido, direto e objetivo\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Fabrício, achei muito legal você ter comentado na jornada preparatória \"Gostaria de atuar com hipertensão\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Fabrício, parei pra reler o que você escreveu lá no preparatório — \"Rápido, direto e objetivo\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Fabrício, parei pra reler o que você escreveu lá no preparatório — \"Gostaria de atuar com hipertensão\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Fabrício, fiquei pensando no seu comentário \"Rápido, direto e objetivo\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Fabrício, fiquei pensando no seu comentário \"Gostaria de atuar com hipertensão\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Fabrício, quando você escreveu \"Rápido, direto e objetivo\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Fabrício, quando você escreveu \"Gostaria de atuar com hipertensão\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -4094,33 +4922,47 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 12:53",
         "text": "Ainda não faço prescrição de treinos, estou cursando a faculdade",
         "tags": []
+      },
+      {
+        "nota": 1,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 04:13",
+        "text": "Ainda não decidi específicamente com qual tipo de aluno pretendo trabalhar, mas gosto da ideia de que poderei ajudar qualquer um deles.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 03:43",
+        "text": "Esse módulo introduz os assuntos a serem estudados posteriormente, dando uma ideia geral da importância de entender a fisiologia de pessoas com doenças crônicas, que necessitam de uma atenção diferenciada.",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Gabriela, achei muito legal você ter comentado na jornada preparatória \"Ainda não faço prescrição de treinos, estou cursando a faculdade\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Gabriela, achei muito legal você ter comentado na jornada preparatória \"Esse módulo introduz os assuntos a serem estudados posteriormente\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Gabriela, parei pra reler o que você escreveu lá no preparatório — \"Ainda não faço prescrição de treinos, estou cursando a faculdade\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Gabriela, parei pra reler o que você escreveu lá no preparatório — \"Esse módulo introduz os assuntos a serem estudados posteriormente\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Gabriela, fiquei pensando no seu comentário \"Ainda não faço prescrição de treinos, estou cursando a faculdade\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Gabriela, fiquei pensando no seu comentário \"Esse módulo introduz os assuntos a serem estudados posteriormente\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Gabriela, quando você escreveu \"Ainda não faço prescrição de treinos, estou cursando a faculdade\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Gabriela, quando você escreveu \"Esse módulo introduz os assuntos a serem estudados posteriormente\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Gabriela, ler o teu \"Ainda não faço prescrição de treinos, estou cursando a faculdade\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Gabriela, ler o teu \"Esse módulo introduz os assuntos a serem estudados posteriormente\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -4316,33 +5158,56 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "ansiedade"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:39",
+        "text": "Boa",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:29",
+        "text": "Pretendo ter um leque de opções de aluno",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:16",
+        "text": "Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades",
+        "tags": [
+          "comorbidades"
+        ]
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Gilvanildo, achei muito legal você ter comentado na jornada preparatória \"Ajudar as pessoas, a ter melhora na auto estima e sua qualidade de vida\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Gilvanildo, achei muito legal você ter comentado na jornada preparatória \"Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Gilvanildo, parei pra reler o que você escreveu lá no preparatório — \"Ajudar as pessoas, a ter melhora na auto estima e sua qualidade de vida\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Gilvanildo, parei pra reler o que você escreveu lá no preparatório — \"Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Gilvanildo, fiquei pensando no seu comentário \"Ajudar as pessoas, a ter melhora na auto estima e sua qualidade de vida\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Gilvanildo, fiquei pensando no seu comentário \"Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Gilvanildo, quando você escreveu \"Ajudar as pessoas, a ter melhora na auto estima e sua qualidade de vida\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Gilvanildo, quando você escreveu \"Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Gilvanildo, ler o teu \"Ajudar as pessoas, a ter melhora na auto estima e sua qualidade de vida\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Gilvanildo, ler o teu \"Vejo muito em outros personais atendendo aquele público de sempre, difícil ver alguém de fato com comorbidades\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -4594,33 +5459,47 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "duvida"
         ]
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:40",
+        "text": "Ainda com nenhum",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:26",
+        "text": "Muito bom, informações claras e fáceis de compreender.",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Haruo, quando você escreveu \"Molhorar a qualidade de vida das pessoas\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Haruo, quando você escreveu \"Muito bom, informações claras e fáceis de compreender\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Haruo, ler o teu \"Molhorar a qualidade de vida das pessoas\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Haruo, ler o teu \"Muito bom, informações claras e fáceis de compreender\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Haruo, teu comentário \"Molhorar a qualidade de vida das pessoas\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Haruo, teu comentário \"Muito bom, informações claras e fáceis de compreender\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Haruo, olha esse trecho do que você comentou na jornada: \"Molhorar a qualidade de vida das pessoas\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Haruo, olha esse trecho do que você comentou na jornada: \"Muito bom, informações claras e fáceis de compreender\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Haruo, achei muito legal você ter comentado na jornada preparatória \"Molhorar a qualidade de vida das pessoas\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Haruo, achei muito legal você ter comentado na jornada preparatória \"Muito bom, informações claras e fáceis de compreender\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -4729,6 +5608,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Henrique Xavier Ferreira de Lima",
+    "email": "hxfl21@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 03:20",
+        "text": "Didático.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Henrique, suas respostas no preparatório me chamaram atenção. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Henrique, andei olhando teu envolvimento na jornada e quis te chamar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Henrique, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Henrique, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Henrique, suas respostas no preparatório me chamaram atenção. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
     "name": "Hugo Rodrigo",
     "email": "prof.hugorodrigo@gmail.com",
     "comments": [
@@ -4745,6 +5665,15 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 12:43",
         "text": "Muito mais seguro e embasado!",
         "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:59",
+        "text": "Idosos geralmente com ponte de safena e marcapasso",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
@@ -4775,6 +5704,79 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "engajado"
+  },
+  {
+    "name": "Iasmin Rios Piterskih",
+    "email": "iasminrios48@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:37",
+        "text": "Levar saúde e alegria aos meus alunos",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:34",
+        "text": "Sim",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:30",
+        "text": "Me sinto insegura",
+        "tags": [
+          "inseguro"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:27",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:26",
+        "text": "Amei",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Iasmin, teu comentário \"Levar saúde e alegria aos meus alunos\" na jornada diz muito sobre teu momento. Então: quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar caso a caso. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Iasmin, olha esse trecho do que você comentou na jornada: \"Levar saúde e alegria aos meus alunos\". Isso me leva direto a isso aqui: te dou um diagnóstico rápido — você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap em 3 semanas. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Iasmin, achei muito legal você ter comentado na jornada preparatória \"Levar saúde e alegria aos meus alunos\", então: uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda completamente como você prescreve — vale o curso inteiro. Posso te mandar?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Iasmin, parei pra reler o que você escreveu lá no preparatório — \"Levar saúde e alegria aos meus alunos\" — e fui te chamar na hora. Então: tem muito profissional na jornada com a MESMA insegurança que a sua — só que os que entraram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou continuar evitando o aluno especial?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Iasmin, fiquei pensando no seu comentário \"Levar saúde e alegria aos meus alunos\" da jornada. Então: vou ser direto — a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só material gravado e perde justamente o ajuste fino de caso real, que é o que tira a insegurança. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "medo"
   },
   {
     "name": "Idel Fuks",
@@ -4984,36 +5986,68 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "22/05/2026 14:07",
         "text": "Foi bem interessante",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:38",
+        "text": "Ser um profissional diferenciado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:35",
+        "text": "Não",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:31",
+        "text": "Ainda não me sinto bem preparada",
+        "tags": [
+          "inseguro"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:27",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
       {
-        "trigger": "Curiosidade",
-        "icon_key": "curiosidade",
-        "text": "Isadora, quando você escreveu \"Foi bem interessante\" no preparatório, vi um ponto que vale a pena conversar. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
-      },
-      {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Isadora, ler o teu \"Foi bem interessante\" lá no preparatório me fez parar tudo pra te procurar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+        "text": "Isadora, quando você escreveu \"Ainda não me sinto bem preparada\" no preparatório, vi um ponto que vale a pena conversar. Então: quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar caso a caso. Posso te mostrar como?"
       },
       {
         "trigger": "Progresso visível",
         "icon_key": "progresso",
-        "text": "Isadora, teu comentário \"Foi bem interessante\" na jornada diz muito sobre teu momento. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+        "text": "Isadora, ler o teu \"Ainda não me sinto bem preparada\" lá no preparatório me fez parar tudo pra te procurar. Então: te dou um diagnóstico rápido — você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap em 3 semanas. Quer ver o passo a passo?"
       },
       {
-        "trigger": "Ganho racional",
-        "icon_key": "ganho",
-        "text": "Isadora, olha esse trecho do que você comentou na jornada: \"Foi bem interessante\". Isso me leva direto a isso aqui: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Isadora, teu comentário \"Ainda não me sinto bem preparada\" na jornada diz muito sobre teu momento. Então: uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda completamente como você prescreve — vale o curso inteiro. Posso te mandar?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Isadora, olha esse trecho do que você comentou na jornada: \"Ainda não me sinto bem preparada\". Isso me leva direto a isso aqui: tem muito profissional na jornada com a MESMA insegurança que a sua — só que os que entraram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou continuar evitando o aluno especial?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Isadora, achei muito legal você ter comentado na jornada preparatória \"Foi bem interessante\", então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+        "text": "Isadora, achei muito legal você ter comentado na jornada preparatória \"Ainda não me sinto bem preparada\", então: vou ser direto — a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só material gravado e perde justamente o ajuste fino de caso real, que é o que tira a insegurança. Posso garantir tua vaga?"
       }
     ],
-    "archetype": "basico"
+    "archetype": "medo"
   },
   {
     "name": "Isaias robert",
@@ -5031,6 +6065,27 @@ window.ADAPTA_PARTICIPANTS = [
         "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
         "ts": "24/05/2026 11:44",
         "text": "workshop muito bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:42",
+        "text": "show",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:38",
+        "text": "muito top",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:35",
+        "text": "muito boom",
         "tags": []
       }
     ],
@@ -5285,6 +6340,22 @@ window.ADAPTA_PARTICIPANTS = [
         "text": "Não, eu não sou capaz e não posso prescrever nenhuma rotina, treino ou plano alimentar de forma autônoma para um aluno diabético. Como profissional de Educação Física, sua autonomia técnica é legal é fundamental para guiar o aluno diabético com segurança",
         "tags": [
           "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:37",
+        "text": "Primeiramente fazer uma boa avaliação anamnese, O processo de anamnese costuma responder por cerca de 80 a 90% da formulação de hipóteses diagnósticas.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:27",
+        "text": "Pessoas idosos",
+        "tags": [
+          "atende-idosos"
         ]
       }
     ],
@@ -5563,6 +6634,54 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Jenmey Yen",
+    "email": "j3nm3y.y3n@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:01",
+        "text": "Desejo trabalhar com grupos especiais da melhor idade, grupos dos 50+",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:52",
+        "text": "Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar profissionais qualificados e capacitados",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Jenmey, fiquei pensando no seu comentário \"Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar\" da jornada. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Jenmey, quando você escreveu \"Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar\" no preparatório, vi um ponto que vale a pena conversar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Jenmey, ler o teu \"Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar\" lá no preparatório me fez parar tudo pra te procurar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Jenmey, teu comentário \"Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar\" na jornada diz muito sobre teu momento. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Jenmey, olha esse trecho do que você comentou na jornada: \"Parabéns a toda equipe por disponibilizar eventos como este e materiais de qualidade que possam agregar conhecimento e nos tornar\". Isso me leva direto a isso aqui: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Jonatan Shiniti Sooma",
     "email": "jonatansooma@gmail.com",
     "comments": [
@@ -5611,6 +6730,77 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "cetico"
+  },
+  {
+    "name": "Jonathan Cristorf Camargo",
+    "email": "jcristorf@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:39",
+        "text": "Ajudar as pessoas",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:37",
+        "text": "Sim",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:35",
+        "text": "Capacitado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:34",
+        "text": "idosos",
+        "tags": [
+          "atende-idosos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:31",
+        "text": "otimo",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Jonathan, ler o teu \"Ajudar as pessoas\" lá no preparatório me fez parar tudo pra te procurar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Jonathan, teu comentário \"Ajudar as pessoas\" na jornada diz muito sobre teu momento. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Jonathan, olha esse trecho do que você comentou na jornada: \"Ajudar as pessoas\". Isso me leva direto a isso aqui: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Jonathan, achei muito legal você ter comentado na jornada preparatória \"Ajudar as pessoas\", então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Jonathan, parei pra reler o que você escreveu lá no preparatório — \"Ajudar as pessoas\" — e fui te chamar na hora. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
   },
   {
     "name": "Jones Pires de Oliveira",
@@ -5677,6 +6867,126 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Jones, ler o teu \"Até agora estou gostando\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Jorge Katsuo Nishimura de Andrade",
+    "email": "jorgekatsuofdc@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:07",
+        "text": "-",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:04",
+        "text": "-",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:59",
+        "text": "-",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:40",
+        "text": "Excelente conteúdo",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:16",
+        "text": "Mto interessante o conteudo",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Jorge, teu comentário \"Mto interessante o conteudo\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Jorge, olha esse trecho do que você comentou na jornada: \"Mto interessante o conteudo\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Jorge, achei muito legal você ter comentado na jornada preparatória \"Mto interessante o conteudo\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Jorge, parei pra reler o que você escreveu lá no preparatório — \"Mto interessante o conteudo\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Jorge, fiquei pensando no seu comentário \"Mto interessante o conteudo\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Jorge Silveira",
+    "email": "jwps1989@gmail.com",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:30",
+        "text": "Hipertensos e diabéticos.",
+        "tags": [
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:27",
+        "text": "Conteúdo atual e, muito importante.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Jorge, achei muito legal você ter comentado na jornada preparatória \"Conteúdo atual e, muito importante\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Jorge, parei pra reler o que você escreveu lá no preparatório — \"Conteúdo atual e, muito importante\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Jorge, fiquei pensando no seu comentário \"Conteúdo atual e, muito importante\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Jorge, quando você escreveu \"Conteúdo atual e, muito importante\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Jorge, ler o teu \"Conteúdo atual e, muito importante\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -5816,36 +7126,119 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "23/05/2026 10:55",
         "text": "Muito bom, obrigado.",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:37",
+        "text": "Ser útil ao próximo.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:32",
+        "text": "Sim.",
+        "tags": []
       }
     ],
     "suggestions": [
       {
-        "trigger": "Curiosidade",
-        "icon_key": "curiosidade",
-        "text": "Josias, olha esse trecho do que você comentou na jornada: \"Muito bom, obrigado\". Isso me leva direto a isso aqui: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
-      },
-      {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Josias, achei muito legal você ter comentado na jornada preparatória \"Muito bom, obrigado\", então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+        "text": "Josias, olha esse trecho do que você comentou na jornada: \"Muito bom, obrigado\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
-        "trigger": "Progresso visível",
+        "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Josias, parei pra reler o que você escreveu lá no preparatório — \"Muito bom, obrigado\" — e fui te chamar na hora. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+        "text": "Josias, achei muito legal você ter comentado na jornada preparatória \"Muito bom, obrigado\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
-        "trigger": "Ganho racional",
-        "icon_key": "ganho",
-        "text": "Josias, fiquei pensando no seu comentário \"Muito bom, obrigado\" da jornada. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Josias, parei pra reler o que você escreveu lá no preparatório — \"Muito bom, obrigado\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Josias, fiquei pensando no seu comentário \"Muito bom, obrigado\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Josias, quando você escreveu \"Muito bom, obrigado\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+        "text": "Josias, quando você escreveu \"Muito bom, obrigado\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
-    "archetype": "basico"
+    "archetype": "engajado"
+  },
+  {
+    "name": "Josimone Maciel",
+    "email": "personaltrainer_josi@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:35",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:30",
+        "text": "boa",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:18",
+        "text": "Me sinto qualificado, mas nao 100% confiante ainda.",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:05",
+        "text": "Estou gostando",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:40",
+        "text": "curioso pelo aprendizado do workshop",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Josimone, achei muito legal você ter comentado na jornada preparatória \"Me sinto qualificado, mas nao 100% confiante ainda\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Josimone, parei pra reler o que você escreveu lá no preparatório — \"Me sinto qualificado, mas nao 100% confiante ainda\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Josimone, fiquei pensando no seu comentário \"Me sinto qualificado, mas nao 100% confiante ainda\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Josimone, quando você escreveu \"Me sinto qualificado, mas nao 100% confiante ainda\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Josimone, ler o teu \"Me sinto qualificado, mas nao 100% confiante ainda\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
   },
   {
     "name": "José Carlos De Oliveira",
@@ -5875,6 +7268,20 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "ansiedade"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:38",
+        "text": "Muito aprendizado.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 04:27",
+        "text": "3ª idade",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -6017,6 +7424,61 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "João Paulo Ribeiro Ferreira",
+    "email": "Jhoni1034@yahoo.com",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:58",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:47",
+        "text": "Muito bom.",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:33",
+        "text": "Muito bom os conteúdos aqui aplicados",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "João, teu comentário \"Muito bom os conteúdos aqui aplicados\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "João, olha esse trecho do que você comentou na jornada: \"Muito bom os conteúdos aqui aplicados\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "João, achei muito legal você ter comentado na jornada preparatória \"Muito bom os conteúdos aqui aplicados\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "João, parei pra reler o que você escreveu lá no preparatório — \"Muito bom os conteúdos aqui aplicados\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "João, fiquei pensando no seu comentário \"Muito bom os conteúdos aqui aplicados\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Juciel Lima dos Santos",
     "email": "Juciel.20014@gmail.com",
     "comments": [
@@ -6053,6 +7515,70 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Juciel, olha esse trecho do que você comentou na jornada: \"Estou gostando, as vezes agente se forma e não busca outros conhecimentos\". Isso me leva direto a isso aqui: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Juliana balabenute faci",
+    "email": "Jubafefa@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:49",
+        "text": "Prescrever exercícios físicos com embasamento científico, para gerar efetividade",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:42",
+        "text": "Não",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:33",
+        "text": "Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:10",
+        "text": "Cardíacos",
+        "tags": [
+          "atende-cardiacos"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Juliana, teu comentário \"Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Juliana, olha esse trecho do que você comentou na jornada: \"Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Juliana, achei muito legal você ter comentado na jornada preparatória \"Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Juliana, parei pra reler o que você escreveu lá no preparatório — \"Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Juliana, fiquei pensando no seu comentário \"Tenho um conhecimento de base da faculdade, porém os estudo hoje esta me embasando melhor o que seguir\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -6152,6 +7678,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "experiente"
   },
   {
+    "name": "Juna Yuri Oshikawa Zacarin",
+    "email": "junayuri@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:42",
+        "text": "Muito bom!",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Juna, quando você escreveu \"Muito bom!\" no preparatório, vi um ponto que vale a pena conversar. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Juna, ler o teu \"Muito bom!\" lá no preparatório me fez parar tudo pra te procurar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Juna, teu comentário \"Muito bom!\" na jornada diz muito sobre teu momento. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Juna, olha esse trecho do que você comentou na jornada: \"Muito bom!\". Isso me leva direto a isso aqui: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Juna, achei muito legal você ter comentado na jornada preparatória \"Muito bom!\", então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
     "name": "Juscelino Rodrigues Lima",
     "email": "jorgejuscelino40@gmail.com",
     "comments": [
@@ -6161,36 +7728,54 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "23/05/2026 00:44",
         "text": "Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:02",
+        "text": "Meu objetivo é me tornar referência em prescrição de treino para grupos especiais, oferecendo resultados com segurança e excelência.",
+        "tags": [
+          "ser-referencia"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:56",
+        "text": "Eu já estou trabalhando com pessoas assim aais de 25 anos só que é sempre bom ter reflexões sobre os assuntos. O conteúdo abriu minha visão sobre o controle glicêmico e a importância da prescrição correta para alunos diabéticos. Me sinto muito mais preparado para aplicar isso na prática.",
+        "tags": [
+          "atende-diabeticos"
+        ]
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Juscelino, olha esse trecho do que você comentou na jornada: \"Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas\". Isso me leva direto a isso aqui: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
-      },
-      {
-        "trigger": "Progresso (Maestria)",
-        "icon_key": "progresso",
-        "text": "Juscelino, achei muito legal você ter comentado na jornada preparatória \"Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas\", então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Juscelino, olha esse trecho do que você comentou na jornada: \"Meu objetivo é me tornar referência em prescrição de treino para grupos especiais\". Isso me leva direto a isso aqui: isso não é discurso de quem só quer aprender — é de quem decidiu se posicionar. Esse curso é a ferramenta de quem ocupa o espaço de referência em grupos especiais. Posso te chamar pra detalhar?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Juscelino, parei pra reler o que você escreveu lá no preparatório — \"Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas\" — e fui te chamar na hora. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
-      },
-      {
-        "trigger": "Curiosidade",
-        "icon_key": "curiosidade",
-        "text": "Juscelino, fiquei pensando no seu comentário \"Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas\" da jornada. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Juscelino, achei muito legal você ter comentado na jornada preparatória \"Meu objetivo é me tornar referência em prescrição de treino para grupos especiais\", então: a turma desse curso é exatamente esse perfil: profissional que vê grupos especiais como nicho de diferenciação. Tem gente do interior, da capital, e gente que já bombava em geral migrou pra cá. Quer ver quem tá na turma?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Juscelino, quando você escreveu \"Está sendo muito a troca de conhecimentos estou gostando muito das perguntas que estão sendo feitas\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Juscelino, parei pra reler o que você escreveu lá no preparatório — \"Meu objetivo é me tornar referência em prescrição de treino para grupos especiais\" — e fui te chamar na hora. Então: o nicho de grupos especiais tem mais demanda do que oferta qualificada — você já viu isso. A janela pra ocupar esse espaço com autoridade é AGORA, antes do mercado se inundar com gente despreparada. Posso te garantir a vaga?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Juscelino, fiquei pensando no seu comentário \"Meu objetivo é me tornar referência em prescrição de treino para grupos especiais\" da jornada. Então: posicionamento de referência é resultado de método, não de vontade. O curso te dá os 4 pilares: avaliação clínica, prescrição segura, comunicação com médico e comunicação com aluno. Em 8 semanas você tem o pacote completo. Quer ver o roteiro?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Juscelino, quando você escreveu \"Meu objetivo é me tornar referência em prescrição de treino para grupos especiais\" no preparatório, vi um ponto que vale a pena conversar. Então: uma observação rápida — boa parte dos personals que faturam acima da média no Brasil atendem grupos especiais como nicho principal. Quer ver o dado e o porquê?"
       }
     ],
-    "archetype": "engajado"
+    "archetype": "referencia"
   },
   {
     "name": "Jéssica Souza",
@@ -6488,6 +8073,47 @@ window.ADAPTA_PARTICIPANTS = [
         "trigger": "Perda iminente",
         "icon_key": "perda",
         "text": "Larissa, teu comentário \"Ansiosa para começar\" na jornada diz muito sobre teu momento. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
+    "name": "Larissa Franciele Roque",
+    "email": "larif.roque@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:30",
+        "text": "Muito didático.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Larissa, fiquei pensando no seu comentário \"Muito didático\" da jornada. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Larissa, quando você escreveu \"Muito didático\" no preparatório, vi um ponto que vale a pena conversar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Larissa, ler o teu \"Muito didático\" lá no preparatório me fez parar tudo pra te procurar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Larissa, teu comentário \"Muito didático\" na jornada diz muito sobre teu momento. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Larissa, olha esse trecho do que você comentou na jornada: \"Muito didático\". Isso me leva direto a isso aqui: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
       }
     ],
     "archetype": "basico"
@@ -6881,33 +8507,40 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 11:43",
         "text": "Ótimo",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:34",
+        "text": "Hoje tenho mais segurança.",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Luana, achei muito legal você ter comentado na jornada preparatória \"Ser Diferenciada\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Luana, achei muito legal você ter comentado na jornada preparatória \"Hoje tenho mais segurança\", então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Luana, parei pra reler o que você escreveu lá no preparatório — \"Ser Diferenciada\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Luana, parei pra reler o que você escreveu lá no preparatório — \"Hoje tenho mais segurança\" — e fui te chamar na hora. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Luana, fiquei pensando no seu comentário \"Ser Diferenciada\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Luana, fiquei pensando no seu comentário \"Hoje tenho mais segurança\" da jornada. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Luana, quando você escreveu \"Ser Diferenciada\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Luana, quando você escreveu \"Hoje tenho mais segurança\" no preparatório, vi um ponto que vale a pena conversar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Luana, ler o teu \"Ser Diferenciada\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Luana, ler o teu \"Hoje tenho mais segurança\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -6931,6 +8564,29 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "atende-diabeticos"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 09:46",
+        "text": "Cuidar da saúde",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 09:43",
+        "text": "Para diabéticos acho que não",
+        "tags": [
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 09:38",
+        "text": "Muito bem",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -7016,6 +8672,78 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "engajado"
+  },
+  {
+    "name": "Lucia Helena Rodrigues Couto",
+    "email": "efucinha@gmail.com",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:55",
+        "text": "Proporcionar qualidade de vida aos meus alunos, com segurança e conhecimento!!!",
+        "tags": []
+      },
+      {
+        "nota": 3,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:49",
+        "text": "Sinto ainda que preciso de mais ferramentas para me sentir segura na prescrição de exercícios...",
+        "tags": []
+      },
+      {
+        "nota": 3,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:10",
+        "text": "Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança....",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 09:11",
+        "text": "Quero trabalhar c diabéticos, para ajudá-los, através do exercício físico, ganharem qualidade de vida e menos medicação ... Hipertensos, qdo me sentir mais capacitada e segura, através de aprendizado como esse workshop e especializações...",
+        "tags": [
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 4,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 07:56",
+        "text": "A jornada de aprendizado me pareceu até aqui, pautada em conteúdo planejado e estruturado em diretrizes clínicas de segurança",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Lucia, achei muito legal você ter comentado na jornada preparatória \"Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança\", então: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Lucia, parei pra reler o que você escreveu lá no preparatório — \"Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança\" — e fui te chamar na hora. Então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Lucia, fiquei pensando no seu comentário \"Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança\" da jornada. Então: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Lucia, quando você escreveu \"Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança\" no preparatório, vi um ponto que vale a pena conversar. Então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Lucia, ler o teu \"Prescrevo com um pouco mais de conhecimento, mas ainda preciso de tempo de estudo para prescrever c segurança e confiança\" lá no preparatório me fez parar tudo pra te procurar. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "experiente"
   },
   {
     "name": "Luciene Cristina Bartolo",
@@ -7141,6 +8869,111 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "engajado"
+  },
+  {
+    "name": "Luiz Carlos Fernandes",
+    "email": "cinemaluprofluiz@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:18",
+        "text": "Segurança e competência",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:57",
+        "text": "Ok",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:39",
+        "text": "Seguro",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:19",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Luiz, parei pra reler o que você escreveu lá no preparatório — \"Segurança e competência\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Luiz, fiquei pensando no seu comentário \"Segurança e competência\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Luiz, quando você escreveu \"Segurança e competência\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Luiz, ler o teu \"Segurança e competência\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Luiz, teu comentário \"Segurança e competência\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "luzieti",
+    "email": "luzieti44@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 09:35",
+        "text": "Estou gostando muito",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Luzieti, olha esse trecho do que você comentou na jornada: \"Estou gostando muito\". Isso me leva direto a isso aqui: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Luzieti, achei muito legal você ter comentado na jornada preparatória \"Estou gostando muito\", então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Luzieti, parei pra reler o que você escreveu lá no preparatório — \"Estou gostando muito\" — e fui te chamar na hora. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Luzieti, fiquei pensando no seu comentário \"Estou gostando muito\" da jornada. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Luzieti, quando você escreveu \"Estou gostando muito\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
   },
   {
     "name": "Marcelo",
@@ -7273,6 +9106,56 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "iniciante"
   },
   {
+    "name": "Marcio Claudio Gaefke",
+    "email": "marciovidaativa@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 03:03",
+        "text": "Salvar vidas e promover saúde e bem estar, combatendo, prevenindo e tratando as doenças crônicas, ser um autêntico promotor de saúde!",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 02:56",
+        "text": "Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!",
+        "tags": [
+          "atende-diabeticos"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Marcio, olha esse trecho do que você comentou na jornada: \"Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!\". Isso me leva direto a isso aqui: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Marcio, achei muito legal você ter comentado na jornada preparatória \"Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!\", então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Marcio, parei pra reler o que você escreveu lá no preparatório — \"Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!\" — e fui te chamar na hora. Então: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Marcio, fiquei pensando no seu comentário \"Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!\" da jornada. Então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Marcio, quando você escreveu \"Sim me sinto apto, trabalho com alunos com diabetes tipo 2, estou querendo sempre me aperfeiçoar!\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "experiente"
+  },
+  {
     "name": "Marcio Henrique de sousa",
     "email": "mhsdam11@gmail.com",
     "comments": [
@@ -7312,6 +9195,47 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "basico"
+  },
+  {
+    "name": "Marco Jim Gui Vallin",
+    "email": "marcojm.treinador@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:52",
+        "text": "Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Marco, quando você escreveu \"Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso\" no preparatório, vi um ponto que vale a pena conversar. Então: quem decide começar pelo nicho de grupos especiais não é amador — é estratégico. Você acertou no segmento que mais ensina rápido e que tem mais demanda real. Posso te mostrar como entrar com pé direito?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Marco, ler o teu \"Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso\" lá no preparatório me fez parar tudo pra te procurar. Então: o curso é desenhado em fases — do zero (fisiologia aplicada, sem teoria desnecessária) até protocolo prático com casos reais. Você termina em 8 semanas mesmo começando agora. Quer ver a estrutura módulo por módulo?"
+      },
+      {
+        "trigger": "Pertencimento",
+        "icon_key": "pertencimento",
+        "text": "Marco, teu comentário \"Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso\" na jornada diz muito sobre teu momento. Então: todo profissional que hoje é referência em grupos especiais começou exatamente onde você tá agora. A diferença é que eles tiveram um guia certo nos primeiros meses. Quer que esse seja o teu ponto de partida?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Marco, olha esse trecho do que você comentou na jornada: \"Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso\". Isso me leva direto a isso aqui: antes de te falar do curso, te dou um spoiler: a primeira sessão com aluno especial NUNCA é avaliação física. Tem um protocolo específico de entrevista que decide 80% do resultado. Quer que eu te mande um resumo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Marco, achei muito legal você ter comentado na jornada preparatória \"Conhecimento de introdução, curto, mas abre a curiosidade para iniciar curso\", então: quem começa errado no nicho perde o primeiro aluno e desiste do segmento. Quem começa com protocolo testado tem indicação já no primeiro mês. Posso te garantir a vaga na turma com mentoria?"
+      }
+    ],
+    "archetype": "iniciante"
   },
   {
     "name": "Marcos Augusto de Carvalho Rossini",
@@ -7569,6 +9493,123 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Marliza Canal Peres",
+    "email": "canalmarliza@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 03:32",
+        "text": "Contribuir para o bem estar fisico e mental daqueles que me procuram em busca de saúde e uma melhor qualidade de vida.",
+        "tags": []
+      },
+      {
+        "nota": 3,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 03:14",
+        "text": "Me sinto com pouca autonomia.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Marliza, fiquei pensando no seu comentário \"Me sinto com pouca autonomia\" da jornada. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Marliza, quando você escreveu \"Me sinto com pouca autonomia\" no preparatório, vi um ponto que vale a pena conversar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Marliza, ler o teu \"Me sinto com pouca autonomia\" lá no preparatório me fez parar tudo pra te procurar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Marliza, teu comentário \"Me sinto com pouca autonomia\" na jornada diz muito sobre teu momento. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Marliza, olha esse trecho do que você comentou na jornada: \"Me sinto com pouca autonomia\". Isso me leva direto a isso aqui: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Martinho dos Santos Araújo Junior",
+    "email": "martinhoaraujo75@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:20",
+        "text": "Obrigado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:17",
+        "text": "Obrigado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:14",
+        "text": "O",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:12",
+        "text": "Obrigado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:07",
+        "text": "Obrigado",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Martinho, suas respostas no preparatório me chamaram atenção. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Martinho, andei olhando teu envolvimento na jornada e quis te chamar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Martinho, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Martinho, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Martinho, suas respostas no preparatório me chamaram atenção. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Matheus Alves",
     "email": "w3malves@gmail.com",
     "comments": [
@@ -7685,6 +9726,47 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Mauro",
+    "email": "maurolaurindo@professor.educacao.sp.gov.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:28",
+        "text": "Top",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Mauro, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Mauro, suas respostas no preparatório me chamaram atenção. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Mauro, andei olhando teu envolvimento na jornada e quis te chamar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Mauro, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Mauro, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
     "name": "Maximiliano Quevedo de Oliveira Rocha",
     "email": "mestremaxquevedo@gmail.com",
     "comments": [
@@ -7776,6 +9858,27 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "23/05/2026 06:35",
         "text": "Muito bom estou animado para expandir ainda mais meus conhecimentos",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 06:58",
+        "text": "Impactar e mudar vidas",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 06:49",
+        "text": "Mais ou menos",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 06:13",
+        "text": "Mais confiante",
+        "tags": []
       }
     ],
     "suggestions": [
@@ -7837,6 +9940,13 @@ window.ADAPTA_PARTICIPANTS = [
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "24/05/2026 11:44",
         "text": "Maravilhoso",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:39",
+        "text": "Muito bem explicado",
         "tags": []
       }
     ],
@@ -7982,6 +10092,106 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Monique Nicole Alves da Silva",
+    "email": "alvesmoniquenicole@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:23",
+        "text": "-",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Monique, suas respostas no preparatório me chamaram atenção. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Monique, andei olhando teu envolvimento na jornada e quis te chamar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Monique, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Monique, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Monique, suas respostas no preparatório me chamaram atenção. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
+    "name": "Naiala Ferreira de Oliveira",
+    "email": "nanaixavier@gmail.com",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:58",
+        "text": "Sentir segurança em minha atuação profissional.",
+        "tags": []
+      },
+      {
+        "nota": 1,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:48",
+        "text": "Ainda não me sinto pronta.",
+        "tags": [
+          "inseguro"
+        ]
+      },
+      {
+        "nota": 1,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:10",
+        "text": "Não me sinto apta no momento.",
+        "tags": [
+          "inseguro"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Naiala, ler o teu \"Sentir segurança em minha atuação profissional\" lá no preparatório me fez parar tudo pra te procurar. Então: quem se preocupa em prescrever com segurança JÁ é o tipo de profissional que esse curso forma. Só falta a gente te entregar a ferramenta pra você não ter que adivinhar caso a caso. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Naiala, teu comentário \"Sentir segurança em minha atuação profissional\" na jornada diz muito sobre teu momento. Então: te dou um diagnóstico rápido — você já tem boa parte do conhecimento técnico. O que trava é o protocolo de avaliação inicial e a comunicação com o aluno especial na primeira sessão. O curso fecha exatamente esse gap em 3 semanas. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Naiala, olha esse trecho do que você comentou na jornada: \"Sentir segurança em minha atuação profissional\". Isso me leva direto a isso aqui: uma pergunta antes de te oferecer qualquer coisa: você sabe o que faz a maioria dos colegas evitarem o aluno hipertenso ou diabético? Tem uma resposta específica que muda completamente como você prescreve — vale o curso inteiro. Posso te mandar?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Naiala, achei muito legal você ter comentado na jornada preparatória \"Sentir segurança em minha atuação profissional\", então: tem muito profissional na jornada com a MESMA insegurança que a sua — só que os que entraram no curso saem prescrevendo com confiança em 6 semanas. Você quer estar nesse grupo ou continuar evitando o aluno especial?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Naiala, parei pra reler o que você escreveu lá no preparatório — \"Sentir segurança em minha atuação profissional\" — e fui te chamar na hora. Então: vou ser direto — a turma com mentoria ao vivo fecha em breve. Quem entra fora pega só material gravado e perde justamente o ajuste fino de caso real, que é o que tira a insegurança. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "medo"
+  },
+  {
     "name": "Natalia D S Bueno",
     "email": "naahdass.nd@gmail.com",
     "comments": [
@@ -8021,6 +10231,97 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "basico"
+  },
+  {
+    "name": "Nelson Marques da Silva",
+    "email": "profnelsonsilva@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:14",
+        "text": "Vamos se capacitar ainda mais",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Nelson, teu comentário \"Vamos se capacitar ainda mais\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Nelson, olha esse trecho do que você comentou na jornada: \"Vamos se capacitar ainda mais\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Nelson, achei muito legal você ter comentado na jornada preparatória \"Vamos se capacitar ainda mais\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Nelson, parei pra reler o que você escreveu lá no preparatório — \"Vamos se capacitar ainda mais\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Nelson, fiquei pensando no seu comentário \"Vamos se capacitar ainda mais\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Nilson Bastos Hendel",
+    "email": "hendelnbh_@hotmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:19",
+        "text": "Estou iniciando. Ainda não trabalho com grupos de alunos específicos.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 09:44",
+        "text": "Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais. Comecei a ter as primeiras noções e quero aprender muito mais.",
+        "tags": [
+          "pediu-mais"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Nilson, ler o teu \"Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais\" lá no preparatório me fez parar tudo pra te procurar. Então: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Nilson, teu comentário \"Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais\" na jornada diz muito sobre teu momento. Então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Nilson, olha esse trecho do que você comentou na jornada: \"Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais\". Isso me leva direto a isso aqui: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Nilson, achei muito legal você ter comentado na jornada preparatória \"Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais\", então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Nilson, parei pra reler o que você escreveu lá no preparatório — \"Até aqui comecei a compreender como aplicar conhecimento durante as práticas de exercício para grupos especiais\" — e fui te chamar na hora. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "experiente"
   },
   {
     "name": "Otávio Pereira Ferreira Sampaio",
@@ -8093,6 +10394,13 @@ window.ADAPTA_PARTICIPANTS = [
         "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
         "ts": "24/05/2026 11:52",
         "text": "Ainda não sei o tipo de aluno, mas acho a área fascinante.",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:34",
+        "text": "Estou achando incrível!!",
         "tags": []
       }
     ],
@@ -8231,6 +10539,36 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "22/05/2026 21:45",
         "text": "Muito dinâmico e prazeroso",
         "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:30",
+        "text": "Salvar vidas",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:21",
+        "text": "Ainda não",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:15",
+        "text": "Pré preparado",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:06",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
       }
     ],
     "suggestions": [
@@ -8494,6 +10832,65 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "basico"
   },
   {
+    "name": "Rafaela Castellanos",
+    "email": "rafapilatespersonal@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:02",
+        "text": "Sinto parcialmente segura. Gostaria de algumas orientações como protocolos e equipamentos adequados para acompanhar atendimento do idoso em casa",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:44",
+        "text": "Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose. Minha duvida é fazer aula para um aluno que sofre principalmente DOR crônica pela artrose",
+        "tags": [
+          "duvida",
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:18",
+        "text": "Muito legal a gameficacao",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Rafaela, olha esse trecho do que você comentou na jornada: \"Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose\". Isso me leva direto a isso aqui: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Rafaela, achei muito legal você ter comentado na jornada preparatória \"Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose\", então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Rafaela, parei pra reler o que você escreveu lá no preparatório — \"Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose\" — e fui te chamar na hora. Então: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Rafaela, fiquei pensando no seu comentário \"Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose\" da jornada. Então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Rafaela, quando você escreveu \"Eu trabalho com alunos 60+ muitos tem diversas patologias. Diabete pressão alta artrose\" no preparatório, vi um ponto que vale a pena conversar. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "experiente"
+  },
+  {
     "name": "Rafaela Silva do Nascimento",
     "email": "rafaelarsn76@gmail.com",
     "comments": [
@@ -8677,6 +11074,13 @@ window.ADAPTA_PARTICIPANTS = [
         "prompt": "Vamos nessa?",
         "ts": "22/05/2026 23:05",
         "text": "Conteudo bom e proveitoso 👍",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:03",
+        "text": "Com muito mais conhecimento",
         "tags": []
       }
     ],
@@ -8877,33 +11281,81 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "preparado"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 10:56",
+        "text": "Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Ricardo, quando você escreveu \"Me sinto preparado!\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Ricardo, quando você escreveu \"Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!\" no preparatório, vi um ponto que vale a pena conversar. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Ricardo, ler o teu \"Me sinto preparado!\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Ricardo, ler o teu \"Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!\" lá no preparatório me fez parar tudo pra te procurar. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Ricardo, teu comentário \"Me sinto preparado!\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Ricardo, teu comentário \"Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!\" na jornada diz muito sobre teu momento. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Ricardo, olha esse trecho do que você comentou na jornada: \"Me sinto preparado!\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Ricardo, olha esse trecho do que você comentou na jornada: \"Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!\". Isso me leva direto a isso aqui: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Ricardo, achei muito legal você ter comentado na jornada preparatória \"Me sinto preparado!\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Ricardo, achei muito legal você ter comentado na jornada preparatória \"Meu propósito é ajudar as pessoas a transformarem a vida com exercício físico!\", então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Richard Cristiano Mendes",
+    "email": "richard.mendes148@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:29",
+        "text": "Muito bom, são questões que sempre foram importantes para área",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Richard, parei pra reler o que você escreveu lá no preparatório — \"Muito bom, são questões que sempre foram importantes para área\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Richard, fiquei pensando no seu comentário \"Muito bom, são questões que sempre foram importantes para área\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Richard, quando você escreveu \"Muito bom, são questões que sempre foram importantes para área\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Richard, ler o teu \"Muito bom, são questões que sempre foram importantes para área\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Richard, teu comentário \"Muito bom, são questões que sempre foram importantes para área\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -9532,6 +11984,54 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Sidney Amancio da Silva",
+    "email": "sidney0511daniela@gmail.com",
+    "comments": [
+      {
+        "nota": 4,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 10:54",
+        "text": "Isso que eu espero",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 09:55",
+        "text": "Percebi que tenho que focar e buscar compreender realmente o público especial",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Sidney, parei pra reler o que você escreveu lá no preparatório — \"Percebi que tenho que focar e buscar compreender realmente o público especial\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Sidney, fiquei pensando no seu comentário \"Percebi que tenho que focar e buscar compreender realmente o público especial\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Sidney, quando você escreveu \"Percebi que tenho que focar e buscar compreender realmente o público especial\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Sidney, ler o teu \"Percebi que tenho que focar e buscar compreender realmente o público especial\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Sidney, teu comentário \"Percebi que tenho que focar e buscar compreender realmente o público especial\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
     "name": "Silvia Regina Tonetto",
     "email": "silproff@yahoo.com.br",
     "comments": [
@@ -9576,6 +12076,91 @@ window.ADAPTA_PARTICIPANTS = [
     "archetype": "engajado"
   },
   {
+    "name": "Silvia Regina Tonetto",
+    "email": "silproff1@yahoo.com.br",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:29",
+        "text": "ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️",
+        "tags": [
+          "duvida",
+          "ansiedade"
+        ]
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Silvia, teu comentário \"ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️\" na jornada diz muito sobre teu momento. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Silvia, olha esse trecho do que você comentou na jornada: \"ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️\". Isso me leva direto a isso aqui: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Silvia, achei muito legal você ter comentado na jornada preparatória \"ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️\", então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Silvia, parei pra reler o que você escreveu lá no preparatório — \"ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️\" — e fui te chamar na hora. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Silvia, fiquei pensando no seu comentário \"ansiosa por começar a me aprofundar em conhecimentos e atender cada vez melhor meu grupo especial❤️\" da jornada. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
+  },
+  {
+    "name": "Stephani Souza de Oliveira",
+    "email": "phanyoliveira29@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:53",
+        "text": "Gostei",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Stephani, suas respostas no preparatório me chamaram atenção. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Stephani, andei olhando teu envolvimento na jornada e quis te chamar. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Stephani, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Stephani, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Stephani, suas respostas no preparatório me chamaram atenção. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
     "name": "Stephanie Aline de Oliveira",
     "email": "teezinha.oliveira02@gmail.com",
     "comments": [
@@ -9607,6 +12192,16 @@ window.ADAPTA_PARTICIPANTS = [
         "text": "Não me sinto confortável",
         "tags": [
           "inseguro"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:38",
+        "text": "Hipertensos e diabéticos",
+        "tags": [
+          "atende-hipertensos",
+          "atende-diabeticos"
         ]
       }
     ],
@@ -9746,6 +12341,184 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "engajado"
+  },
+  {
+    "name": "Tatiane Hernandes",
+    "email": "tati_hernandes@hotmail.com",
+    "comments": [
+      {
+        "nota": 3,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 10:50",
+        "text": "trabalho com idosos com patologias como diabetes e hipertensao.",
+        "tags": [
+          "atende-idosos",
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 10:24",
+        "text": "conteudo simplificado e com muita clareza.",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Tatiane, ler o teu \"trabalho com idosos com patologias como diabetes e hipertensao\" lá no preparatório me fez parar tudo pra te procurar. Então: dá pra ver que você já é quem pega caso complexo na academia. Esse curso é pra você não ficar mais dependente de pesquisar a cada caso na internet ou esperar resposta de médico. Posso te mostrar como?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Tatiane, teu comentário \"trabalho com idosos com patologias como diabetes e hipertensao\" na jornada diz muito sobre teu momento. Então: você já cobre a operação básica. O que esse curso faz é refinar — prescrição com bioestatística do aluno (FC, PA, glicemia em tempo real), comunicação com equipe médica e protocolo pra casos limítrofes. É upgrade técnico. Quer ver?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Tatiane, olha esse trecho do que você comentou na jornada: \"trabalho com idosos com patologias como diabetes e hipertensao\". Isso me leva direto a isso aqui: pergunta direta — quanto tempo você gasta hoje pra preparar a aula de um aluno especial novo? Quem usa nosso protocolo tá fazendo isso em 20 minutos. Quer ver o passo a passo?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Tatiane, achei muito legal você ter comentado na jornada preparatória \"trabalho com idosos com patologias como diabetes e hipertensao\", então: o curso tem rede ativa de professores que trocam casos reais entre si. Você passa a discutir aluno com gente do teu nível — não com aluno de graduação. Quer ver o grupo?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Tatiane, parei pra reler o que você escreveu lá no preparatório — \"trabalho com idosos com patologias como diabetes e hipertensao\" — e fui te chamar na hora. Então: a turma com mentoria fecha em breve. É a única chance de pegar discussão de caso em tempo real com a equipe técnica. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "experiente"
+  },
+  {
+    "name": "Thabata Lang",
+    "email": "thabata.lang@gmail.com",
+    "comments": [
+      {
+        "nota": 3,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 10:20",
+        "text": "Não muito",
+        "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 09:01",
+        "text": "Idosos",
+        "tags": [
+          "atende-idosos"
+        ]
+      },
+      {
+        "nota": 4,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 07:21",
+        "text": "Vamos6",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Thabata, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Thabata, suas respostas no preparatório me chamaram atenção. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Thabata, andei olhando teu envolvimento na jornada e quis te chamar. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Thabata, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Thabata, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
+  },
+  {
+    "name": "Thiago Martinho Pereira",
+    "email": "Thiaguinho.martinho@gmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 11:30",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 11:27",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:24",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:20",
+        "text": "Bom",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:17",
+        "text": "Bos",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Thiago, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: te incomoda se eu te fizer 2 perguntas? Tua resposta determina se o curso faz sentido pra você AGORA ou só daqui a um ano. Tá ok?"
+      },
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Thiago, vi suas interações na jornada preparatória — dá pra ver que esse tema importa de verdade pra você. Então: quem termina a jornada inteira e dá 5 estrelas não faz por preencher — faz porque achou que valia. Bora conversar sobre o próximo passo?"
+      },
+      {
+        "trigger": "Progresso visível",
+        "icon_key": "progresso",
+        "text": "Thiago, suas respostas no preparatório me chamaram atenção. Então: te explico em 3 frases o que o curso entrega. Se fizer sentido, a gente continua. Pode ser?"
+      },
+      {
+        "trigger": "Ganho racional",
+        "icon_key": "ganho",
+        "text": "Thiago, andei olhando teu envolvimento na jornada e quis te chamar. Então: 8 módulos · 8 semanas · mentoria semanal ao vivo · acesso vitalício ao material · investimento parcelado em até 12x. Faz sentido pra você ouvir mais?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Thiago, pelo seu engajamento no preparatório, tem algo específico que faz sentido te falar. Então: a turma com mentoria fecha em breve. Quer que eu segure tua vaga enquanto a gente conversa?"
+      }
+    ],
+    "archetype": "basico"
   },
   {
     "name": "Thomaz de Melo Alcântara",
@@ -9941,6 +12714,78 @@ window.ADAPTA_PARTICIPANTS = [
       }
     ],
     "archetype": "cetico"
+  },
+  {
+    "name": "Vanessa de Lima Marins",
+    "email": "vanessa_delima_marins@hotmail.com",
+    "comments": [
+      {
+        "nota": 5,
+        "prompt": "Chegando ao final dessa nossa primeira jornada.",
+        "ts": "24/05/2026 06:27",
+        "text": "Aprender e evoluir",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você já entendeu mais sobre controle glicêmico do que muitos colegas de trabalho. Mas a pergunta real é: você se sente capaz de prescrever com autonomia para um aluno diabético amanhã?",
+        "ts": "24/05/2026 06:23",
+        "text": "Amando",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 05:58",
+        "text": "Ainda não apta",
+        "tags": []
+      },
+      {
+        "nota": 5,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 05:42",
+        "text": "Hipertenso e diabéticos",
+        "tags": [
+          "atende-hipertensos",
+          "atende-diabeticos"
+        ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 05:33",
+        "text": "Estou amando o app",
+        "tags": []
+      }
+    ],
+    "suggestions": [
+      {
+        "trigger": "Identidade",
+        "icon_key": "identidade",
+        "text": "Vanessa, parei pra reler o que você escreveu lá no preparatório — \"Aprender e evoluir\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+      },
+      {
+        "trigger": "Progresso (Maestria)",
+        "icon_key": "progresso",
+        "text": "Vanessa, fiquei pensando no seu comentário \"Aprender e evoluir\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+      },
+      {
+        "trigger": "Status social",
+        "icon_key": "status",
+        "text": "Vanessa, quando você escreveu \"Aprender e evoluir\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+      },
+      {
+        "trigger": "Curiosidade",
+        "icon_key": "curiosidade",
+        "text": "Vanessa, ler o teu \"Aprender e evoluir\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+      },
+      {
+        "trigger": "Perda iminente",
+        "icon_key": "perda",
+        "text": "Vanessa, teu comentário \"Aprender e evoluir\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+      }
+    ],
+    "archetype": "engajado"
   },
   {
     "name": "Vanessa de Paiva",
@@ -10296,33 +13141,47 @@ window.ADAPTA_PARTICIPANTS = [
         "ts": "24/05/2026 11:45",
         "text": "Muito obrigado",
         "tags": []
+      },
+      {
+        "nota": 4,
+        "prompt": "Você está entendendo por que pressão arterial não é só dado clínico — é responsabilidade do profissional que prescreve. Como você se sente para prescrever com segurança hoje?",
+        "ts": "24/05/2026 11:40",
+        "text": "Forte",
+        "tags": []
+      },
+      {
+        "nota": 1,
+        "prompt": "Você acabou de entender algo que a maioria dos profissionais ignora na prática. Quanto disso você já aplica com seus alunos hoje?",
+        "ts": "24/05/2026 11:31",
+        "text": "Atuo com grupo grande, difícil fazer avaliação!",
+        "tags": []
       }
     ],
     "suggestions": [
       {
         "trigger": "Identidade",
         "icon_key": "identidade",
-        "text": "Wellington, parei pra reler o que você escreveu lá no preparatório — \"Aprender e evoluir sempre\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
+        "text": "Wellington, parei pra reler o que você escreveu lá no preparatório — \"Atuo com grupo grande, difícil fazer avaliação!\" — e fui te chamar na hora. Então: esse tipo de comentário não é de quem só veio fazer a tarefa — é de quem pensa o aluno, não só o exercício. É exatamente esse perfil que mais aproveita o curso completo. Posso te chamar?"
       },
       {
         "trigger": "Progresso (Maestria)",
         "icon_key": "progresso",
-        "text": "Wellington, fiquei pensando no seu comentário \"Aprender e evoluir sempre\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
+        "text": "Wellington, fiquei pensando no seu comentário \"Atuo com grupo grande, difícil fazer avaliação!\" da jornada. Então: você claramente já estudou bastante. O passo que falta é SISTEMATIZAR — transformar o que você sabe em protocolo replicável e que dê pra ensinar a outros. É isso que o curso entrega. Quer ver?"
       },
       {
         "trigger": "Status social",
         "icon_key": "status",
-        "text": "Wellington, quando você escreveu \"Aprender e evoluir sempre\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
+        "text": "Wellington, quando você escreveu \"Atuo com grupo grande, difícil fazer avaliação!\" no preparatório, vi um ponto que vale a pena conversar. Então: gente que se engaja no preparatório do jeito que você se engajou é minoria — e é justamente quem vira referência no nicho em 12 meses. Quer entrar na turma com esse perfil?"
       },
       {
         "trigger": "Curiosidade",
         "icon_key": "curiosidade",
-        "text": "Wellington, ler o teu \"Aprender e evoluir sempre\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
+        "text": "Wellington, ler o teu \"Atuo com grupo grande, difícil fazer avaliação!\" lá no preparatório me fez parar tudo pra te procurar. Então: pelo que você escreveu, tenho 2-3 módulos específicos do curso que vão direto ao teu interesse — não é o pacote inteiro genérico. Posso te mandar quais são?"
       },
       {
         "trigger": "Perda iminente",
         "icon_key": "perda",
-        "text": "Wellington, teu comentário \"Aprender e evoluir sempre\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
+        "text": "Wellington, teu comentário \"Atuo com grupo grande, difícil fazer avaliação!\" na jornada diz muito sobre teu momento. Então: a turma com mentoria ao vivo fecha em breve. Pra teu nível de engajamento, esse é o componente mais valioso do curso — sem ele é só material gravado. Posso garantir tua vaga?"
       }
     ],
     "archetype": "engajado"
@@ -10538,6 +13397,13 @@ window.ADAPTA_PARTICIPANTS = [
         "tags": [
           "atende-idosos"
         ]
+      },
+      {
+        "nota": 5,
+        "prompt": "Vamos nessa?",
+        "ts": "24/05/2026 11:15",
+        "text": "Muito interessante como o conhecimento do curso está sendo conduzido!",
+        "tags": []
       }
     ],
     "suggestions": [
