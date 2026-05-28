@@ -145,6 +145,15 @@
   .sticky-cta { transform: translateY(120%); transition: transform 0.4s cubic-bezier(.2,.7,.2,1); }
   .sticky-cta.visible { transform: translateY(0); }
 
+  /* Coordenação — modais */
+  .coord-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+  .coord-card:hover { transform: translateY(-4px); border-color: rgba(70,243,202,0.5); box-shadow: 0 20px 40px -16px rgba(0,0,0,0.4); }
+  .coord-modal { padding: 0; border: 0; background: transparent; max-width: min(960px, 92vw); max-height: 92vh; width: 100%; color: white; overflow: visible; }
+  .coord-modal::backdrop { background: rgba(2, 6, 23, 0.78); backdrop-filter: blur(8px); }
+  .coord-modal[open] { animation: coord-modal-in 0.28s cubic-bezier(.2,.7,.2,1); }
+  @keyframes coord-modal-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+  body.coord-modal-open { overflow: hidden; }
+
   @media (max-width: 768px) {
     .hero-bg::before {
       background-image:
@@ -804,37 +813,122 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Coord 1 -->
-      <div class="glass-dark border border-white/15 rounded-3xl p-7 backdrop-blur-xl">
-        <img src="images/coordenacao/breda.png" alt="Dra. Ana Paula Breda" class="w-24 h-24 rounded-full bg-tertiary-fixed object-cover mb-5 shadow-lg shadow-black/30 ring-2 ring-tertiary-fixed/40" loading="lazy" />
-        <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
-        <h3 class="text-xl font-extrabold text-white leading-tight mb-2">Dra. Ana Paula Breda</h3>
-        <p class="text-white/65 text-sm leading-relaxed">Atuante na reabilitação cardiorrespiratória com base na prática clínica e na pesquisa científica.</p>
-      </div>
+      <button type="button" data-coord-open="modal-breda" class="coord-card group glass-dark border border-white/15 rounded-3xl overflow-hidden backdrop-blur-xl text-left flex flex-col">
+        <img src="images/coordenacao/breda.png" alt="Dra. Ana Paula Breda" class="w-full aspect-[5/6] object-cover" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
+          <h3 class="text-lg font-extrabold text-white leading-tight mb-4">Dra. Ana Paula Breda</h3>
+          <span class="mt-auto inline-flex items-center gap-1.5 text-tertiary-fixed text-xs font-bold uppercase tracking-wider group-hover:gap-2.5 transition-all">
+            Ver mini-CV
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+      </button>
 
       <!-- Coord 2 -->
-      <div class="glass-dark border border-white/15 rounded-3xl p-7 backdrop-blur-xl">
-        <img src="images/coordenacao/juliana.png" alt="Prof.ª Juliana Moura" class="w-24 h-24 rounded-full bg-tertiary-fixed object-cover mb-5 shadow-lg shadow-black/30 ring-2 ring-tertiary-fixed/40" loading="lazy" />
-        <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
-        <h3 class="text-xl font-extrabold text-white leading-tight mb-2">Prof.ª Juliana Moura</h3>
-        <p class="text-white/65 text-sm leading-relaxed">Especialista em fisioterapia cardiorrespiratória com experiência consolidada no atendimento domiciliar.</p>
-      </div>
+      <button type="button" data-coord-open="modal-juliana" class="coord-card group glass-dark border border-white/15 rounded-3xl overflow-hidden backdrop-blur-xl text-left flex flex-col">
+        <img src="images/coordenacao/juliana.png" alt="Prof.ª Juliana Moura" class="w-full aspect-[5/6] object-cover" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
+          <h3 class="text-lg font-extrabold text-white leading-tight mb-4">Prof.ª Juliana Moura</h3>
+          <span class="mt-auto inline-flex items-center gap-1.5 text-tertiary-fixed text-xs font-bold uppercase tracking-wider group-hover:gap-2.5 transition-all">
+            Ver mini-CV
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+      </button>
 
       <!-- Coord 3 -->
-      <div class="glass-dark border border-white/15 rounded-3xl p-7 backdrop-blur-xl">
-        <img src="images/coordenacao/cristiane.png" alt="Prof.ª Cristiane Paião" class="w-24 h-24 rounded-full bg-tertiary-fixed object-cover mb-5 shadow-lg shadow-black/30 ring-2 ring-tertiary-fixed/40" loading="lazy" />
-        <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
-        <h3 class="text-xl font-extrabold text-white leading-tight mb-2">Prof.ª Cristiane Paião</h3>
-        <p class="text-white/65 text-sm leading-relaxed">Reabilitação cardiorrespiratória com olhar prático para protocolos individualizados no domicílio.</p>
-      </div>
+      <button type="button" data-coord-open="modal-marcelo" class="coord-card group glass-dark border border-white/15 rounded-3xl overflow-hidden backdrop-blur-xl text-left flex flex-col">
+        <img src="images/coordenacao/marcelo.png" alt="Prof. Me. Marcelo Colucci" class="w-full aspect-[5/6] object-cover" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
+          <h3 class="text-lg font-extrabold text-white leading-tight mb-4">Prof. Me. Marcelo Colucci</h3>
+          <span class="mt-auto inline-flex items-center gap-1.5 text-tertiary-fixed text-xs font-bold uppercase tracking-wider group-hover:gap-2.5 transition-all">
+            Ver mini-CV
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+      </button>
 
       <!-- Coord 4 -->
-      <div class="glass-dark border border-white/15 rounded-3xl p-7 backdrop-blur-xl">
-        <img src="images/coordenacao/marcelo.png" alt="Prof. Marcelo Colucci" class="w-24 h-24 rounded-full bg-tertiary-fixed object-cover mb-5 shadow-lg shadow-black/30 ring-2 ring-tertiary-fixed/40" loading="lazy" />
-        <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
-        <h3 class="text-xl font-extrabold text-white leading-tight mb-2">Prof. Marcelo Colucci</h3>
-        <p class="text-white/65 text-sm leading-relaxed">Atuação consolidada em fisioterapia cardiorrespiratória e ensino aplicado à reabilitação domiciliar.</p>
-      </div>
+      <button type="button" data-coord-open="modal-cristiane" class="coord-card group glass-dark border border-white/15 rounded-3xl overflow-hidden backdrop-blur-xl text-left flex flex-col">
+        <img src="images/coordenacao/cristiane.png" alt="Prof.ª Cristiane Paião" class="w-full aspect-[5/6] object-cover" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <p class="text-tertiary-fixed text-xs font-bold tracking-[0.18em] uppercase mb-2">Coordenação</p>
+          <h3 class="text-lg font-extrabold text-white leading-tight mb-4">Prof.ª Cristiane Paião</h3>
+          <span class="mt-auto inline-flex items-center gap-1.5 text-tertiary-fixed text-xs font-bold uppercase tracking-wider group-hover:gap-2.5 transition-all">
+            Ver mini-CV
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+      </button>
     </div>
+
+    <!-- Coordenação — modais (mini-CVs completos) -->
+    <dialog id="modal-breda" class="coord-modal" aria-labelledby="modal-breda-title">
+      <div class="relative bg-primary-deep border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+        <button type="button" data-coord-close aria-label="Fechar" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-6 md:gap-10 p-6 md:p-10 items-center">
+          <img src="images/coordenacao/breda.png" alt="Dra. Ana Paula Breda" class="w-full max-w-sm mx-auto rounded-2xl" />
+          <div>
+            <p class="text-tertiary-fixed text-xs font-bold tracking-[0.2em] uppercase mb-3">Coordenação</p>
+            <h3 id="modal-breda-title" class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-5">Dra. Ana Paula Breda</h3>
+            <p class="text-white/80 text-base md:text-lg leading-relaxed">Fisioterapeuta especialista em reabilitação cardiopulmonar, com mais de 20 anos de experiência em UTI, semi-intensiva e reabilitação no Hospital Albert Einstein, além de ampla atuação no atendimento domiciliar. Coordena a pós-graduação com olhar clínico e acadêmico, unindo prática de alto nível à formação de novos especialistas.</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-juliana" class="coord-modal" aria-labelledby="modal-juliana-title">
+      <div class="relative bg-primary-deep border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+        <button type="button" data-coord-close aria-label="Fechar" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-6 md:gap-10 p-6 md:p-10 items-center">
+          <img src="images/coordenacao/juliana.png" alt="Prof.ª Juliana Moura" class="w-full max-w-sm mx-auto rounded-2xl" />
+          <div>
+            <p class="text-tertiary-fixed text-xs font-bold tracking-[0.2em] uppercase mb-3">Coordenação</p>
+            <h3 id="modal-juliana-title" class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-5">Prof.ª Juliana Moura</h3>
+            <p class="text-white/80 text-base md:text-lg leading-relaxed">Especialista em Fisioterapia Respiratória e Pneumologia, com mais de 20 anos de experiência em hospitais de ponta como o Albert Einstein e em atendimentos domiciliares. Atua no cuidado de pacientes com doenças respiratórias crônicas, pré e pós-transplante de pulmão, além de reabilitação de sequelas da COVID-19, sempre com embasamento científico e foco na qualidade de vida do paciente.</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-marcelo" class="coord-modal" aria-labelledby="modal-marcelo-title">
+      <div class="relative bg-primary-deep border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+        <button type="button" data-coord-close aria-label="Fechar" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-6 md:gap-10 p-6 md:p-10 items-center">
+          <img src="images/coordenacao/marcelo.png" alt="Prof. Me. Marcelo Colucci" class="w-full max-w-sm mx-auto rounded-2xl" />
+          <div>
+            <p class="text-tertiary-fixed text-xs font-bold tracking-[0.2em] uppercase mb-3">Coordenação</p>
+            <h3 id="modal-marcelo-title" class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-5">Prof. Me. Marcelo Colucci</h3>
+            <p class="text-white/80 text-base md:text-lg leading-relaxed">Mestre em Ciências da Reabilitação pela UNIFESP, especialista em Fisioterapia Respiratória e em Biomecânica e Fisiologia do Exercício. Fisioterapeuta graduado pela Universidade Guarulhos, atua como docente de graduação e pós-graduação desde 2006, com sólida experiência acadêmica e clínica.</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-cristiane" class="coord-modal" aria-labelledby="modal-cristiane-title">
+      <div class="relative bg-primary-deep border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+        <button type="button" data-coord-close aria-label="Fechar" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-6 md:gap-10 p-6 md:p-10 items-center">
+          <img src="images/coordenacao/cristiane.png" alt="Prof.ª Cristiane Paião" class="w-full max-w-sm mx-auto rounded-2xl" />
+          <div>
+            <p class="text-tertiary-fixed text-xs font-bold tracking-[0.2em] uppercase mb-3">Coordenação</p>
+            <h3 id="modal-cristiane-title" class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-5">Prof.ª Cristiane Paião</h3>
+            <p class="text-white/80 text-base md:text-lg leading-relaxed">Fisioterapeuta formada em 1998, com especializações em fisioterapia cardiorrespiratória e gerontologia, e trajetória de mais de 20 anos em hospitais de referência como o Albert Einstein. Atuou em UTIs, enfermarias e atendimento domiciliar de idosos, sempre com cuidado técnico, humano e centrado na pessoa. Já formou e treinou dezenas de profissionais, sendo multiplicadora da filosofia Planetree, que valoriza o cuidado integral.</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
 
     <!-- Inline CTA -->
     <div class="mt-16 max-w-4xl mx-auto">
@@ -1256,6 +1350,47 @@
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  })();
+
+  // Coordenação — abrir/fechar modais com mini-CV
+  (function () {
+    var openers = document.querySelectorAll('[data-coord-open]');
+    if (!openers.length) return;
+
+    function open(modal) {
+      if (!modal || typeof modal.showModal !== 'function') return;
+      modal.showModal();
+      document.body.classList.add('coord-modal-open');
+    }
+    function close(modal) {
+      if (!modal) return;
+      modal.close();
+      document.body.classList.remove('coord-modal-open');
+    }
+
+    openers.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        open(document.getElementById(btn.getAttribute('data-coord-open')));
+      });
+    });
+
+    document.querySelectorAll('.coord-modal').forEach(function (modal) {
+      // close on backdrop click (outside the inner content)
+      modal.addEventListener('click', function (e) {
+        var rect = modal.getBoundingClientRect();
+        var inDialog = (e.clientX >= rect.left && e.clientX <= rect.right &&
+                        e.clientY >= rect.top && e.clientY <= rect.bottom);
+        if (!inDialog) close(modal);
+      });
+      // close button
+      modal.querySelectorAll('[data-coord-close]').forEach(function (btn) {
+        btn.addEventListener('click', function () { close(modal); });
+      });
+      // restore body class on native close (Esc, etc.)
+      modal.addEventListener('close', function () {
+        document.body.classList.remove('coord-modal-open');
+      });
+    });
   })();
 </script>
 
