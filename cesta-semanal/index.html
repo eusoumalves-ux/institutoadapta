@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cesta Fresca — Frescor de verdade na sua casa, toda semana</title>
+<meta name="description" content="Assinatura semanal de hortifrúti: frutas, verduras, legumes e hortaliças frescas e selecionadas, entregues na sua porta. Mais praticidade e saúde, sem sair de casa."/>
+<meta property="og:title" content="Cesta Fresca — Frescor de verdade na sua casa, toda semana"/>
+<meta property="og:description" content="Frutas, verduras, legumes e hortaliças frescas, entregues semanalmente na sua porta. Sua feira sem sair de casa."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --green:#176B45; --green-ink:#14271C; --tomato:#E5533C; --orange:#FF9E2C;
+    --pale:#EEF4E8; --card:#F7FAF4; --muted:#5A6B5E; --line:#EDF1EA;
+    --on-green:#DCEBE0; --on-green-soft:#9FBFA9; --reassure:#BFD8C6;
+    --display:'Archivo',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);color:var(--green-ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;
+    background:var(--tomato);color:#fff;font-family:var(--display);font-weight:700;
+    font-size:17px;padding:18px 30px;border-radius:100px;transition:transform .15s ease,filter .15s ease;}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05);}
+  .btn svg{flex-shrink:0;}
+
+  /* Header */
+  header{background:var(--green);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-mark{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--orange);border-radius:10px;}
+  .logo-name{color:#fff;font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-.01em;}
+  .nav-links{display:none;align-items:center;gap:36px;}
+  .nav-links a{color:var(--on-green);font-size:15px;font-weight:500;}
+  .nav-cta{background:var(--tomato);color:#fff;font-weight:700;font-size:15px;padding:11px 22px;border-radius:100px;}
+
+  /* Hero */
+  .hero{background:var(--green);}
+  .hero-content{display:flex;flex-direction:column;gap:24px;padding:8px 24px 56px;align-items:flex-start;max-width:1200px;margin:0 auto;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,255,255,.14);border-radius:100px;}
+  .eyebrow .dot{width:7px;height:7px;border-radius:100px;background:var(--orange);}
+  .eyebrow span{color:var(--pale);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+  .h1{font-family:var(--display);font-weight:900;color:#fff;font-size:46px;line-height:1;letter-spacing:-.02em;}
+  .h1 .accent{color:var(--orange);}
+  .hero-sub{color:var(--on-green);font-size:17px;line-height:1.55;max-width:480px;}
+  .cta-group{display:flex;flex-direction:column;gap:12px;align-items:flex-start;padding-top:4px;}
+  .reassure{display:flex;align-items:center;gap:8px;color:var(--reassure);font-size:14px;font-weight:500;}
+  .hero-visual{position:relative;display:flex;align-items:flex-end;justify-content:center;
+    width:100%;height:230px;border-radius:28px;overflow:hidden;
+    background:linear-gradient(160deg,#EEF4E8 0%,#D8E8CE 100%);}
+  .blob{position:absolute;border-radius:100px;}
+  .basket{width:220px;height:120px;background:var(--green);border-radius:0 0 110px 110px / 0 0 90px 90px;}
+
+  /* Sections */
+  section .wrap{padding-top:52px;padding-bottom:52px;}
+  .bg-white{background:#fff;}
+  .bg-pale{background:var(--pale);}
+  .bg-green{background:var(--green);}
+  .kicker{color:var(--tomato);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+  .h2{font-family:var(--display);font-weight:800;font-size:32px;line-height:1.12;letter-spacing:-.015em;}
+  .lead{color:var(--muted);font-size:16px;line-height:1.6;max-width:560px;}
+  .sec-head{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+
+  /* Benefits cards */
+  .cards{display:grid;grid-template-columns:1fr;gap:20px;margin-top:32px;}
+  .card{display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:28px;background:var(--card);border-radius:20px;}
+  .icon-box{display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--pale);border-radius:14px;}
+  .card h3{font-family:var(--display);font-size:20px;font-weight:700;line-height:1.25;}
+  .card p{color:var(--muted);font-size:15px;line-height:1.5;}
+
+  /* Problem */
+  .problem-grid{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
+  .problem-grid p{color:#41514A;font-size:16px;line-height:1.65;}
+  .solve{display:inline-flex;align-items:center;gap:12px;padding:18px 22px;background:var(--green);border-radius:16px;}
+  .solve span{color:#fff;font-family:var(--display);font-size:18px;font-weight:700;}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px;}
+  .step{display:flex;gap:16px;align-items:flex-start;padding:24px;background:var(--card);border-radius:18px;}
+  .step .num{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0;background:var(--green);border-radius:100px;color:#fff;font-family:var(--display);font-size:19px;font-weight:800;}
+  .step h3{font-family:var(--display);font-size:19px;font-weight:700;line-height:1.25;}
+  .step p{color:var(--muted);font-size:15px;line-height:1.5;margin-top:4px;}
+
+  /* Ideal pills */
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .pill{padding:12px 18px;background:#fff;border-radius:100px;font-size:15px;font-weight:600;}
+  .pill.solid{background:var(--green);color:#fff;}
+  .bg-pale .pill{background:#fff;}
+
+  /* Final CTA */
+  .final{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-top:56px;padding-bottom:60px;}
+  .final h2{font-family:var(--display);font-weight:900;color:#fff;font-size:34px;line-height:1.1;letter-spacing:-.02em;max-width:320px;}
+  .final .lead{color:var(--on-green);max-width:340px;}
+  .final .fine{color:var(--on-green-soft);font-size:13px;font-weight:500;}
+
+  /* Footer */
+  footer{background:var(--green-ink);color:#9FB0A6;font-size:13px;text-align:center;padding:28px 24px;}
+
+  /* ---- Desktop ---- */
+  @media (min-width:960px){
+    .nav-links{display:flex;}
+    .hero-content{flex-direction:row;align-items:center;justify-content:space-between;gap:56px;padding:40px 24px 90px;}
+    .hero-left{display:flex;flex-direction:column;gap:26px;align-items:flex-start;width:560px;flex-shrink:0;}
+    .h1{font-size:72px;}
+    .hero-sub{font-size:19px;}
+    .cta-group{flex-direction:row;align-items:center;gap:20px;}
+    .hero-visual{height:440px;border-radius:32px;}
+    .basket{width:360px;height:200px;border-radius:0 0 180px 180px / 0 0 150px 150px;}
+    section .wrap{padding-top:96px;padding-bottom:96px;}
+    .sec-head{align-items:center;text-align:center;}
+    .sec-head.left{align-items:flex-start;text-align:left;}
+    .h2{font-size:46px;}
+    .lead{font-size:18px;}
+    .cards{grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+    .card{padding:30px;}
+    .card h3{font-size:20px;}
+    .problem-grid{flex-direction:row;align-items:center;gap:80px;}
+    .problem-grid .h2{width:480px;flex-shrink:0;}
+    .problem-right{display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
+    .problem-grid p{font-size:18px;}
+    .solve span{font-size:20px;}
+    .steps{grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
+    .step{flex-direction:column;padding:36px;}
+    .step .num{width:52px;height:52px;font-size:22px;}
+    .step h3{font-size:24px;margin-top:18px;}
+    .pills{justify-content:center;gap:14px;margin-top:36px;}
+    .pill{padding:14px 24px;font-size:17px;}
+    .final h2{font-size:60px;max-width:760px;}
+    .final .lead{font-size:20px;max-width:560px;}
+    .final .btn{font-size:19px;padding:22px 40px;}
+    .final .fine{font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="nav">
+    <div class="logo">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c0 5-4 6-4 10a4 4 0 0 0 8 0c0-4-4-5-4-10z" fill="#176B45"/></svg></span>
+      <span class="logo-name">Cesta Fresca</span>
+    </div>
+    <div class="nav-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#a-cesta">A cesta</a>
+      <a href="#planos">Planos</a>
+      <a href="#" class="nav-cta">Assinar agora</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="eyebrow"><span class="dot"></span><span>Assinatura semanal de hortifrúti</span></div>
+        <h1 class="h1">Frescor de verdade na sua casa,<br><span class="accent">toda semana.</span></h1>
+        <p class="hero-sub">Mais praticidade, mais saúde e menos tempo perdido no mercado. Frutas, verduras, legumes e hortaliças selecionados, entregues na sua porta.</p>
+        <div class="cta-group">
+          <a href="#" class="btn">Quero minha cesta semanal
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="reassure">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#FF9E2C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Primeira cesta entregue nesta semana
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <span class="blob" style="top:11%;left:15%;width:38%;height:54%;max-width:130px;max-height:130px;background:#E5533C;"></span>
+        <span class="blob" style="top:27%;left:46%;width:28%;height:40%;max-width:96px;max-height:96px;background:#FF9E2C;"></span>
+        <span class="blob" style="top:13%;right:18%;width:32%;height:46%;max-width:110px;max-height:110px;background:#6FA84B;"></span>
+        <span class="blob" style="top:38%;right:38%;width:21%;height:30%;max-width:74px;max-height:74px;background:#C0392B;"></span>
+        <span class="basket"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Benefits -->
+<section class="bg-white" id="a-cesta">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Sua feira em casa</span>
+      <h2 class="h2">Sua feira semanal, sem sair de casa</h2>
+      <p class="lead">Toda semana uma cesta cuidadosamente montada, direto da produção para a sua mesa.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Frutas frescas da estação</h3><p>Saborosas e no ponto certo, colhidas perto da entrega.</p></div>
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Verduras e hortaliças</h3><p>Folhas selecionadas, com aparência e qualidade superiores.</p></div>
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Legumes de qualidade</h3><p>Seleção de alta qualidade para o seu dia a dia.</p></div>
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Entrega programada</h3><p>Tudo organizado e entregue direto na sua casa.</p></div>
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Mais praticidade</h3><p>Menos tempo perdido no mercado, mais leveza na rotina.</p></div>
+      <div class="card"><span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#176B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Saúde para a família</h3><p>Alimentação mais saudável para todos em casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="bg-pale">
+  <div class="wrap">
+    <div class="problem-grid">
+      <h2 class="h2">Comer bem não deveria ser difícil</h2>
+      <div class="problem-right">
+        <p>A correria do dia a dia faz muita gente adiar a alimentação saudável. Você promete ir ao mercado, mas falta tempo. Quando vai, os produtos nem sempre estão bons, e acaba escolhendo industrializados por praticidade.</p>
+        <div class="solve">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#FF9E2C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Nós resolvemos isso para você.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="bg-white" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Simples assim</span>
+      <h2 class="h2">Como funciona?</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><div><h3>Escolha seu plano</h3><p>Selecione a cesta ideal para a sua casa e a sua rotina.</p></div></div>
+      <div class="step"><span class="num">2</span><div><h3>Receba semanalmente</h3><p>Nós organizamos e entregamos tudo direto no seu endereço.</p></div></div>
+      <div class="step"><span class="num">3</span><div><h3>Aproveite o melhor</h3><p>Mais saúde, praticidade e qualidade na sua semana.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Ideal for -->
+<section class="bg-pale" id="planos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Ideal para você</h2>
+    </div>
+    <div class="pills">
+      <span class="pill">Famílias que querem comer melhor</span>
+      <span class="pill">Pessoas com rotina corrida</span>
+      <span class="pill">Quem busca mais saúde e disposição</span>
+      <span class="pill">Quem gosta de cozinhar com fresco</span>
+      <span class="pill solid">Quem quer cuidar melhor da alimentação</span>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="bg-green">
+  <div class="wrap final">
+    <h2>Praticidade sem abrir mão da qualidade</h2>
+    <p class="lead">Sua casa abastecida. Sua rotina mais leve. Sua alimentação muito melhor.</p>
+    <a href="#" class="btn">Assinar e receber minha cesta
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <span class="fine">Cancele quando quiser · Sem fidelidade</span>
+  </div>
+</section>
+
+<footer>© Cesta Fresca · Frutas, verduras e legumes frescos toda semana</footer>
+
+</body>
+</html>
