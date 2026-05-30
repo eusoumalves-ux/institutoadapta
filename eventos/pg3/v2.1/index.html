@@ -301,7 +301,7 @@ Os primeiros inscritos entram
 na frente.
 </div> </div> <div style="box-sizing: border-box; color: #424655; display: flex; flex-wrap: wrap; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 20px; justify-content: center; line-height: 32px; text-align: center; width: 700px;">
 A programação completa está sendo finalizada. Quem entrar agora garante acesso prioritário, condição de lançamento e os bônus exclusivos.
-</div> </div> <div style="background-color: #FFFFFF; border-color: #DAE2FF; border-radius: 28px; border-style: solid; border-width: 1px; box-shadow: #0A2A6614 0px 40px 80px -32px; box-sizing: border-box; display: flex; flex-direction: column; margin-top: 48px; overflow: clip; width: 600px;"> <div style="align-items: center; background-color: #0A1340; box-sizing: border-box; display: flex; gap: 9px; justify-content: center; padding-block: 16px; padding-inline: 24px;"> <div style="box-sizing: border-box; font-size: 16px; line-height: 18px;">⚡</div> <div style="box-sizing: border-box; color: #5FE6C3; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0.14em; line-height: 16px; text-transform: uppercase;">
+</div> </div> <div id="card-oferta" style="background-color: #FFFFFF; border-color: #DAE2FF; border-radius: 28px; border-style: solid; border-width: 1px; box-shadow: #0A2A6614 0px 40px 80px -32px; box-sizing: border-box; display: flex; flex-direction: column; margin-top: 48px; overflow: clip; scroll-margin-top: 28px; width: 600px;"> <div style="align-items: center; background-color: #0A1340; box-sizing: border-box; display: flex; gap: 9px; justify-content: center; padding-block: 16px; padding-inline: 24px;"> <div style="box-sizing: border-box; font-size: 16px; line-height: 18px;">⚡</div> <div style="box-sizing: border-box; color: #5FE6C3; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0.14em; line-height: 16px; text-transform: uppercase;">
 Lote 1 · Acaba em breve
 </div> </div> <div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 4px; padding-bottom: 8px; padding-left: 40px; padding-right: 40px; padding-top: 32px;"> <div style="box-sizing: border-box; color: #9CA3B5; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 19px; font-weight: 600; line-height: 24px; text-decoration: line-through;">
 De R$ 197,00
@@ -372,10 +372,10 @@ Quero meu lugar no workshop
 </div> </div> </div> <script>
       document.querySelectorAll('a[href="#oferta"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
-          var btn = document.getElementById('cta-checkout');
-          if (btn) {
+          var card = document.getElementById('card-oferta');
+          if (card) {
             e.preventDefault();
-            btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         });
       });
