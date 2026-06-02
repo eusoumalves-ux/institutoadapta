@@ -152,9 +152,9 @@
       <a class="text-ink-soft hover:text-primary transition-colors font-medium text-sm" href="#bianca">Dra. Bianca</a>
       <a class="text-ink-soft hover:text-primary transition-colors font-medium text-sm" href="#faq">FAQ</a>
     </div>
-    <button type="button" data-modal-open="inscricao" class="btn-primary px-5 md:px-6 py-2.5 rounded-full font-semibold text-sm">
+    <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-primary px-5 md:px-6 py-2.5 rounded-full font-semibold text-sm">
       Garantir vaga · <span class="whitespace-nowrap">R$&nbsp;19</span>
-    </button>
+    </a>
   </div>
 </nav>
 
@@ -185,10 +185,10 @@
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 items-center justify-center mb-8">
-      <button type="button" data-modal-open="inscricao" class="btn-primary px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
+      <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-primary px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
         Garantir Minha Vaga · LOTE 1
         <span class="material-symbols-outlined">arrow_forward</span>
-      </button>
+      </a>
       <span class="text-muted text-sm"><strong class="text-ink">R$ 19</strong> · 200 vagas · sujeito a esgotar</span>
     </div>
 
@@ -393,10 +393,10 @@
     </div>
 
     <div class="text-center mt-12">
-      <button type="button" data-modal-open="inscricao" class="btn-primary px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
+      <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-primary px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
         Garantir Minha Vaga Agora · LOTE 1
         <span class="material-symbols-outlined">arrow_forward</span>
-      </button>
+      </a>
     </div>
   </div>
 </section>
@@ -484,10 +484,10 @@
     </div>
 
     <div class="text-center mt-12">
-      <button type="button" data-modal-open="inscricao" class="btn-accent px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
+      <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-accent px-8 py-4 rounded-full font-extrabold text-base md:text-lg inline-flex items-center justify-center gap-2">
         Quero Participar · LOTE 1 · R$ 19
         <span class="material-symbols-outlined">arrow_forward</span>
-      </button>
+      </a>
     </div>
   </div>
 </section>
@@ -520,10 +520,10 @@
         <p class="font-headline text-7xl md:text-8xl font-extrabold text-primary leading-none mb-3">R$ 19</p>
         <p class="text-ink-soft text-base mb-8">Pagamento único · Cartão, Pix ou boleto</p>
 
-        <button type="button" data-modal-open="inscricao" class="btn-primary block w-full px-8 py-5 rounded-full font-extrabold text-lg shadow-xl">
+        <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-primary block w-full px-8 py-5 rounded-full font-extrabold text-lg shadow-xl">
           GARANTIR MINHA VAGA AGORA
           <span class="material-symbols-outlined align-middle ml-2">arrow_forward</span>
-        </button>
+        </a>
         <p class="text-muted text-xs mt-4 inline-flex items-center gap-1.5">
           <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
           Garantia incondicional de 7 dias · Pagamento Facilitado
@@ -712,10 +712,10 @@
       Garanta sua vaga no Lote 1 e transforme sua forma de atender mulheres em qualquer fase da vida.
     </p>
 
-    <button type="button" data-modal-open="inscricao" class="btn-accent px-10 py-5 rounded-full font-extrabold text-lg md:text-xl inline-flex items-center justify-center gap-2 shadow-2xl shadow-black/30">
+    <a href="https://pay.hotmart.com/Q106011154P?off=ax5fcm16&checkoutMode=10" target="_blank" rel="noopener" class="btn-accent px-10 py-5 rounded-full font-extrabold text-lg md:text-xl inline-flex items-center justify-center gap-2 shadow-2xl shadow-black/30">
       GARANTIR MINHA VAGA AGORA
       <span class="material-symbols-outlined">arrow_forward</span>
-    </button>
+    </a>
     <p class="text-white/70 text-sm mt-4 inline-flex items-center gap-1.5">
       <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
       Vagas Limitadas · R$ 19
@@ -921,6 +921,29 @@
       setTimeout(function () {
         if (btn.disabled) window.location.href = redirectUrl;
       }, 4000);
+    });
+  })();
+</script>
+
+<!-- CTA = checkout direto Hotmart (mesmo comportamento da v1): repassa UTMs + dispara lead no clique -->
+<script>
+  (function () {
+    var links = document.querySelectorAll('a[href^="https://pay.hotmart.com/"]');
+    var pageParams = new URLSearchParams(window.location.search);
+    if (pageParams.toString()) {
+      links.forEach(function (a) {
+        try {
+          var u = new URL(a.href);
+          pageParams.forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+          a.href = u.toString();
+        } catch (e) {}
+      });
+    }
+    links.forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (typeof window.__abTrackLead === 'function') window.__abTrackLead();
+        else if (window.dataLayer) window.dataLayer.push({ event: 'lead_submit' });
+      });
     });
   })();
 </script>
