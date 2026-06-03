@@ -53,16 +53,17 @@
 
 </div> <script>
       (function () {
-        function scrollToOferta(e) {
-          var alvo = document.getElementById('oferta');
-          if (alvo) { if (e) e.preventDefault(); alvo.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        var CHECKOUT_URL = 'https://pay.hotmart.com/Q106101451N?off=de1vtj99&checkoutMode=10';
+        function irParaCheckout(e) {
+          if (e) e.preventDefault();
+          window.open(CHECKOUT_URL, '_blank', 'noopener');
         }
         var ctaRe = /^Quero meu lugar/;
         document.querySelectorAll('div, a').forEach(function (el) {
           if (el.children.length === 0 && ctaRe.test((el.textContent || '').trim())) {
             var btn = el.parentElement || el;
             btn.style.cursor = 'pointer';
-            btn.addEventListener('click', scrollToOferta);
+            btn.addEventListener('click', irParaCheckout);
           }
         });
       })();
