@@ -1,0 +1,13 @@
+.DS_Store
+.claude/settings.local.json
+
+# Repos/projetos separados (split do monorepo) — NAO commitar dentro do institutoadapta
+/-parceiro-cbmev-instituto-adapta/
+/eventos-instituto-adapta/
+/pos-instituto-adapta/
+/core-instituto-adapta/
+
+# Backups das reorgs locais
+/*.bak-reorg/
+/eventos-instituto-adapta.bak-reorg/
+/pos-instituto-adapta.bak-reorg/
