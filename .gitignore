@@ -11,3 +11,9 @@
 /*.bak-reorg/
 /eventos-instituto-adapta.bak-reorg/
 /pos-instituto-adapta.bak-reorg/
+
+# Projeto separado (deploy proprio no Vercel)
+/gestao-instituto-adapta/
+
+# Projeto separado (repo e deploy proprios)
+/institucional-instituto-adapta/
